@@ -6,6 +6,10 @@ The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.
 
 Project handoff notes and measured checkpoint results are in [`handoffs/2026-10-09-project-handoff.md`](handoffs/2026-10-09-project-handoff.md). Current checkpoints and evaluations are in `trained-v4/`; earlier experiments are preserved with context in `experiments/archive/`. The provided UCSC AI Hackathon guide is in `references/`.
 
+## Physical AI track status
+
+The AMD challenge's Mission 1 requires a full Hugging Face LeRobot setup on AMD hardware and a real pick-and-place into a bin. This project currently rehearses the task in custom MuJoCo/SB3 simulation; it has not yet been ported to LeRobot or tested on the loaner hardware. Complete and record the real Mission 1 path first, then add XIAO vision and ElevenLabs voice if time permits. The challenge also requires winning teams to publish code, datasets, models, and demo videos publicly on GitHub. This repository stays private during development; see the dated handoff for the eventual public-release checklist and the Mission 2 option.
+
 ## Install
 
 Use Python 3.10–3.12. From this folder:
