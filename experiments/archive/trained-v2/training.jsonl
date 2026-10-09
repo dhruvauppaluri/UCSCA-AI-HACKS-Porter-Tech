@@ -1,0 +1,6 @@
+{"time": "2026-10-09T03:25:05.613268+00:00", "stage": "reach", "steps": 1, "success_rate": 1.0, "mean_episode_steps": 18.0, "rms_joint_jerk_rad_s3": 133.07853580121298}
+{"time": "2026-10-09T03:25:20.215870+00:00", "stage": "grasp", "steps": 2, "success_rate": 1.0, "mean_episode_steps": 20.0, "rms_joint_jerk_rad_s3": 165.4499652744185}
+{"time": "2026-10-09T03:26:07.201331+00:00", "stage": "lift", "steps": 3, "success_rate": 0.3333333333333333, "mean_episode_steps": 168.0, "rms_joint_jerk_rad_s3": 99.16061999675777}
+{"time": "2026-10-09T03:26:45.067219+00:00", "stage": "place", "steps": 4, "success_rate": 0.0, "mean_episode_steps": 240.0, "rms_joint_jerk_rad_s3": 757.2044371071661}
+{"time": "2026-10-09T03:27:11.762093+00:00", "stage": "mixed", "steps": 5, "success_rate": 0.6666666666666666, "mean_episode_steps": 140.66666666666666, "rms_joint_jerk_rad_s3": 132.33593635591706}
+{"time": "2026-10-09T03:27:26.284340+00:00", "stage": "robust", "steps": 6, "success_rate": 0.0, "mean_episode_steps": 240.0, "rms_joint_jerk_rad_s3": 693.3088724051853}

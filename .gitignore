@@ -1,0 +1,24 @@
+# Python environments, bytecode, and test caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Local credentials and machine-specific files
+.env
+.env.*
+!.env.example
+.DS_Store
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Default local run location; named, reviewed runs in this repository remain tracked.
+runs/

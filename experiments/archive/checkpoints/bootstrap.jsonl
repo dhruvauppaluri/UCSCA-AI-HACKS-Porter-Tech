@@ -1,0 +1,5 @@
+{"stage": "grasp", "episodes": 30, "success_rate": 1.0, "samples": 660, "bc_loss": 0.011618769727647305}
+{"stage": "lift", "episodes": 30, "success_rate": 1.0, "samples": 776, "bc_loss": 0.00593529874458909}
+{"stage": "place", "episodes": 30, "success_rate": 1.0, "samples": 1576, "bc_loss": 0.020212091505527496}
+{"stage": "mixed", "episodes": 30, "success_rate": 0.7666666666666667, "samples": 2849, "bc_loss": 0.12121198326349258}
+{"stage": "robust", "episodes": 30, "success_rate": 0.1, "samples": 5855, "bc_loss": 0.1574523001909256}

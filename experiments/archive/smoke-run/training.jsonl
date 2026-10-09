@@ -1,0 +1,2 @@
+{"time": "2026-10-09T03:08:43.714946+00:00", "stage": "reach", "steps": 600, "success_rate": 0.0, "mean_episode_steps": 240.0}
+{"time": "2026-10-09T03:09:06.857208+00:00", "stage": "reach", "steps": 1200, "success_rate": 0.0, "mean_episode_steps": 240.0}

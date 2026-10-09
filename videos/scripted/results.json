@@ -1,0 +1,20 @@
+[
+  {
+    "object": "box",
+    "success": true,
+    "steps": 57,
+    "scripted_phase": "settle"
+  },
+  {
+    "object": "bottle",
+    "success": true,
+    "steps": 53,
+    "scripted_phase": "settle"
+  },
+  {
+    "object": "cylinder",
+    "success": true,
+    "steps": 56,
+    "scripted_phase": "settle"
+  }
+]

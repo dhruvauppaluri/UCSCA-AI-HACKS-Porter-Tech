@@ -1,0 +1,5 @@
+{"time": "2026-10-09T03:14:51.118200+00:00", "stage": "grasp", "steps": 2, "success_rate": 1.0, "mean_episode_steps": 23.333333333333332}
+{"time": "2026-10-09T03:15:02.086777+00:00", "stage": "lift", "steps": 3, "success_rate": 1.0, "mean_episode_steps": 28.0}
+{"time": "2026-10-09T03:15:17.063349+00:00", "stage": "place", "steps": 4, "success_rate": 0.0, "mean_episode_steps": 240.0}
+{"time": "2026-10-09T03:15:33.190305+00:00", "stage": "mixed", "steps": 5, "success_rate": 0.3333333333333333, "mean_episode_steps": 164.66666666666666}
+{"time": "2026-10-09T03:16:03.959918+00:00", "stage": "robust", "steps": 6, "success_rate": 0.0, "mean_episode_steps": 240.0}
