@@ -75,6 +75,33 @@ Suggested sequence on the NVIDIA laptop:
 
 This is a preparation route, not a promise of zero-shot transfer. Tomorrow still requires matching LeRobot action conventions to the loaner, calibrating motors and camera, and validating the real gripper with slow supervised trials. Treat sim-trained checkpoints as starting points to evaluate/refine, not as safe physical-arm commands. The Mac can also train lighter LeRobot policies on MPS, but that does not unlock LeIsaac's NVIDIA Isaac simulation path. Confirm runtime support before relying on either laptop for the final AMD event stack.
 
+## Priority objective: finish as much manipulation and motion training as possible today
+
+This is the user's explicit top priority for October 9: arrive at the October 10 hardware session with as much pick/grasp/lift/transport/release behavior trained and evaluated as possible, so tomorrow is primarily calibration, correction, and integration with vision and voice—not a cold start. This is a target for today's work, not a claim that physical manipulation has already been trained or validated.
+
+### Today's execution target
+
+1. Start on the RTX 5070 Ti laptop and immediately check whether its NVIDIA GPU and Linux/WSL2 environment can run the documented LeIsaac SO-101 example. Time-box environment setup; if the first supported task will not launch promptly, switch to the already-working MuJoCo environment rather than losing the training window.
+2. If LeIsaac runs, use its SO-101 simulation and LeRobot data path to teleoperate varied pick, lift, carry, and release episodes; save the demonstrations in LeRobot format, train a policy, and evaluate repeatable success and motion smoothness. Preserve the exact environment pins, task ID, dataset, policy config, checkpoints, evaluation, and demo video.
+3. If LeIsaac is unavailable, make the most of the current MuJoCo task: collect teleoperation demonstrations, behavior-clone them, continue the existing curriculum, and compare held-out checkpoints. This path improves our custom simulation baseline and movement sequencing, but the current SB3 policy and NPZ data are not directly loadable by LeRobot.
+4. Do not count the assisted-grasp proxy as physical grasp training. It supports motion/task-sequence learning, but the simulator's proxy grasp does not establish real contact reliability. Keep speed, action-change, acceleration, and jerk limits; choose checkpoints using held-out success plus motion metrics, not reward alone.
+5. Save all datasets, configuration, logs, model checkpoints, and videos in the repo before switching machines. Add voice/vision integration after a repeatable manipulation baseline exists, or develop those pieces in parallel without interrupting the training run.
+
+### What “refinement tomorrow” means
+
+The October 10 work should begin from today's saved dataset/checkpoint and task procedure: connect the borrowed SO-101 through the event's AMD LeRobot environment; calibrate motor directions/zeros, gripper endpoints, camera-to-table coordinates, and latency; run slow supervised reach and grasp tests; record a small number of real corrective demonstrations; then fine-tune or select a compatible checkpoint and measure real placement success. Add XIAO object localization and ElevenLabs intent/tool integration once the safe pick-and-place loop works. Reusing today's LeRobot-format demonstrations/checkpoint is more promising than reusing the custom SB3 weights, but neither path guarantees sim-to-real transfer.
+
+The user's desired outcome is to complete **most, ideally all feasible simulated manipulation and movement training today**. The boundary is that without the physical loaner today, real gripper contact, motor calibration, and final sim-to-real reliability cannot be completed; those are the limited hardware-dependent refinement steps for tomorrow.
+
+## Archive map
+
+- `README.md`: install/use instructions, simulation and training design, data collection, camera/vision, voice API, and safety caveats.
+- `so101_sim/`, `trained-v4/`, `experiments/archive/`, and `videos/`: implementation, checkpoints, evaluations, prior experiments, and demo evidence.
+- `handoffs/conversation-record.md`: chronological user messages and assistant final responses for the Codex conversation; excludes tool traces and internal reasoning.
+- `references/Hacker Guide - UCSC AI Hackathon.pdf` and its searchable `.md` extraction: original supplied event guide and searchable text.
+- `references/Track-Challenges-UCSC-AI-Hackathon.md` and `references/Prizes-UCSC-AI-Hackathon.md`: offline snapshots of the complete linked sponsor track and prize Docs as retrieved October 9, 2026. Verify source Docs/Discord for later changes.
+- `handoffs/`: current project and machine-to-machine handoff notes. Hardware measurements and operator-collected real demonstrations remain future data, not archived artifacts.
+
 ## Provenance
 
 The robot model and STL assets are from TheRobotStudio SO-ARM100 repository and retain its Apache-2.0 license in `so101_sim/model/`. The original hackathon guide provided for this project is in `references/`. Earlier generated run artifacts are preserved under `experiments/archive/`; local virtual environments, caches, and credentials are excluded by `.gitignore`.

@@ -6,6 +6,10 @@ The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.
 
 Project handoff notes and measured checkpoint results are in [`handoffs/2026-10-09-project-handoff.md`](handoffs/2026-10-09-project-handoff.md). Current checkpoints and evaluations are in `trained-v4/`; earlier experiments are preserved with context in `experiments/archive/`. The provided UCSC AI Hackathon guide is in `references/`.
 
+## Project archive and continuation
+
+The repository includes the searchable [conversation record](handoffs/conversation-record.md), a [handoff/archive map](handoffs/2026-10-09-project-handoff.md), the supplied [hackathon guide PDF](references/Hacker%20Guide%20-%20UCSC%20AI%20Hackathon.pdf) and searchable [guide text](references/Hacker-Guide-UCSC-AI-Hackathon.md), plus offline snapshots of the full [track challenges](references/Track-Challenges-UCSC-AI-Hackathon.md) and [prize breakdown](references/Prizes-UCSC-AI-Hackathon.md). The handoff states the immediate objective: complete as much feasible manipulation and motion training as possible today, then spend tomorrow calibrating/refining on the real SO-101 and integrating camera/voice features. The conversation record excludes tool traces and internal reasoning; machine/hardware data not yet collected is listed as pending rather than invented.
+
 ## Physical AI track status
 
 The AMD challenge's Mission 1 requires a full Hugging Face LeRobot setup on AMD hardware and a real pick-and-place into a bin. This project currently rehearses the task in custom MuJoCo/SB3 simulation; it has not yet been ported to LeRobot or tested on the loaner hardware. Complete and record the real Mission 1 path first, then add XIAO vision and ElevenLabs voice if time permits. The challenge also requires winning teams to publish code, datasets, models, and demo videos publicly on GitHub. This repository stays private during development; see the dated handoff for the eventual public-release checklist and the Mission 2 option.
