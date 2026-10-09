@@ -60,6 +60,21 @@ The gripper mapping is explicit but provisional. Verify joint directions, zeros,
 4. At the venue, inspect the loaner and XIAO, calibrate first, and conduct slow reach/grip/release tests with a physical stop available.
 5. Prioritize real LeRobot setup and one successful physical pick/place for Mission 1. Then update simulation parameters and wire ElevenLabs through an authenticated bridge if time allows. Keep the bridge local by default; do not expose unauthenticated actuator control.
 
+## Laptop choice and LeRobot simulation prep — October 9
+
+For doing LeRobot policy training and SO-101 simulation work today, prefer the laptop with the RTX 5070 Ti and Ryzen 9 AI HX, provided its NVIDIA GPU is visible from a supported Linux environment. LeRobot's training stack supports CUDA on NVIDIA, and LeIsaac's SO-101 simulation integration is built on NVIDIA Isaac Lab/CUDA. The M1 Pro MacBook is a fallback for lighter LeRobot policy training (PyTorch MPS/CPU), dataset inspection, and this repository's existing MuJoCo simulator; it is not the target machine for the Isaac-based LeIsaac setup.
+
+Before committing time to LeIsaac on the laptop, confirm the OS and GPU setup. The documented LeIsaac recipe is Linux-oriented and pins Python 3.11, CUDA toolkit 12.8.1, PyTorch 2.7.0/cu128, LeIsaac with Isaac Lab, and LeRobot 0.4.1. If the laptop is Windows, use a Linux/WSL2 environment only after confirming NVIDIA GPU access and Isaac Sim/Isaac Lab compatibility there. Do not install this stack into the simulator project's `.venv`; keep an isolated environment because the Python and dependency pins differ. References: [LeIsaac × LeRobot setup](https://github.com/huggingface/lerobot/blob/main/docs/source/envhub_leisaac.mdx), [LeRobot installation and CUDA notes](https://github.com/huggingface/lerobot/blob/main/docs/source/installation.mdx).
+
+Suggested sequence on the NVIDIA laptop:
+
+1. Run `nvidia-smi` in the intended Linux shell and confirm the RTX 5070 Ti and a compatible driver are visible. If using WSL2, first verify GPU passthrough there; a Windows NVIDIA driver alone does not prove Isaac Lab works in that environment.
+2. Create a separate Python 3.11 environment and follow the LeIsaac setup pinned in the official integration guide. Smoke-test one provided SO-101 task (for example `so101_pick_orange`) before adapting any task.
+3. Teleoperate the simulated SO-101 and record LeRobot-format demonstrations, then train/evaluate a LeRobot policy. This gives us a policy/data workflow closer to tomorrow's LeRobot hardware path than the current custom SAC checkpoint. The LeIsaac scene/task is separate from our custom MuJoCo scene, so it will not automatically train on our box/bottle/cylinder environment.
+4. If Isaac/LeIsaac setup is blocked or taking too long, pivot to the M1 Pro or NVIDIA laptop's regular Python environment for our existing MuJoCo task and keep preparing the task, vision, and voice layers. Do not spend the remaining work window debugging an unverified graphics stack.
+
+This is a preparation route, not a promise of zero-shot transfer. Tomorrow still requires matching LeRobot action conventions to the loaner, calibrating motors and camera, and validating the real gripper with slow supervised trials. Treat sim-trained checkpoints as starting points to evaluate/refine, not as safe physical-arm commands. The Mac can also train lighter LeRobot policies on MPS, but that does not unlock LeIsaac's NVIDIA Isaac simulation path. Confirm runtime support before relying on either laptop for the final AMD event stack.
+
 ## Provenance
 
 The robot model and STL assets are from TheRobotStudio SO-ARM100 repository and retain its Apache-2.0 license in `so101_sim/model/`. The original hackathon guide provided for this project is in `references/`. Earlier generated run artifacts are preserved under `experiments/archive/`; local virtual environments, caches, and credentials are excluded by `.gitignore`.
