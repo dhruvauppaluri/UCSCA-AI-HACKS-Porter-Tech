@@ -44,4 +44,4 @@ python -m pip install 'setuptools<81' 'wheel==0.43.0'
 python -m pip install --no-build-isolation -e 'source/leisaac[isaaclab]' --extra-index-url https://pypi.nvidia.com
 ```
 
-LeIsaac 0.4.0 / Isaac Lab 2.3.0 requires `packaging<24`; LeRobot 0.4.2 requires `packaging>=24.2`. Keep them in separate environments. The installed simulator reached NVIDIA Omniverse's required license prompt and cannot start until the operator accepts it. Its task run status is recorded in the dated handoff.
+LeIsaac 0.4.0 / Isaac Lab 2.3.0 requires `packaging<24`; LeRobot 0.4.2 requires `packaging>=24.2`. Keep them in separate environments. The operator accepted the Omniverse EULA on 2026-10-10. The next task attempt stalled after Isaac Sim reported no Vulkan graphics device in WSL2. Asset URLs, the exact launch command, and diagnostic output are in the [Isaac launch record](../handoffs/2026-10-10-isaac-launch.md).

@@ -133,5 +133,5 @@
     "contact_teacher_summary": {"episodes": 15, "pick": 2, "lift": 1, "place": 0}
   },
   "pick101_review": "handoffs/2026-10-10-pick101-review.md",
-  "leisaac_status": "Installed in a separate environment; lift-cube launch reached NVIDIA Omniverse EULA prompt. The license was not accepted in this run. MuJoCo fallback used."
+  "leisaac_status": "Installed separately; operator accepted NVIDIA Omniverse EULA on 2026-10-10. Official SO-101 robot and table scene assets downloaded. WSL2 direct lift-cube smoke reached task parsing but stalled before environment creation after Isaac Sim reported no Vulkan graphics device. No Isaac training run; MuJoCo remains the measured fallback. See handoffs/2026-10-10-isaac-launch.md."
 }
