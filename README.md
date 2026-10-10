@@ -2,6 +2,8 @@
 
 **Continuing on a new machine?** Start with the [current handoff](handoffs/START-HERE.md) for the measured status, saved artifacts, real-kit interface gaps, and first physical-arm session. The [resource index](handoffs/resource-links.md) gathers the supplied Google Docs, kit listing, hackathon notebook, source repositories, and setup links.
 
+For the latest contact-grasp dataset, AMD cloud training smoke test, real-arm session order, and NVIDIA Brev credit path, see the [competition execution record](handoffs/2026-10-10-competition-execution.md).
+
 This project rehearses SO-101 pick-and-place in MuJoCo and records synchronized camera, joint-state, and joint-target demonstrations in LeRobot v3 format. It includes ACT training and simulated inference, a Gymnasium environment, bounded controllers, the earlier state-only SAC curriculum, camera adapters, evaluation metrics, and a local command API.
 
 The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101) under Apache 2.0; see `so101_sim/model/LICENSE-APACHE-2.0`. The XIAO stream adapter follows Seeed's [XIAO ESP32-S3 Sense camera example](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/). No physical robot interface is enabled in this package.
@@ -51,6 +53,8 @@ python -m so101_sim.eval_lerobot \
 The evaluation uses 30 fixed-seed episodes across mixed and robust conditions by default and reports pick, lift, place, duration, speed, jerk, and collisions. Its seed ranges are disjoint from the recording seeds. The policy sees only the overhead RGB frame and six joint positions. It outputs six absolute simulated joint targets; the controller limits every step. These radians and the provisional gripper mapping require calibration before use with a real SO-101.
 
 The selected checkpoint from the dated run placed 13/30 objects in its assisted-grasp scene (7/15 mixed, 6/15 robust), but made 0/15 two-finger grasps in the separate pick-101 contact scene. See the [run handoff](handoffs/2026-10-10-lerobot-simulation.md) for per-object results and failure videos. The checkpoint is a simulation baseline for correction, not a ready physical-gripper policy.
+
+The later true-contact cylinder run saved 100 successful LeRobot demonstrations and a 3,000-step ACT checkpoint. On held-out contact starts, that ACT checkpoint placed 0/30, while the scripted controller placed 6/30; on randomized starts they placed 0/15 and 2/15. See the [execution record](handoffs/2026-10-10-competition-execution.md) and [run manifest](repro/run-manifest.json) before using either policy.
 
 For human corrective demonstrations on a machine with a graphical MuJoCo viewer:
 

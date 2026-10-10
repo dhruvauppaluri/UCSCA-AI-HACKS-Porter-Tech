@@ -31,6 +31,8 @@ python -m pip check
 Pass `--dataset.video_backend=pyav` to `lerobot-train` and `video_backend="pyav"` to `LeRobotDataset(...)`. TorchCodec is installed by LeRobot 0.4.2 but cannot load without shared FFmpeg libraries in this WSL image. PyAV successfully decodes the saved videos.
 The selected ACT experiment was trained with [`scripts/train_act_no_vae.sh`](../scripts/train_act_no_vae.sh); the initial VAE experiment used [`scripts/train_act.sh`](../scripts/train_act.sh).
 
+The training script accepts `LEROBOT_DEVICE`, `LEROBOT_STEPS`, `LEROBOT_BATCH_SIZE`, `LEROBOT_NUM_WORKERS`, and `LEROBOT_SAVE_FREQ` environment overrides. On a provisioned AMD ROCm machine, run [`scripts/amd_cloud_smoke.sh`](../scripts/amd_cloud_smoke.sh) after following the event's ROCm setup. It requires a HIP-backed PyTorch GPU, decodes the dataset, loads the checkpoint, and runs a 10-step ACT job. It was validated locally with a two-step NVIDIA CUDA run; AMD cloud execution awaits instance access. See the [competition execution record](../handoffs/2026-10-10-competition-execution.md).
+
 ## LeIsaac setup gate
 
 ```bash
