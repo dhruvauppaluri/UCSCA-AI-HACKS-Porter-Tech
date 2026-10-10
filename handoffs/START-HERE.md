@@ -62,4 +62,5 @@ The AMD hackathon notebook is a **training recipe** for an MI300X/ROCm machine, 
 - [Exact machine-readable run manifest](../repro/run-manifest.json)
 - [Environment reconstruction](../repro/README.md)
 - [Detailed `pick-101` source review](2026-10-10-pick101-review.md)
+- [Isaac SO-ARM101 lift tutorial assessment](2026-10-10-isaac-so-arm101-review.md)
 - [Earlier project and conversation archive](2026-10-09-project-handoff.md)
