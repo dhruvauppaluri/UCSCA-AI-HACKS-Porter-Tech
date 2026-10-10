@@ -1,5 +1,7 @@
 # SO-101 pick-and-place simulator
 
+**Continuing on a new machine?** Start with the [current handoff](handoffs/START-HERE.md) for the measured status, saved artifacts, real-kit interface gaps, and first physical-arm session. The [resource index](handoffs/resource-links.md) gathers the supplied Google Docs, kit listing, hackathon notebook, source repositories, and setup links.
+
 This project rehearses SO-101 pick-and-place in MuJoCo and records synchronized camera, joint-state, and joint-target demonstrations in LeRobot v3 format. It includes ACT training and simulated inference, a Gymnasium environment, bounded controllers, the earlier state-only SAC curriculum, camera adapters, evaluation metrics, and a local command API.
 
 The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101) under Apache 2.0; see `so101_sim/model/LICENSE-APACHE-2.0`. The XIAO stream adapter follows Seeed's [XIAO ESP32-S3 Sense camera example](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/). No physical robot interface is enabled in this package.
