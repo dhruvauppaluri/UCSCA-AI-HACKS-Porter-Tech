@@ -6,6 +6,8 @@ The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.
 
 Project handoff notes and measured checkpoint results are in [`handoffs/2026-10-09-project-handoff.md`](handoffs/2026-10-09-project-handoff.md). Current checkpoints and evaluations are in `trained-v4/`; earlier experiments are preserved with context in `experiments/archive/`. The provided UCSC AI Hackathon guide is in `references/`.
 
+The latest measured leader and follower motor calibrations are saved under [`data/hardware/calibration/`](data/hardware/calibration/README.md), with their capture times and source IDs. They are reference data for mapping the physical arms into simulation; the MuJoCo joint calibration has not yet been changed to match them.
+
 ## Project archive and continuation
 
 The repository includes the searchable [conversation record](handoffs/conversation-record.md), a [handoff/archive map](handoffs/2026-10-09-project-handoff.md), the supplied [hackathon guide PDF](references/Hacker%20Guide%20-%20UCSC%20AI%20Hackathon.pdf) and searchable [guide text](references/Hacker-Guide-UCSC-AI-Hackathon.md), plus offline snapshots of the full [track challenges](references/Track-Challenges-UCSC-AI-Hackathon.md) and [prize breakdown](references/Prizes-UCSC-AI-Hackathon.md). The handoff states the immediate objective: complete as much feasible manipulation and motion training as possible today, then spend tomorrow calibrating/refining on the real SO-101 and integrating camera/voice features. The conversation record excludes tool traces and internal reasoning; machine/hardware data not yet collected is listed as pending rather than invented.
