@@ -1,0 +1,137 @@
+{
+  "run_id": "so101-2026-10-10",
+  "date_local": "2026-10-10",
+  "host": {
+    "os": "Ubuntu 24.04 under WSL2",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "vram_mib": 12227,
+    "driver": "616.92"
+  },
+  "dependency_inventories": {
+    "mujoco": "repro/mujoco-pip-freeze.txt",
+    "lerobot": "repro/lerobot-pip-freeze.txt",
+    "leisaac": "repro/leisaac-pip-freeze.txt"
+  },
+  "versions": {
+    "mujoco": "3.15.0",
+    "lerobot": "0.4.2",
+    "torch_cuda": "2.7.0+cu128",
+    "isaac_lab": "2.3.0",
+    "leisaac_commit": "24d3bcd3f1e4585740fc79921782c41617237812",
+    "pick101_commit": "c9d5400ffa0b742fe58a65750fed7982008450d9"
+  },
+  "simulator": {
+    "training_scene": "so101_sim/model/scene_pick_place.xml",
+    "contact_transfer_scene": "so101_sim/model/scene_contact_pick_place.xml",
+    "control_hz": 20,
+    "camera_width": 160,
+    "camera_height": 120,
+    "camera_source": "overhead",
+    "assisted_grasp_in_training": true,
+    "contact_transfer_requires_two_pad_contact": true,
+    "randomization_ranges": {
+      "mixed": {
+        "object_xy_m": 0.04,
+        "tray_xy_m": 0.02,
+        "object_size_fraction": 0.1,
+        "object_mass_fraction": 0.25,
+        "object_friction_fraction": 0.25,
+        "servo_gain_fraction": 0.1,
+        "joint_damping_fraction": 0.15,
+        "joint_sensor_bias_rad": 0.008,
+        "camera_tilt_deg": 3.0,
+        "action_delay_steps_inclusive": [0, 2]
+      },
+      "robust": {
+        "object_xy_m": 0.045,
+        "tray_xy_m": 0.0225,
+        "object_size_fraction": 0.12,
+        "object_mass_fraction": 0.3,
+        "object_friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0,
+        "action_delay_steps_inclusive": [0, 2]
+      },
+      "recorded_camera_effects": {
+        "jpeg_quality_inclusive": [38, 80],
+        "brightness_fraction": 0.15,
+        "blur_probability": 0.1,
+        "perspective_jitter_pixels": 2,
+        "frame_drop_probability": 0,
+        "frame_delay": 0
+      }
+    }
+  },
+  "dataset": {
+    "artifact_path": "artifacts/so101-2026-10-10/dataset",
+    "repo_id": "local/so101-mujoco-robust-60-v3",
+    "format": "LeRobot v3",
+    "successful_episodes": 60,
+    "frames": 3314,
+    "attempts": 71,
+    "failed_attempts_separate": 11,
+    "successes_by_object": {"box": 20, "bottle": 20, "cylinder": 20},
+    "training_seed_bases": {"box": 20000, "bottle": 30000, "cylinder": 40000},
+    "attempts_log": "artifacts/so101-2026-10-10/attempts.json",
+    "collection_command": "python -m so101_sim.collect_lerobot --out runs/2026-10-09/lerobot-robust-60-v3 --repo-id local/so101-mujoco-robust-60-v3 --stage robust --successes-per-object 20 --max-attempts-per-object 80 --seed 20000"
+  },
+  "act_training": {
+    "command": "bash scripts/train_act.sh runs/2026-10-09/lerobot-robust-60-v3 local/so101-mujoco-robust-60-v3 runs/2026-10-09/act-robust-60",
+    "seed": 20261010,
+    "steps": 4000,
+    "batch_size": 16,
+    "model_parameters": 17131526,
+    "final_logged_loss": 0.308,
+    "checkpoint_steps": [1000, 2000, 3000, 4000],
+    "checkpoint_artifact_dir": "artifacts/so101-2026-10-10/act_checkpoints",
+    "training_log": "artifacts/so101-2026-10-10/act_training.log",
+    "selection_placement": {"step_1000": "1/6", "step_2000": "1/6", "step_3000": "1/6", "step_4000": "0/6"}
+  },
+  "act_no_vae_training": {
+    "command": "bash scripts/train_act_no_vae.sh runs/2026-10-09/lerobot-robust-60-v3 local/so101-mujoco-robust-60-v3 runs/2026-10-09/act-no-vae-robust-60",
+    "seed": 20261010,
+    "steps": 4000,
+    "batch_size": 16,
+    "use_vae": false,
+    "chunk_size": 32,
+    "n_action_steps": 8,
+    "selected_checkpoint_step": 2000,
+    "selected_checkpoint": "artifacts/so101-2026-10-10/act_no_vae_checkpoints/002000",
+    "last_checkpoint": "artifacts/so101-2026-10-10/act_no_vae_checkpoints/004000",
+    "selection_placement": {"step_2000": "3/6", "step_4000": "2/6"}
+  },
+  "evaluation": {
+    "selection_seed_base": 80000,
+    "selection_episodes_per_checkpoint": 6,
+    "final_seed_base": 60000,
+    "final_mixed_seeds": "60000-60204",
+    "final_robust_seeds": "70000-70204",
+    "final_episodes": 30,
+    "selected_act_command": "python -m so101_sim.eval_lerobot --dataset artifacts/so101-2026-10-10/dataset --repo-id local/so101-mujoco-robust-60-v3 --checkpoint artifacts/so101-2026-10-10/act_no_vae_checkpoints/002000 --out artifacts/so101-2026-10-10/evaluations/act-no-vae-heldout-30.json --video-dir artifacts/so101-2026-10-10/videos/act-no-vae-heldout --episodes-per-object 5 --stages mixed robust --seed 60000",
+    "selected_act_result": {
+      "file": "artifacts/so101-2026-10-10/evaluations/act-no-vae-heldout-30.json",
+      "mixed": {"episodes": 15, "pick": 7, "lift": 7, "place": 7},
+      "robust": {"episodes": 15, "pick": 6, "lift": 6, "place": 6},
+      "overall": {"episodes": 30, "place": 13}
+    },
+    "selected_act_videos": "artifacts/so101-2026-10-10/videos/act-no-vae-heldout",
+    "selected_act_video_count": 12,
+    "contact_act_command": "python -m so101_sim.eval_lerobot --dataset artifacts/so101-2026-10-10/dataset --repo-id local/so101-mujoco-robust-60-v3 --checkpoint artifacts/so101-2026-10-10/act_no_vae_checkpoints/002000 --out artifacts/so101-2026-10-10/evaluations/act-no-vae-pick101-contact-robust-15.json --video-dir artifacts/so101-2026-10-10/videos/act-pick101-contact --episodes-per-object 5 --stages robust --seed 70000 --physics-variant pick101_contact",
+    "contact_act_result": {
+      "file": "artifacts/so101-2026-10-10/evaluations/act-no-vae-pick101-contact-robust-15.json",
+      "episodes": 15,
+      "two_pad_pick": 0,
+      "lift": 0,
+      "place": 0,
+      "failure_videos": "artifacts/so101-2026-10-10/videos/act-pick101-contact"
+    },
+    "baseline_dir": "artifacts/so101-2026-10-10/evaluations",
+    "contact_teacher_file": "artifacts/so101-2026-10-10/evaluations/pick101-contact-teacher-robust-15.json",
+    "contact_teacher_command": "python -m so101_sim.eval_expert --out runs/2026-10-09/pick101-contact-teacher-robust-15.json --episodes-per-object 5 --stages robust --seed 70000 --physics-variant pick101_contact",
+    "contact_teacher_summary": {"episodes": 15, "pick": 2, "lift": 1, "place": 0}
+  },
+  "pick101_review": "handoffs/2026-10-10-pick101-review.md",
+  "leisaac_status": "Installed in a separate environment; lift-cube launch reached NVIDIA Omniverse EULA prompt. The license was not accepted in this run. MuJoCo fallback used."
+}

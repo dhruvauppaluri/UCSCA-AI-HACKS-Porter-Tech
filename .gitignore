@@ -22,3 +22,4 @@ secrets.json
 
 # Default local run location; named, reviewed runs in this repository remain tracked.
 runs/
+MUJOCO_LOG.TXT

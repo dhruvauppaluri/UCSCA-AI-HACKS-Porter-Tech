@@ -1,10 +1,13 @@
 # SO-101 pick-and-place simulator
 
-This project trains a MuJoCo SO-101 arm to move a small box, bottle, or cylindrical container into a tray. It includes a Gymnasium environment, bounded Cartesian controller, SAC curriculum, camera adapters, a color-coded prototype detector, evaluation metrics, and a local command API.
+This project rehearses SO-101 pick-and-place in MuJoCo and records synchronized camera, joint-state, and joint-target demonstrations in LeRobot v3 format. It includes ACT training and simulated inference, a Gymnasium environment, bounded controllers, the earlier state-only SAC curriculum, camera adapters, evaluation metrics, and a local command API.
 
 The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101) under Apache 2.0; see `so101_sim/model/LICENSE-APACHE-2.0`. The XIAO stream adapter follows Seeed's [XIAO ESP32-S3 Sense camera example](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/). No physical robot interface is enabled in this package.
 
-Project handoff notes and measured checkpoint results are in [`handoffs/2026-10-09-project-handoff.md`](handoffs/2026-10-09-project-handoff.md). Current checkpoints and evaluations are in `trained-v4/`; earlier experiments are preserved with context in `experiments/archive/`. The provided UCSC AI Hackathon guide is in `references/`.
+An optional contact-based variant adopts the finger pads and robot model from [ggand0/pick-101](https://github.com/ggand0/pick-101), with attribution and MIT notice in [`so101_sim/model/PICK101-ATTRIBUTION.md`](so101_sim/model/PICK101-ATTRIBUTION.md). Pass `--physics-variant pick101_contact` to `so101_sim.eval_lerobot` to evaluate without the assisted grasp proxy. This is a separate transfer check; it uses different grasp physics and a shifted tool site, so compare its results separately from the training scene.
+The [pick-101 review](handoffs/2026-10-10-pick101-review.md) explains its reported 2-million-frame lift result and the exact pieces adopted here.
+
+The original handoff is in [`handoffs/2026-10-09-project-handoff.md`](handoffs/2026-10-09-project-handoff.md); the LeRobot run record is in [`handoffs/2026-10-10-lerobot-simulation.md`](handoffs/2026-10-10-lerobot-simulation.md). Earlier checkpoints remain in `trained-v4/`; exact package inventories are in `repro/`. The provided UCSC AI Hackathon guide is in `references/`.
 
 ## Project archive and continuation
 
@@ -12,7 +15,7 @@ The repository includes the searchable [conversation record](handoffs/conversati
 
 ## Physical AI track status
 
-The AMD challenge's Mission 1 requires a full Hugging Face LeRobot setup on AMD hardware and a real pick-and-place into a bin. This project currently rehearses the task in custom MuJoCo/SB3 simulation; it has not yet been ported to LeRobot or tested on the loaner hardware. Complete and record the real Mission 1 path first, then add XIAO vision and ElevenLabs voice if time permits. The challenge also requires winning teams to publish code, datasets, models, and demo videos publicly on GitHub. This repository stays private during development; see the dated handoff for the eventual public-release checklist and the Mission 2 option.
+The AMD challenge's Mission 1 requires a full Hugging Face LeRobot setup on AMD hardware and a real pick-and-place into a bin. This repository now has a LeRobot simulation data, training, and inference path, but no loaner-arm trial has been run. The simulated joint radians, assisted grasp proxy, and NVIDIA GPU run do not establish real-arm or AMD challenge compliance. Complete and record the real Mission 1 path first, then add XIAO vision and ElevenLabs voice if time permits. This repository stays private during development; see the dated handoff for the eventual public-release checklist and the Mission 2 option.
 
 ## Install
 
@@ -24,6 +27,36 @@ python3 -m venv .venv
 ```
 
 MuJoCo image rendering on macOS needs access to the desktop graphics session. State-based training and tests do not render images.
+
+## LeRobot simulation loop
+
+Use the separate Linux environments in [`repro/README.md`](repro/README.md). The LeRobot commands below run inside the `so101-lerobot` environment. The saved training data contains successful scripted demonstrations; failed attempts are listed in a neighboring `*-attempts.json` file.
+
+```bash
+python -m so101_sim.collect_lerobot \
+  --out runs/lerobot-robust-60 --repo-id local/so101-mujoco-robust-60 \
+  --stage robust --successes-per-object 20 --seed 20000
+
+bash scripts/train_act_no_vae.sh runs/lerobot-robust-60 \
+  local/so101-mujoco-robust-60 runs/act-robust
+
+python -m so101_sim.eval_lerobot \
+  --dataset runs/lerobot-robust-60 --repo-id local/so101-mujoco-robust-60 \
+  --checkpoint runs/act-robust/checkpoints/002000/pretrained_model \
+  --out runs/act-robust/heldout.json --video-dir runs/act-robust/videos
+```
+
+The evaluation uses 30 fixed-seed episodes across mixed and robust conditions by default and reports pick, lift, place, duration, speed, jerk, and collisions. Its seed ranges are disjoint from the recording seeds. The policy sees only the overhead RGB frame and six joint positions. It outputs six absolute simulated joint targets; the controller limits every step. These radians and the provisional gripper mapping require calibration before use with a real SO-101.
+
+The selected checkpoint from the dated run placed 13/30 objects in its assisted-grasp scene (7/15 mixed, 6/15 robust), but made 0/15 two-finger grasps in the separate pick-101 contact scene. See the [run handoff](handoffs/2026-10-10-lerobot-simulation.md) for per-object results and failure videos. The checkpoint is a simulation baseline for correction, not a ready physical-gripper policy.
+
+For human corrective demonstrations on a machine with a graphical MuJoCo viewer:
+
+```bash
+python -m so101_sim.teleop_lerobot \
+  --out runs/keyboard-lerobot --repo-id local/so101-mujoco-keyboard \
+  --stage robust --episodes 10 --seed 30000
+```
 
 ## Train
 
