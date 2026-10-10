@@ -1,0 +1,3907 @@
+[
+  {
+    "object": "box",
+    "attempt": 0,
+    "seed": 20000,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 55,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0064294624754089,
+      "object_mass_kg": 0.03102997821338309,
+      "friction_scale": 0.7141965083156493,
+      "servo_gain_scale": [
+        1.0559249626907496,
+        1.0552969880018859,
+        0.897159885220831,
+        0.8655542002446841,
+        0.8539026929658504,
+        1.0197525605716817
+      ],
+      "joint_damping_scale": [
+        1.1674095295906544,
+        0.8641366269860751,
+        0.9517456690410655,
+        1.1996229113742467,
+        1.061456446601998,
+        1.153406089123811
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.008341309516728526,
+        -0.014001953735617268,
+        0.0142593368573341,
+        -0.011154528198186436,
+        0.01468925824081635,
+        -0.009252328936696953
+      ],
+      "camera_tilt_rad": [
+        -0.06098056525490202,
+        0.06457383781575797
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 1,
+    "seed": 20001,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 56,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.8966052554742017,
+      "object_mass_kg": 0.029420102545253388,
+      "friction_scale": 1.2761727607273992,
+      "servo_gain_scale": [
+        0.9744405843371032,
+        1.0205757880869453,
+        0.9509449394096297,
+        1.0206065966300872,
+        1.1300055913082612,
+        1.0508178222553468
+      ],
+      "joint_damping_scale": [
+        1.0644459220439444,
+        1.153963627114158,
+        0.7536967741601951,
+        0.7525324159138866,
+        1.111276941351035,
+        1.0897186915802188
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.001305473707856903,
+        0.010700441118103237,
+        -0.011044660663090757,
+        0.006208611093769075,
+        -0.010414697428597882,
+        0.010403976830787302
+      ],
+      "camera_tilt_rad": [
+        -0.05956015988540661,
+        -0.07293715458938803
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 2,
+    "seed": 20002,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0681987674435913,
+      "object_mass_kg": 0.017826987753133027,
+      "friction_scale": 1.170604032740236,
+      "servo_gain_scale": [
+        0.8763377531102825,
+        0.8845104823568855,
+        0.993998506023195,
+        1.0584417133192778,
+        1.0760844310746476,
+        1.1357592459093944
+      ],
+      "joint_damping_scale": [
+        1.1971557746964074,
+        0.8805029163769962,
+        1.1499854784618047,
+        0.8411791168794645,
+        1.0411142711331687,
+        1.1368379078496624
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.003054185734344487,
+        0.0070915761167640486,
+        0.007332948114343967,
+        0.0011464964345028958,
+        0.0015844594912509564,
+        0.011181861123110703
+      ],
+      "camera_tilt_rad": [
+        0.03098649870001792,
+        -0.011248449783970091
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 3,
+    "seed": 20003,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 58,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9634116642619767,
+      "object_mass_kg": 0.023696659508704115,
+      "friction_scale": 1.2187190206309646,
+      "servo_gain_scale": [
+        1.0293710955950826,
+        0.8981324699457085,
+        0.9644710587715997,
+        1.0312118255217548,
+        1.0481188676481517,
+        0.9717402580558394
+      ],
+      "joint_damping_scale": [
+        0.7897990336941133,
+        1.0706045169461884,
+        1.0896061404528212,
+        1.1748304792389814,
+        0.8714862558994587,
+        1.2457475541532528
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.01263829546802888,
+        0.008273794918333525,
+        -0.01496194332982529,
+        0.013103056281571459,
+        0.014985430259269988,
+        -0.011237630177127865
+      ],
+      "camera_tilt_rad": [
+        0.0054577637249556415,
+        0.0176163439741103
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 4,
+    "seed": 20004,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 60,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0367400494579213,
+      "object_mass_kg": 0.02711496864143517,
+      "friction_scale": 0.7100647453204482,
+      "servo_gain_scale": [
+        1.03729276983865,
+        1.081956831735997,
+        1.0886131153547924,
+        0.8516380647925376,
+        1.064767923355607,
+        1.0357040722782005
+      ],
+      "joint_damping_scale": [
+        1.0436671041382728,
+        1.0179185330801823,
+        0.9535518979612461,
+        0.7661401910006761,
+        0.8266497512890638,
+        1.0140519753033863
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.008470116528739576,
+        -0.004404730185999319,
+        0.009737764512466076,
+        0.008484348153438487,
+        -0.007309245918882365,
+        0.0008373430975461317
+      ],
+      "camera_tilt_rad": [
+        -0.07022824108848544,
+        0.051834893617512826
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 5,
+    "seed": 20005,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9721597641651328,
+      "object_mass_kg": 0.021870701502315713,
+      "friction_scale": 1.2491579344222383,
+      "servo_gain_scale": [
+        1.057393154507983,
+        1.0599538052290305,
+        1.053946406197896,
+        0.8882856410745241,
+        0.9893879956031211,
+        1.1488657709840904
+      ],
+      "joint_damping_scale": [
+        1.223094377834953,
+        0.9640669710928813,
+        0.7980858722357282,
+        1.0169265022744176,
+        1.0252728018989188,
+        1.1574998527382503
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.004369440384324415,
+        0.013947825171827653,
+        0.010115092152774011,
+        -0.010100851308894964,
+        0.0038774270683625857,
+        -0.002316131752061086
+      ],
+      "camera_tilt_rad": [
+        0.01029058352682781,
+        -0.025405102181926625
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 6,
+    "seed": 20006,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 51,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9267096470813418,
+      "object_mass_kg": 0.018560956365253758,
+      "friction_scale": 0.7838936591634527,
+      "servo_gain_scale": [
+        1.118747224582397,
+        0.8880800156428991,
+        0.9563915817138487,
+        0.8908402362901762,
+        0.9142723593757068,
+        1.0799006313283162
+      ],
+      "joint_damping_scale": [
+        1.0321593891517398,
+        1.1987833908284955,
+        0.8110968890636062,
+        0.8998552980795206,
+        1.0679616151843905,
+        1.1765127881707813
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.00281532079249632,
+        0.01353434977945426,
+        0.00527392649363552,
+        0.004302265776727907,
+        0.003869956186825993,
+        0.003323040151912704
+      ],
+      "camera_tilt_rad": [
+        -0.03468384820612239,
+        -0.021769930957893036
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 7,
+    "seed": 20007,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0762121695171123,
+      "object_mass_kg": 0.020675156920064938,
+      "friction_scale": 1.2914225376875517,
+      "servo_gain_scale": [
+        1.0984955485873482,
+        0.9445021106580329,
+        1.054295024322367,
+        1.0959604404268068,
+        0.8853455097909495,
+        0.9868857648489349
+      ],
+      "joint_damping_scale": [
+        0.9963373487084527,
+        0.777093553399572,
+        1.1580182069486609,
+        0.7981043427659735,
+        1.1770530552533238,
+        1.1536302698502996
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.011528530657986744,
+        -0.0021762585841629285,
+        0.011204430008473893,
+        0.0028829899461889977,
+        0.002860394375704272,
+        0.004063568398596642
+      ],
+      "camera_tilt_rad": [
+        -0.08217646597261327,
+        -0.011667357286027608
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 8,
+    "seed": 20008,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 53,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.1018169105391817,
+      "object_mass_kg": 0.02750379789464894,
+      "friction_scale": 1.1795099179208397,
+      "servo_gain_scale": [
+        0.9726288676892525,
+        0.9943553958251171,
+        1.0188089371841103,
+        1.1000964504488238,
+        0.9417522988443567,
+        0.9574644842003196
+      ],
+      "joint_damping_scale": [
+        1.0745001593804988,
+        0.9310826928454579,
+        0.8759035287234975,
+        1.1494948303747952,
+        1.0354146666664912,
+        0.9579633965454466
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.003895176027548672,
+        -0.00767432429169231,
+        -0.00594147062849594,
+        0.011829475354633006,
+        0.013017035741696065,
+        -0.0008621906952664821
+      ],
+      "camera_tilt_rad": [
+        0.04657179173293634,
+        0.07383849463014379
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 9,
+    "seed": 20009,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 47,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9639482962566724,
+      "object_mass_kg": 0.02329910067834894,
+      "friction_scale": 0.9948143612125305,
+      "servo_gain_scale": [
+        0.9093104026756392,
+        0.9182507096419099,
+        0.8835659390860874,
+        0.8756393935358703,
+        0.9378685741539677,
+        1.1277261240431649
+      ],
+      "joint_damping_scale": [
+        0.9162442849789425,
+        0.7543184806019355,
+        1.0995854704705526,
+        1.1719398129178702,
+        0.8419740167861851,
+        1.2077344540103119
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.010641137425223456,
+        0.013665264762617837,
+        -0.0026978643641389737,
+        -0.0005569330856214603,
+        -0.008390088251982824,
+        -0.008630239072204008
+      ],
+      "camera_tilt_rad": [
+        0.018425666266816812,
+        0.0031717503815270748
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 10,
+    "seed": 20010,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 47,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0445020220196917,
+      "object_mass_kg": 0.01881003957537976,
+      "friction_scale": 1.2518911803619897,
+      "servo_gain_scale": [
+        1.0779508744559978,
+        0.8914042940248108,
+        0.9750852377669652,
+        0.9926892969686443,
+        0.8534136861060054,
+        1.0806075801515322
+      ],
+      "joint_damping_scale": [
+        1.242033771962118,
+        0.9560612088245946,
+        0.9712578941114676,
+        1.0545011450089807,
+        0.8235939204105369,
+        0.9785520704812358
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.005833762267788013,
+        0.011322204738866058,
+        -0.007508248778271046,
+        -0.004150797747840985,
+        0.005113229218955025,
+        -0.007991178033354137
+      ],
+      "camera_tilt_rad": [
+        0.06304449792068186,
+        -0.0733436126055313
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 11,
+    "seed": 20011,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 58,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9012285973588119,
+      "object_mass_kg": 0.02168965431458486,
+      "friction_scale": 0.7189919473723692,
+      "servo_gain_scale": [
+        0.99993783417207,
+        0.94707029164506,
+        1.0424324727821863,
+        0.9330049022110882,
+        1.1133539400826138,
+        0.8788348006456107
+      ],
+      "joint_damping_scale": [
+        0.8669635055848987,
+        1.0439848340089626,
+        0.9604274488043032,
+        1.1056538815547825,
+        0.8301688166798262,
+        0.7741404664709601
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.0011866261844809996,
+        -0.011054528109529088,
+        0.004900050877481972,
+        -0.0055972921912131185,
+        -0.014406447527205938,
+        0.011613129633380296
+      ],
+      "camera_tilt_rad": [
+        -0.03742711694421308,
+        -0.04554134723728481
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 12,
+    "seed": 20012,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 50,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.8874100420448903,
+      "object_mass_kg": 0.022657059066410797,
+      "friction_scale": 0.9905041942512569,
+      "servo_gain_scale": [
+        1.142025706319366,
+        1.1457470968611638,
+        0.8945231333811994,
+        0.9515495270850135,
+        0.9878186564506117,
+        1.1083709437867184
+      ],
+      "joint_damping_scale": [
+        0.8533458407452826,
+        1.1199883379044029,
+        0.8737102737744541,
+        0.9369842219996041,
+        0.7607627057046347,
+        0.9996945086874136
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.005749250619349725,
+        -0.011019106711539599,
+        -0.01070932213130928,
+        -0.0035254056208957434,
+        -0.010174525105713879,
+        -0.007650709480876785
+      ],
+      "camera_tilt_rad": [
+        0.05711444916805726,
+        0.06337533340900071
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 13,
+    "seed": 20013,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 46,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0732644471211314,
+      "object_mass_kg": 0.02944892621908342,
+      "friction_scale": 0.7188960548703085,
+      "servo_gain_scale": [
+        0.9382929048985672,
+        0.8884225967656794,
+        1.0005557646923753,
+        0.9431922296762277,
+        0.9217220581899775,
+        0.996951752509571
+      ],
+      "joint_damping_scale": [
+        1.0785123019744127,
+        0.9816687770796064,
+        1.0848132197095852,
+        1.1053595858194813,
+        0.8162724083636869,
+        0.8358087788141177
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.0015787051204436998,
+        -0.004018295066702544,
+        0.0032059654273243164,
+        -0.006954268954386418,
+        0.007655203267736055,
+        -0.008651070806284994
+      ],
+      "camera_tilt_rad": [
+        0.012683340429328796,
+        -0.028857228369612888
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 14,
+    "seed": 20014,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.077271318825423,
+      "object_mass_kg": 0.023478446447657366,
+      "friction_scale": 0.845988346995987,
+      "servo_gain_scale": [
+        1.0802065342031655,
+        1.0238896747058086,
+        0.9541799371358378,
+        1.1461753300541118,
+        1.0230256741283454,
+        0.8604082647418537
+      ],
+      "joint_damping_scale": [
+        1.0690840845010396,
+        1.0919557061875311,
+        1.0084484452033757,
+        0.9838746465386992,
+        0.7518665874220698,
+        0.965253205241308
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.006538084037346653,
+        0.013135205821141097,
+        0.01281069796669488,
+        0.0063307328521724805,
+        -0.006373892506888572,
+        0.004571070849662625
+      ],
+      "camera_tilt_rad": [
+        0.045254375569659624,
+        0.07153160277930108
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 15,
+    "seed": 20015,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.02552622199486,
+      "object_mass_kg": 0.029926855430444477,
+      "friction_scale": 0.7932139935638436,
+      "servo_gain_scale": [
+        0.9339904504445742,
+        1.0769650343372947,
+        0.8986085342195435,
+        1.1002218529131966,
+        1.1214304000918038,
+        1.020667498821791
+      ],
+      "joint_damping_scale": [
+        0.9415611087623412,
+        1.235420692165635,
+        1.1476360864118702,
+        1.1873999339170354,
+        0.7748597760468966,
+        0.9158093086303574
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.014033294933446083,
+        -0.013707779652129356,
+        0.013286541607411152,
+        -0.007424918805677046,
+        -0.0005232172880757606,
+        0.0018286255769483124
+      ],
+      "camera_tilt_rad": [
+        0.03787563976322249,
+        -0.06531986342464673
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 16,
+    "seed": 20016,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 63,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9856560266598511,
+      "object_mass_kg": 0.018064931019583546,
+      "friction_scale": 1.1805413546662133,
+      "servo_gain_scale": [
+        1.1219217518624731,
+        0.883040258774887,
+        1.0516276040298425,
+        1.1407763274181963,
+        0.910918409804126,
+        1.0243746594164824
+      ],
+      "joint_damping_scale": [
+        1.1506401868835778,
+        0.8001830089940266,
+        1.0702681437291344,
+        0.7622538441814215,
+        0.876525710344465,
+        0.7828323631850378
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.006286600305420862,
+        -0.009776759805072454,
+        0.006193793045738517,
+        -0.009320759102853331,
+        -0.0015104547694511344,
+        -0.009051667238661982
+      ],
+      "camera_tilt_rad": [
+        0.08300100614331325,
+        -0.059967621256561895
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 17,
+    "seed": 20017,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9910065489980473,
+      "object_mass_kg": 0.02773395424041185,
+      "friction_scale": 1.0928369797016861,
+      "servo_gain_scale": [
+        0.9773066673285389,
+        1.028256055237594,
+        0.8502020373749375,
+        1.0718874026326788,
+        1.0656614386948544,
+        1.094642450855772
+      ],
+      "joint_damping_scale": [
+        1.234913340253004,
+        0.8437990827469279,
+        1.233841306295882,
+        0.7570535695712542,
+        0.819670475988981,
+        0.934353905627252
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.005171314393354595,
+        0.011048584981981757,
+        -0.006055877972887241,
+        -0.006236244506021735,
+        -0.002842291129495274,
+        0.012677820664281057
+      ],
+      "camera_tilt_rad": [
+        -0.036488750469274585,
+        0.044452489707709306
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 18,
+    "seed": 20018,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9743670141326686,
+      "object_mass_kg": 0.02422060220300991,
+      "friction_scale": 1.0359366942186061,
+      "servo_gain_scale": [
+        1.0195857792495784,
+        1.0829734965792854,
+        0.9438716976461413,
+        0.9233853806247503,
+        0.9998537718823998,
+        0.9115356615252508
+      ],
+      "joint_damping_scale": [
+        1.1874287557253502,
+        1.0507322306205522,
+        1.1272289120830246,
+        1.1931661435525691,
+        0.9886165832231263,
+        1.1807803188581332
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.002076163488008636,
+        -0.004371518791232178,
+        0.01415099670397029,
+        0.008745150270426771,
+        0.009022519997030649,
+        0.01015570967608138
+      ],
+      "camera_tilt_rad": [
+        -0.020031294402693342,
+        0.05602458715634444
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 19,
+    "seed": 20019,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 54,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9058573897586242,
+      "object_mass_kg": 0.023160328633378725,
+      "friction_scale": 0.7417956556414329,
+      "servo_gain_scale": [
+        1.0672056800312044,
+        1.1054034710420189,
+        1.0826559350678653,
+        1.0118688607443136,
+        0.8757834041955311,
+        1.036345912835446
+      ],
+      "joint_damping_scale": [
+        0.994388157314573,
+        1.0308615350591386,
+        1.1450286517238086,
+        1.0423940476609397,
+        0.9114525236022574,
+        0.95926365074899
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.007196545449122458,
+        -0.004123191086966117,
+        -0.003847237019884868,
+        0.006577932810755676,
+        -0.004366921500970651,
+        0.002175248574611717
+      ],
+      "camera_tilt_rad": [
+        -0.045228073391420244,
+        -0.03791466257555266
+      ]
+    }
+  },
+  {
+    "object": "box",
+    "attempt": 20,
+    "seed": 20020,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 51,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9692400453590886,
+      "object_mass_kg": 0.025826878300399883,
+      "friction_scale": 0.8936530408222608,
+      "servo_gain_scale": [
+        1.0574273142340465,
+        1.135482258296197,
+        1.125164888478439,
+        0.8680842921743205,
+        1.0320578237341491,
+        0.9750605172852173
+      ],
+      "joint_damping_scale": [
+        1.0766035273712962,
+        0.7778478679445782,
+        0.8889980856256432,
+        1.0537682898642047,
+        0.8959272476094143,
+        1.1801905378935948
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.008927162961853257,
+        -0.012295820211574764,
+        -0.0109735524007195,
+        0.0033605938241241667,
+        -0.014590272029983807,
+        -0.012940513149528134
+      ],
+      "camera_tilt_rad": [
+        0.08395489381357436,
+        -0.008390237896986744
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 0,
+    "seed": 30000,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 70,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.952152038005512,
+      "object_mass_kg": 0.026733776588215376,
+      "friction_scale": 0.769641686738398,
+      "servo_gain_scale": [
+        0.9677576100174214,
+        0.9017351796972025,
+        0.9686815174727778,
+        1.0384020339210405,
+        0.9404539877284515,
+        1.1029429552323888
+      ],
+      "joint_damping_scale": [
+        0.9415920173713104,
+        1.0470796786112013,
+        0.8482041968112027,
+        1.0017809211508841,
+        1.2024975971020464,
+        1.2380775310168972
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.00033303923358988727,
+        0.002901085799681815,
+        -0.004299839531518416,
+        0.006067641214021299,
+        7.567958154197467e-05,
+        -0.0021443051509610605
+      ],
+      "camera_tilt_rad": [
+        -0.07640884356436455,
+        0.049778600548923926
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 1,
+    "seed": 30001,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9667136406033779,
+      "object_mass_kg": 0.03037260219431639,
+      "friction_scale": 1.0030832306603124,
+      "servo_gain_scale": [
+        1.0402839991552975,
+        1.1140945103009778,
+        0.9310016344249833,
+        0.8917716537516175,
+        0.8743729536311359,
+        0.9232881773497599
+      ],
+      "joint_damping_scale": [
+        0.8004140837748193,
+        0.9227221875645821,
+        0.9777350014943696,
+        0.7584095084832003,
+        0.9751003359754904,
+        1.2381182759889355
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.011634915854184334,
+        -0.01410837381626566,
+        0.010507357630939722,
+        -0.0011771704262273901,
+        -0.012270250038808548,
+        0.0003289869240474391
+      ],
+      "camera_tilt_rad": [
+        -0.06611509276996995,
+        -0.040122891236319
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 2,
+    "seed": 30002,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9657225702987119,
+      "object_mass_kg": 0.032286072107237086,
+      "friction_scale": 0.9573942348633308,
+      "servo_gain_scale": [
+        1.0321988844112087,
+        1.0877352414756742,
+        1.1318720377805336,
+        0.9098144493141394,
+        0.9780724351792494,
+        0.9338372334455538
+      ],
+      "joint_damping_scale": [
+        1.0282147360877278,
+        1.0214345373749707,
+        1.2151731848941307,
+        0.8887287099382369,
+        1.1758316033005125,
+        1.1610195771202088
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.01013056542944454,
+        0.013270353632129857,
+        -0.009922310398130754,
+        0.0053695089077881765,
+        -0.0036849509185534705,
+        0.010070080089356122
+      ],
+      "camera_tilt_rad": [
+        0.028112074868842887,
+        -0.0675698250166682
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 3,
+    "seed": 30003,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 51,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0955212044943317,
+      "object_mass_kg": 0.028489866966788093,
+      "friction_scale": 0.7272689346748767,
+      "servo_gain_scale": [
+        0.9328796819592382,
+        1.1156962329975482,
+        1.0028302268257006,
+        1.0232758761780418,
+        0.9826247871765137,
+        1.0623128431261966
+      ],
+      "joint_damping_scale": [
+        0.8335702825495022,
+        0.9470052511112176,
+        1.0065547714951515,
+        0.9742997445996364,
+        0.8087959907688231,
+        1.0538083493834045
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.005808944339363204,
+        0.004707159112338776,
+        -0.014643555242636134,
+        0.014223010262042056,
+        0.0026800696438888973,
+        -0.0006149815161052043
+      ],
+      "camera_tilt_rad": [
+        -0.02800606368651714,
+        -0.0002441055283024518
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 4,
+    "seed": 30004,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9257692962792964,
+      "object_mass_kg": 0.029563075032475607,
+      "friction_scale": 0.8699138132290614,
+      "servo_gain_scale": [
+        1.1136754719993316,
+        1.0566399510324502,
+        1.113452493040859,
+        0.9880412533586024,
+        0.9387210707348136,
+        1.0649075064443125
+      ],
+      "joint_damping_scale": [
+        1.1559256521646015,
+        1.0628042288524553,
+        1.06492938385328,
+        1.2392933816410463,
+        1.2010849396983758,
+        1.170532170852205
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.008789147397822876,
+        -0.00040826584360541436,
+        -0.006101248205283141,
+        -0.012910333672122833,
+        -0.014755033581389996,
+        0.008857253183980365
+      ],
+      "camera_tilt_rad": [
+        0.07133277075352586,
+        -0.06901189007048278
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 5,
+    "seed": 30005,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9523995779362147,
+      "object_mass_kg": 0.03220101007331653,
+      "friction_scale": 0.9440936630223304,
+      "servo_gain_scale": [
+        0.9892459975812504,
+        1.0736335309940002,
+        1.0391055233417514,
+        1.085916656513342,
+        1.0516230970616558,
+        0.9594229085004408
+      ],
+      "joint_damping_scale": [
+        0.9123450972653653,
+        0.8448269659547705,
+        0.8002065892879087,
+        0.7531544511119208,
+        1.2087644882432373,
+        1.2022750177078623
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.00829469579604811,
+        -0.0022123714078459474,
+        0.009277923619709944,
+        0.005620985078166531,
+        -0.012473873172305994,
+        0.008013838704161714
+      ],
+      "camera_tilt_rad": [
+        0.04640003852898998,
+        -0.02026954160794313
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 6,
+    "seed": 30006,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.8863674905023341,
+      "object_mass_kg": 0.02565281910114428,
+      "friction_scale": 0.9326058948877646,
+      "servo_gain_scale": [
+        0.8656813772727201,
+        1.067780884334522,
+        0.9274197357230881,
+        0.9203328349614173,
+        0.8686012948827727,
+        1.0035625806580042
+      ],
+      "joint_damping_scale": [
+        0.8597515871172952,
+        0.9048208554190053,
+        0.9244666850026855,
+        0.7790193817723541,
+        0.9756502980239632,
+        0.9327359336818143
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.01154188839882048,
+        0.0037703208234513667,
+        -0.00531103961733983,
+        -0.008535539901292594,
+        0.0070821793526690685,
+        -0.013196087903574124
+      ],
+      "camera_tilt_rad": [
+        0.07541267268275063,
+        0.03240631065612906
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 7,
+    "seed": 30007,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 58,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0334068892481412,
+      "object_mass_kg": 0.0181954168875897,
+      "friction_scale": 0.9582091714640387,
+      "servo_gain_scale": [
+        0.860998168015215,
+        1.130248828005406,
+        1.0400007710727797,
+        0.956823797476337,
+        1.0800375706922978,
+        0.9836636179074226
+      ],
+      "joint_damping_scale": [
+        1.0614539624954404,
+        1.007056632596954,
+        1.0382803208666898,
+        0.7811407739371848,
+        0.7660744807936994,
+        1.0534769016453587
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.0031790910212961005,
+        -0.014034318772514863,
+        -0.009520193657486421,
+        0.0067497804919598135,
+        -0.013075249168345845,
+        0.0023135078391951884
+      ],
+      "camera_tilt_rad": [
+        -0.05382803268759575,
+        -0.022394318804485613
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 8,
+    "seed": 30008,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0935628699059294,
+      "object_mass_kg": 0.02635175528137465,
+      "friction_scale": 0.9849782754793708,
+      "servo_gain_scale": [
+        0.9557273565433474,
+        0.884442280979242,
+        0.907503812573405,
+        1.018148107374313,
+        1.0977792158762703,
+        0.9995083881676946
+      ],
+      "joint_damping_scale": [
+        1.1504451329346583,
+        0.811203726104789,
+        0.8714863798282064,
+        1.0655468992558932,
+        1.2089480082570152,
+        1.0961982861434718
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.008941258242813301,
+        0.013250201453824401,
+        0.005061826021088765,
+        -0.011774271463465734,
+        -0.00485364972184558,
+        -0.008503734674618084
+      ],
+      "camera_tilt_rad": [
+        -0.012259435039358321,
+        0.008725266751961294
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 9,
+    "seed": 30009,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9308371843270782,
+      "object_mass_kg": 0.02351644029222325,
+      "friction_scale": 0.7005083496837545,
+      "servo_gain_scale": [
+        0.8679759531801703,
+        1.0517621118720764,
+        1.0042516252163651,
+        1.0512775822154075,
+        0.934379031518459,
+        1.1253589614388066
+      ],
+      "joint_damping_scale": [
+        1.1137799162250968,
+        1.1307094736804524,
+        1.1184468240241106,
+        1.0580973264134772,
+        1.0557402683364652,
+        1.1887209135460342
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.010293097597554913,
+        -0.006606868113190608,
+        -0.01407708661374575,
+        -0.008028948682704946,
+        0.0019525650747427986,
+        -0.007471697550513807
+      ],
+      "camera_tilt_rad": [
+        -0.033883402659775616,
+        0.0682112436082865
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 10,
+    "seed": 30010,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0248923260448324,
+      "object_mass_kg": 0.03203873864465983,
+      "friction_scale": 1.1845974083383295,
+      "servo_gain_scale": [
+        1.018495843317978,
+        1.123159839921874,
+        0.9850106411618665,
+        1.104044381560495,
+        1.0188583033105014,
+        1.0504947937353717
+      ],
+      "joint_damping_scale": [
+        1.0302284152168508,
+        0.9430601244986736,
+        0.7559607552274303,
+        1.1831599138860562,
+        1.2327631683797717,
+        1.2297947075848021
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.002765597518241054,
+        0.01196377300791827,
+        0.01088296374414412,
+        0.0038941565333036714,
+        0.002797892549854214,
+        0.01020709643105117
+      ],
+      "camera_tilt_rad": [
+        0.005843230882465453,
+        -0.01280221951377114
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 11,
+    "seed": 30011,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 52,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9475568372439742,
+      "object_mass_kg": 0.02426401097716778,
+      "friction_scale": 0.8875498977312466,
+      "servo_gain_scale": [
+        0.9849580766248363,
+        0.9172387102897912,
+        1.1369073954262392,
+        0.9716705363120973,
+        0.9182875538977677,
+        1.0034636701588302
+      ],
+      "joint_damping_scale": [
+        0.8657008738206415,
+        1.196070109139412,
+        1.138282853953837,
+        0.9203486988494449,
+        0.8244091321756037,
+        0.8086070724892562
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.011410175017741112,
+        0.010424756958823563,
+        -0.01384650536797553,
+        -0.001322690843899058,
+        -0.01071655652331345,
+        -0.013287608800798262
+      ],
+      "camera_tilt_rad": [
+        -0.07117186272294039,
+        0.07632485978600671
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 12,
+    "seed": 30012,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 67,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0344974274565544,
+      "object_mass_kg": 0.030893104631504482,
+      "friction_scale": 0.8194906015331347,
+      "servo_gain_scale": [
+        1.0019017897266478,
+        0.90713832220247,
+        0.9576577270993037,
+        1.0370563689562158,
+        0.895329112388608,
+        0.8849484952267297
+      ],
+      "joint_damping_scale": [
+        0.9723333082527188,
+        1.0839037483236482,
+        0.9718617014862587,
+        0.9630384452597754,
+        1.0702065617441865,
+        0.8506876363555298
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.003322428183000572,
+        0.008634219845381281,
+        0.00745512864553605,
+        -0.011085104879559006,
+        0.013424566624818987,
+        0.009879947722905118
+      ],
+      "camera_tilt_rad": [
+        -0.03593545671032402,
+        -0.005419121875401528
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 13,
+    "seed": 30013,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.8930690132953361,
+      "object_mass_kg": 0.026959811116152567,
+      "friction_scale": 0.7700398017876344,
+      "servo_gain_scale": [
+        0.8865327367979539,
+        0.9693971446828937,
+        0.8720373622359473,
+        0.9047389012529663,
+        0.9201982613480361,
+        0.9002786864339942
+      ],
+      "joint_damping_scale": [
+        1.0805281653472523,
+        0.9774976410570189,
+        1.2165559598918176,
+        1.2497127328231363,
+        1.1871705955457692,
+        0.982705696635241
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.0017748452701275563,
+        -0.007630178002246518,
+        -0.014984745944304163,
+        -0.012533064424885554,
+        0.006009689209573513,
+        0.011857821167359974
+      ],
+      "camera_tilt_rad": [
+        0.006558835391354809,
+        -0.028638271735287595
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 14,
+    "seed": 30014,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 59,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.1025942888939533,
+      "object_mass_kg": 0.028044373556163817,
+      "friction_scale": 0.8057177145564104,
+      "servo_gain_scale": [
+        0.9515573432931892,
+        1.013180232887497,
+        0.9695301853206613,
+        0.9196530707560326,
+        1.022782573119733,
+        1.0789709244272823
+      ],
+      "joint_damping_scale": [
+        1.047072011396894,
+        1.0611198079213935,
+        0.9604498574595692,
+        0.7693133821476501,
+        1.1652458201493463,
+        1.2302623833100044
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.01052693316344857,
+        -0.008522720024301923,
+        -0.007164569109263158,
+        -0.014602121793176215,
+        0.008633473069198795,
+        0.004776403276859867
+      ],
+      "camera_tilt_rad": [
+        -0.048722271884906534,
+        0.04651703865067246
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 15,
+    "seed": 30015,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.015463341632637,
+      "object_mass_kg": 0.025977984116292808,
+      "friction_scale": 1.1805184090206409,
+      "servo_gain_scale": [
+        1.020703513210004,
+        1.0976017125608715,
+        1.0194304402927847,
+        0.9388826904114064,
+        0.8665963423143258,
+        1.0045015649678115
+      ],
+      "joint_damping_scale": [
+        0.7500001345364075,
+        0.9478249292065376,
+        1.0972202726603142,
+        0.775955249092626,
+        1.01567529639309,
+        0.7704004369756641
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.002573934882480533,
+        -0.012562580016702659,
+        -0.005734518519562954,
+        0.0004181978892075309,
+        -0.010083956256973822,
+        -0.013035902573151051
+      ],
+      "camera_tilt_rad": [
+        -0.020317579436953837,
+        0.07523671367045907
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 16,
+    "seed": 30016,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 70,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0638729854806277,
+      "object_mass_kg": 0.02819180384665014,
+      "friction_scale": 0.9366196388619739,
+      "servo_gain_scale": [
+        1.0777480244627375,
+        1.0162206895010724,
+        0.9685679900649988,
+        0.9010158034074957,
+        1.0528303929317029,
+        1.0470304735307878
+      ],
+      "joint_damping_scale": [
+        0.8494904118849405,
+        1.1806354946872473,
+        1.2398048451591919,
+        0.9472238354926596,
+        1.00339604684322,
+        0.9674983976895163
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.011181376123551141,
+        0.008435612758319496,
+        0.011183862385660385,
+        -0.004887268842601631,
+        -0.013471988982821556,
+        -0.0017501732237654947
+      ],
+      "camera_tilt_rad": [
+        0.036070070604699606,
+        -0.06621604522415189
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 17,
+    "seed": 30017,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9909825003124122,
+      "object_mass_kg": 0.02558815329548982,
+      "friction_scale": 1.045355640592841,
+      "servo_gain_scale": [
+        1.1240830151347023,
+        1.1466130268898749,
+        0.9881728862566884,
+        1.097640352932638,
+        1.058650759672575,
+        1.1465721014239314
+      ],
+      "joint_damping_scale": [
+        1.0728053693004407,
+        1.1932547485710163,
+        1.2107602200650653,
+        1.1940747345603233,
+        1.1140997339430156,
+        1.119468842193202
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.006072895161178982,
+        0.003750230026941647,
+        -0.013816974527418695,
+        -0.006057900863657074,
+        -0.009848021170407754,
+        -0.006140204722125722
+      ],
+      "camera_tilt_rad": [
+        0.07577920178859905,
+        0.018829397167072687
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 18,
+    "seed": 30018,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 54,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0889241740071083,
+      "object_mass_kg": 0.021482620608131553,
+      "friction_scale": 0.8957280356477132,
+      "servo_gain_scale": [
+        1.087369552083424,
+        0.9844902101989299,
+        0.9228799971653586,
+        0.9256191421666625,
+        0.9421787260189982,
+        1.1099290914081537
+      ],
+      "joint_damping_scale": [
+        1.169811764053111,
+        1.0022718065891028,
+        0.9886146719417304,
+        0.9894746178625398,
+        0.8099221744808545,
+        0.7525667527313984
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.0021906153009869558,
+        -0.008022627452800132,
+        -0.00047633815012880845,
+        -0.008735833482167901,
+        -0.012501113609130782,
+        0.012737724884309954
+      ],
+      "camera_tilt_rad": [
+        -0.029804176267739763,
+        -0.02548797241268287
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 19,
+    "seed": 30019,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 53,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9826269139155492,
+      "object_mass_kg": 0.031758283018989995,
+      "friction_scale": 1.271840209076306,
+      "servo_gain_scale": [
+        0.8827961713937079,
+        1.0976617551431196,
+        0.874415660128523,
+        0.9315792389415146,
+        0.8817145353574993,
+        1.0438193503606672
+      ],
+      "joint_damping_scale": [
+        1.0036169233585897,
+        0.9799565151059579,
+        0.9082098290049706,
+        0.9265502609687817,
+        1.0789068285620507,
+        1.0367740905023553
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.007023408265246979,
+        -0.00527864971906151,
+        0.007320303224325239,
+        0.006232989628913117,
+        -0.0022174186490601603,
+        -0.010944909783364704
+      ],
+      "camera_tilt_rad": [
+        0.07887255250776086,
+        -0.06637067143328552
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 20,
+    "seed": 30020,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9589737916581546,
+      "object_mass_kg": 0.026231403745719015,
+      "friction_scale": 0.863820749723587,
+      "servo_gain_scale": [
+        0.972657943600869,
+        0.9612004940168831,
+        0.8613416453557541,
+        0.8727816259278407,
+        0.9617640346916579,
+        1.0770308830009028
+      ],
+      "joint_damping_scale": [
+        1.0264832498773933,
+        1.1685882402879988,
+        0.9949550020425677,
+        1.2432588501326565,
+        1.1380977221582507,
+        1.0160040486279756
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.013773291432006523,
+        0.014930243378158334,
+        0.0003549258582056132,
+        -0.009650837125079675,
+        0.01151090500772177,
+        -0.0021245269696601402
+      ],
+      "camera_tilt_rad": [
+        0.07797892746570624,
+        -0.02409205250084827
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 21,
+    "seed": 30021,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 54,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9509771593225557,
+      "object_mass_kg": 0.030659684169929022,
+      "friction_scale": 0.7701207293812298,
+      "servo_gain_scale": [
+        1.0765721710635503,
+        0.9905780400431229,
+        1.1157860622615656,
+        1.0292090046181293,
+        1.1370145380057841,
+        0.8829901395469998
+      ],
+      "joint_damping_scale": [
+        1.0083321864983636,
+        0.9676096337181634,
+        0.8002483527040081,
+        1.2350095737932882,
+        0.9272159299328849,
+        0.942413200815575
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.00437766663377028,
+        -0.0066071207015664865,
+        0.004182739106824332,
+        0.008774549936465308,
+        0.0019433817542498025,
+        -0.013445768892653061
+      ],
+      "camera_tilt_rad": [
+        -0.004856186968591719,
+        0.0378791411309876
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 22,
+    "seed": 30022,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 53,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9978308719359301,
+      "object_mass_kg": 0.029436259175714758,
+      "friction_scale": 0.7899884885624563,
+      "servo_gain_scale": [
+        1.0315627163827796,
+        0.9105611028636376,
+        1.121776744961446,
+        0.9781816497698049,
+        1.1430136553638628,
+        0.9886622815577804
+      ],
+      "joint_damping_scale": [
+        0.9769403942298278,
+        0.9036287078407013,
+        0.9316581173401888,
+        0.9630833417227502,
+        1.135199766498151,
+        1.1216162934280889
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.010487941739534901,
+        -0.0034869399323287677,
+        -0.0043287434112424215,
+        0.00670623982161642,
+        0.009036591615419538,
+        0.004185762550211754
+      ],
+      "camera_tilt_rad": [
+        -0.058380011989988434,
+        -0.030317905593043558
+      ]
+    }
+  },
+  {
+    "object": "bottle",
+    "attempt": 23,
+    "seed": 30023,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 86,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0923299183751152,
+      "object_mass_kg": 0.023452385309282172,
+      "friction_scale": 1.1434727170758539,
+      "servo_gain_scale": [
+        0.9433375615588978,
+        1.1319606788653729,
+        0.9267295054404794,
+        1.0573111146123293,
+        1.1046516727134368,
+        1.0573635438595084
+      ],
+      "joint_damping_scale": [
+        1.0741781798063106,
+        1.0880062681399054,
+        0.9701704073478585,
+        0.879856154509268,
+        0.9025684431082379,
+        1.1746209706588642
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.006403120850065044,
+        0.013816278788428477,
+        0.010814981521375139,
+        -0.01405058175380398,
+        0.0015817787412239076,
+        -0.014703000515447234
+      ],
+      "camera_tilt_rad": [
+        -0.012166125512676762,
+        0.02913803537458097
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 0,
+    "seed": 40000,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 46,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0226604200276126,
+      "object_mass_kg": 0.029760811125998144,
+      "friction_scale": 0.9111449514002071,
+      "servo_gain_scale": [
+        0.9722623943763204,
+        1.0913973704089044,
+        0.9694310707775913,
+        1.089424698162562,
+        0.9638201551850545,
+        0.8932941580115243
+      ],
+      "joint_damping_scale": [
+        1.1347290969806139,
+        0.8285939968801034,
+        1.1948532068045044,
+        1.143779487783687,
+        0.8987804308489411,
+        1.1062659498975045
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.010007545864598615,
+        -0.0029958482370733043,
+        -0.005069944466841546,
+        0.010160265835232468,
+        0.0017578449866013784,
+        -0.0028061539930753655
+      ],
+      "camera_tilt_rad": [
+        0.08237786062180207,
+        -0.08466368550992709
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 1,
+    "seed": 40001,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 51,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.903548069184143,
+      "object_mass_kg": 0.01841263050001887,
+      "friction_scale": 1.103975330084581,
+      "servo_gain_scale": [
+        0.8753648536744797,
+        0.9879987730042428,
+        1.1469257391421124,
+        0.8655219917152769,
+        1.149782978802054,
+        1.13686147500343
+      ],
+      "joint_damping_scale": [
+        0.864322502138974,
+        0.79183759836651,
+        0.9421585769324456,
+        0.9509492394980825,
+        1.1787700712571838,
+        0.7727919263329818
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.0032923257084542037,
+        -0.013003644608562211,
+        0.00985397753997714,
+        -0.01355741519216974,
+        -0.0039573055902100765,
+        -3.229364083024398e-05
+      ],
+      "camera_tilt_rad": [
+        -0.05467074117657558,
+        0.02342904774006481
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 2,
+    "seed": 40002,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0773533760463347,
+      "object_mass_kg": 0.019405197952164846,
+      "friction_scale": 0.7687092623956424,
+      "servo_gain_scale": [
+        1.1326455904588957,
+        1.141782642645989,
+        1.1392114301686342,
+        0.9242330029571939,
+        1.1456189653031106,
+        1.1121721321695135
+      ],
+      "joint_damping_scale": [
+        0.9068126934246895,
+        0.9806602041128979,
+        1.188831954401708,
+        0.8756848383089526,
+        0.8556334238478513,
+        1.2220449210684172
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.008199986490842356,
+        0.009408397223662674,
+        0.011031175785550386,
+        0.00370295021391584,
+        -0.011101579903057074,
+        -0.004860440122661357
+      ],
+      "camera_tilt_rad": [
+        0.08515143313003097,
+        0.0024909702725567223
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 3,
+    "seed": 40003,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 44,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0754086852230582,
+      "object_mass_kg": 0.02308812947708072,
+      "friction_scale": 0.8753930203709005,
+      "servo_gain_scale": [
+        1.141486177295827,
+        1.0870989840663676,
+        0.8819005559572906,
+        1.1310817361594767,
+        1.1432003270441808,
+        0.9283532066835393
+      ],
+      "joint_damping_scale": [
+        1.1669495289636598,
+        1.194313890893247,
+        1.2193105595107814,
+        0.8777977998913244,
+        0.874145408580431,
+        0.9514112178439385
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.00231020061752827,
+        0.009451867167089033,
+        0.014677912370857638,
+        -0.0004890065020624786,
+        0.014167711061924645,
+        0.009683056757103018
+      ],
+      "camera_tilt_rad": [
+        -0.030895025727184992,
+        0.07508475953401651
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 4,
+    "seed": 40004,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9443520687870457,
+      "object_mass_kg": 0.031734711383373394,
+      "friction_scale": 1.0965194555847826,
+      "servo_gain_scale": [
+        1.0171878070968028,
+        0.8860468265039744,
+        0.9227458286710741,
+        1.0181615276136022,
+        1.0580119406802948,
+        0.9194516556211625
+      ],
+      "joint_damping_scale": [
+        1.0270791168991056,
+        0.9380770769111746,
+        0.8375057340078296,
+        1.0273802170880577,
+        1.2431384154589091,
+        0.9237465462608685
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.011055479697645993,
+        -0.005543308083485675,
+        0.014688045474801705,
+        -0.01295492435319265,
+        0.006204437894155982,
+        0.00904393741548665
+      ],
+      "camera_tilt_rad": [
+        0.030005135607658884,
+        0.05330384632029879
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 5,
+    "seed": 40005,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 50,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0452075969131136,
+      "object_mass_kg": 0.027101902755054297,
+      "friction_scale": 0.8157387893565641,
+      "servo_gain_scale": [
+        0.9766389070551408,
+        0.9780806936280104,
+        1.0598699418958513,
+        0.9478492842634536,
+        1.0200760181056607,
+        0.962061792946058
+      ],
+      "joint_damping_scale": [
+        1.2321683625576971,
+        0.8178812719593553,
+        1.0027715265840595,
+        0.8083213941612155,
+        1.2310455792642794,
+        1.249260241633863
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.01349849711912288,
+        0.014308531364971233,
+        -0.0068178951435996765,
+        0.009518382284173395,
+        0.010578354082841832,
+        -0.0061817425939094
+      ],
+      "camera_tilt_rad": [
+        0.043366477642342735,
+        0.03843753726893852
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 6,
+    "seed": 40006,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0491257260162237,
+      "object_mass_kg": 0.021469607576422946,
+      "friction_scale": 0.8924818621745015,
+      "servo_gain_scale": [
+        1.0769008681515304,
+        0.9196314339302694,
+        1.139022157173959,
+        0.9432111622458718,
+        0.9614841763566331,
+        0.9734757780326024
+      ],
+      "joint_damping_scale": [
+        1.2151769218686042,
+        0.9839927636135846,
+        1.1391270355187133,
+        1.0844963212123635,
+        1.247747953411023,
+        1.162713150901922
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.013549708443007104,
+        -0.014744663893916566,
+        -0.009942170581650606,
+        0.0032783680239851128,
+        -0.008215254362624784,
+        0.000471785079784107
+      ],
+      "camera_tilt_rad": [
+        -0.020230401464079548,
+        -0.037098725576645224
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 7,
+    "seed": 40007,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.1162107327720445,
+      "object_mass_kg": 0.025587629754222397,
+      "friction_scale": 1.1403507027321278,
+      "servo_gain_scale": [
+        1.0054180422646757,
+        1.0367542186086582,
+        1.0246473729305983,
+        1.008612250377313,
+        1.0622419733328683,
+        1.0472572079014475
+      ],
+      "joint_damping_scale": [
+        1.0610686416085513,
+        1.2063585761905833,
+        1.1282945793314711,
+        1.0339285691280855,
+        1.1254016910660578,
+        1.2265361770048897
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.005763563984151097,
+        0.0009205201291251353,
+        0.003964795679325037,
+        0.003083504600630879,
+        -0.0035314778410902928,
+        3.561040704572194e-05
+      ],
+      "camera_tilt_rad": [
+        -0.021037082597715945,
+        -0.0035154582391704603
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 8,
+    "seed": 40008,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 55,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0648318194322293,
+      "object_mass_kg": 0.023056658738005248,
+      "friction_scale": 0.7149005741563752,
+      "servo_gain_scale": [
+        1.095256828192667,
+        0.9379821562374885,
+        0.8609680632478034,
+        0.890989673441542,
+        0.9520057746828752,
+        0.8760427239464799
+      ],
+      "joint_damping_scale": [
+        1.0204066767689222,
+        1.0827801161233594,
+        0.932503143881409,
+        0.7727163313607044,
+        1.057468224083634,
+        1.0974636923140255
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.01380415933769532,
+        0.003940374630790076,
+        -0.014725496084614395,
+        0.0005675562306000775,
+        -0.010174360344053002,
+        -0.007546274561956768
+      ],
+      "camera_tilt_rad": [
+        0.0005677121576649208,
+        -0.00423247356621706
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 9,
+    "seed": 40009,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 66,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0318131395053158,
+      "object_mass_kg": 0.031196110567312182,
+      "friction_scale": 1.0333680707870094,
+      "servo_gain_scale": [
+        0.8935904641899347,
+        0.8904837066848466,
+        0.9424484714406398,
+        0.8527232898354805,
+        1.0366216332449756,
+        0.9915518689840828
+      ],
+      "joint_damping_scale": [
+        1.2080047830777696,
+        1.2144772545621743,
+        1.0433528383360595,
+        0.8517463292001369,
+        1.0787405355844415,
+        1.0820984179097106
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.006474222504700597,
+        -0.008561168230352611,
+        -0.01445887456426519,
+        0.0034130855242665986,
+        0.008953221128486774,
+        0.007381922342064678
+      ],
+      "camera_tilt_rad": [
+        -0.019949130680458796,
+        0.0630908259348701
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 10,
+    "seed": 40010,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 49,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9475586100888552,
+      "object_mass_kg": 0.017613871810697075,
+      "friction_scale": 1.0207658330221645,
+      "servo_gain_scale": [
+        1.0087511127352684,
+        1.0671914570206489,
+        1.0903085745245789,
+        0.9374475495645226,
+        1.1251280456743573,
+        0.9613953631086445
+      ],
+      "joint_damping_scale": [
+        0.9865171923521951,
+        0.8780417109911838,
+        0.9629561542877465,
+        0.7717862664398956,
+        0.9479003794156302,
+        0.8923694166757716
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.008504972268230672,
+        -0.009948149549955192,
+        -0.0014275288046898954,
+        -0.010059234491046915,
+        -0.009583703764943824,
+        -0.0021779601321581746
+      ],
+      "camera_tilt_rad": [
+        0.029822429846497536,
+        -0.07390165101839767
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 11,
+    "seed": 40011,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9343811815404849,
+      "object_mass_kg": 0.02006273378847056,
+      "friction_scale": 0.7367199552844422,
+      "servo_gain_scale": [
+        0.9336722387216926,
+        0.8756940056520847,
+        1.1444588574589871,
+        0.8901585380577018,
+        1.0519441746733187,
+        1.1300519863215157
+      ],
+      "joint_damping_scale": [
+        1.11712811919453,
+        0.9678682702262389,
+        0.9169840607449264,
+        0.9872310305182486,
+        1.1250956142767456,
+        1.080447631173578
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.005377280378907851,
+        -0.0026551588925375017,
+        0.012270443339528984,
+        -0.0024788447015274082,
+        -0.009474129775585623,
+        0.0068678983011003295
+      ],
+      "camera_tilt_rad": [
+        -0.03572494271219973,
+        0.008695528794898627
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 12,
+    "seed": 40012,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 66,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.994994552406719,
+      "object_mass_kg": 0.021176187777194558,
+      "friction_scale": 1.1751526166083452,
+      "servo_gain_scale": [
+        0.9674735759850829,
+        1.0195551831261336,
+        0.9265039991947863,
+        0.9890372746021502,
+        0.852934442081229,
+        1.022439988500019
+      ],
+      "joint_damping_scale": [
+        1.2177489879117398,
+        1.1001870589084546,
+        1.005425055229321,
+        1.0123548337008998,
+        1.2169785615357351,
+        1.213491409197724
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.008178170395470103,
+        0.014282900227056396,
+        -0.0007136443844906974,
+        -0.007083526496643011,
+        0.00040486892501474976,
+        0.005153801201276141
+      ],
+      "camera_tilt_rad": [
+        -0.024914143878049536,
+        -0.05468852238192687
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 13,
+    "seed": 40013,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9157411180484073,
+      "object_mass_kg": 0.02055606225086603,
+      "friction_scale": 1.1910908255919603,
+      "servo_gain_scale": [
+        1.1148751724227393,
+        1.115524781734279,
+        1.0832210624290692,
+        0.9222373456918367,
+        1.0535469017114876,
+        1.0662606665206957
+      ],
+      "joint_damping_scale": [
+        1.0586985832175722,
+        1.2123092114236962,
+        1.1633908718686952,
+        1.0466661709897596,
+        0.8537985116369056,
+        0.9920723010722636
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.01062513883283376,
+        -0.007337072425310443,
+        0.010408446381674211,
+        -0.0028898776090759623,
+        -0.001101152367629395,
+        -0.012913489476736666
+      ],
+      "camera_tilt_rad": [
+        -0.008209351617928629,
+        -0.01125656568663036
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 14,
+    "seed": 40014,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 56,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0554170004183603,
+      "object_mass_kg": 0.031525787768637806,
+      "friction_scale": 1.0602340519559488,
+      "servo_gain_scale": [
+        1.0953633217873917,
+        1.0605469191990393,
+        1.0181671043451679,
+        0.9621159218824451,
+        0.8867195232061055,
+        1.0460820263875892
+      ],
+      "joint_damping_scale": [
+        0.9040988200918738,
+        0.8166033265360297,
+        1.1259997799396955,
+        0.7873687057614893,
+        1.0377990195129587,
+        0.8449137853239912
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.00885446704101455,
+        0.00476119737352728,
+        -0.013964152083386418,
+        0.005792166254620527,
+        0.008931212835947378,
+        -0.012635311566473018
+      ],
+      "camera_tilt_rad": [
+        0.0603492611245023,
+        -0.07221468053139281
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 15,
+    "seed": 40015,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 57,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0670554255996458,
+      "object_mass_kg": 0.018172952640698507,
+      "friction_scale": 0.8373189338460807,
+      "servo_gain_scale": [
+        0.9606036412718282,
+        1.1483085300986207,
+        1.0793910345141007,
+        0.9016105524674715,
+        1.1314654633600545,
+        1.0624967317380274
+      ],
+      "joint_damping_scale": [
+        0.9696944260390761,
+        1.0967560154543166,
+        1.0756141425340477,
+        0.905679241689848,
+        1.1190555242843963,
+        0.8292202503321189
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.014883367886871612,
+        -0.0005265733992146481,
+        0.0008014385964785417,
+        0.005939102875270698,
+        0.00025791726804521437,
+        -3.4063577674598236e-05
+      ],
+      "camera_tilt_rad": [
+        -0.04060664909660514,
+        -0.03400213109087783
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 16,
+    "seed": 40016,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9975916592146175,
+      "object_mass_kg": 0.023123135988790264,
+      "friction_scale": 0.9268978919859844,
+      "servo_gain_scale": [
+        0.9349069734777558,
+        1.0363136941735083,
+        1.1102266474628306,
+        0.9077084602482511,
+        1.0838289644181753,
+        0.8534194146395164
+      ],
+      "joint_damping_scale": [
+        1.0573940556927368,
+        1.1095082467331538,
+        1.0405444762251879,
+        0.7589921170366467,
+        1.0278896598747918,
+        1.2223169822489852
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.013845554740333277,
+        0.012420605802757473,
+        -0.0004126606811510197,
+        -0.005930445790063453,
+        -0.0001922159351845018,
+        -0.004971990445892516
+      ],
+      "camera_tilt_rad": [
+        -0.0018565339694665006,
+        -0.011272245628856273
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 17,
+    "seed": 40017,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 59,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.8824103090369694,
+      "object_mass_kg": 0.02167541235622177,
+      "friction_scale": 0.9670098326507662,
+      "servo_gain_scale": [
+        1.0419955841064543,
+        0.9308896240399809,
+        0.8630337840424283,
+        1.0946196350183421,
+        1.0884866592613904,
+        1.0706022186999191
+      ],
+      "joint_damping_scale": [
+        0.7694881960197627,
+        0.858823875689427,
+        1.1032635589074524,
+        1.1306045664243614,
+        1.0925110386406502,
+        1.2420886493694814
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        0.0028397380454429078,
+        -0.0027581353992302063,
+        0.005176413314030154,
+        0.011129735718908039,
+        -0.003119938342145457,
+        -0.0021135860127965422
+      ],
+      "camera_tilt_rad": [
+        -0.06291981889037494,
+        0.05910965159774344
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 18,
+    "seed": 40018,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 47,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.8957792570443365,
+      "object_mass_kg": 0.020111273946241643,
+      "friction_scale": 0.8007855565087441,
+      "servo_gain_scale": [
+        0.977629537693388,
+        0.98034604082601,
+        0.8785835731656986,
+        0.899487383302909,
+        1.0636869640041688,
+        0.9976023922094356
+      ],
+      "joint_damping_scale": [
+        1.193261230543587,
+        1.2233695700629772,
+        1.015660099890793,
+        1.0477702079939069,
+        1.166131321200559,
+        1.0916284448511608
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        -0.013634771787230295,
+        0.01020978591160853,
+        0.006649468783378198,
+        -0.0029585309296486853,
+        -0.0023888408433993015,
+        0.013432731934081947
+      ],
+      "camera_tilt_rad": [
+        0.014547465886698877,
+        0.014770669104951714
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 19,
+    "seed": 40019,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.059503696482013,
+      "object_mass_kg": 0.02524649062508069,
+      "friction_scale": 1.2293475259621855,
+      "servo_gain_scale": [
+        1.0028187911155753,
+        0.9391552971831499,
+        0.9157542116880923,
+        1.0990727320597131,
+        0.9329667504881807,
+        0.979588703944422
+      ],
+      "joint_damping_scale": [
+        0.8503774380481732,
+        0.8665234037883203,
+        1.0936755407795289,
+        0.9425027678099871,
+        0.9756141809964016,
+        0.8056979437877692
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.004475381011173757,
+        0.003596874784205041,
+        -0.012293318777521255,
+        -0.012298212578202732,
+        -0.00798307716068283,
+        -0.012915483518795585
+      ],
+      "camera_tilt_rad": [
+        0.010214806245857175,
+        -0.027295040284389414
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 20,
+    "seed": 40020,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 85,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9877623584058722,
+      "object_mass_kg": 0.0316911377480635,
+      "friction_scale": 1.1741528955800142,
+      "servo_gain_scale": [
+        0.9453424846881441,
+        0.9864172323564864,
+        1.0545105112749975,
+        1.04215484383323,
+        0.8783812503755671,
+        0.9451053297499238
+      ],
+      "joint_damping_scale": [
+        0.9497724836319351,
+        1.2062388109706115,
+        0.8395363060260115,
+        1.0057911896078382,
+        0.8863792175368841,
+        0.9803052316017584
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.003662097791262005,
+        0.008677582763051785,
+        0.0002463275529108414,
+        0.009702230778527606,
+        0.006080328387883464,
+        -0.007043287103072813
+      ],
+      "camera_tilt_rad": [
+        -0.08392777720134113,
+        0.05924442192515526
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 21,
+    "seed": 40021,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 48,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9446439994188778,
+      "object_mass_kg": 0.020510660185607862,
+      "friction_scale": 0.8076932820484454,
+      "servo_gain_scale": [
+        0.8896737024150356,
+        1.0748623714657755,
+        0.9614304630348651,
+        0.9521773091704611,
+        0.9725745428685806,
+        0.9737536995743482
+      ],
+      "joint_damping_scale": [
+        1.0378256559191468,
+        0.9274672984987877,
+        1.0707716383839951,
+        1.2225733174191964,
+        0.9742222066567878,
+        0.8858936363568068
+      ],
+      "action_delay_steps": 0,
+      "joint_sensor_bias_rad": [
+        0.0016091916537368384,
+        0.00622941021247066,
+        0.00019108999045631264,
+        0.0029872109166650916,
+        -0.010640655734944127,
+        -0.003277923773353843
+      ],
+      "camera_tilt_rad": [
+        0.00875507486296817,
+        -0.08201117426416839
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 22,
+    "seed": 40022,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 79,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.9851746660663341,
+      "object_mass_kg": 0.02821712185931093,
+      "friction_scale": 1.2657176883910928,
+      "servo_gain_scale": [
+        0.8976170222107052,
+        1.1288517782152292,
+        1.0882932914153232,
+        0.957005165246263,
+        1.0727458537303016,
+        0.9323078718018849
+      ],
+      "joint_damping_scale": [
+        0.823288066426825,
+        1.0680412043921845,
+        1.0060416327907262,
+        0.7587001135809447,
+        1.118968493389049,
+        0.9971344151812622
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.006245898321592051,
+        -0.013069065072845075,
+        0.009654792789973669,
+        -0.009653432753860335,
+        0.013233160795822874,
+        -0.005749616506963935
+      ],
+      "camera_tilt_rad": [
+        -0.009092462270718096,
+        0.005696957900780411
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 23,
+    "seed": 40023,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.1122242867119945,
+      "object_mass_kg": 0.0231865851364352,
+      "friction_scale": 0.8114856694200312,
+      "servo_gain_scale": [
+        1.0817394806573637,
+        1.0584238531374797,
+        0.8600238429087732,
+        0.9430417066698328,
+        1.0675672857428178,
+        0.9101676005335271
+      ],
+      "joint_damping_scale": [
+        1.0613460769671004,
+        0.7520420223696851,
+        0.8138233741461403,
+        1.213124520979429,
+        1.1499018254898719,
+        0.7519468775813491
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        0.00978775687121099,
+        -7.751295888353167e-05,
+        -0.006444633954001657,
+        0.0014581209608006407,
+        0.00226340028801773,
+        0.01265375502673503
+      ],
+      "camera_tilt_rad": [
+        -0.08373568462873283,
+        -0.03475822737212762
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 24,
+    "seed": 40024,
+    "success": false,
+    "grasped": true,
+    "lifted": true,
+    "steps": 240,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 0.95438187936621,
+      "object_mass_kg": 0.029899763269508113,
+      "friction_scale": 1.0104733021574441,
+      "servo_gain_scale": [
+        0.9252098768701698,
+        0.9692601899045238,
+        0.854291272197818,
+        0.8875657393795107,
+        1.0952463782283517,
+        0.9125425870484984
+      ],
+      "joint_damping_scale": [
+        0.8766794194046286,
+        1.080854276587004,
+        0.8988653700923163,
+        1.0812109417445441,
+        0.9713558645025449,
+        0.8456832329232236
+      ],
+      "action_delay_steps": 2,
+      "joint_sensor_bias_rad": [
+        -0.0009346250464944261,
+        -0.01165072404635844,
+        -0.0020128099898628904,
+        -0.005777613248986591,
+        0.010417361854232941,
+        0.006320937452499176
+      ],
+      "camera_tilt_rad": [
+        0.0820384389177199,
+        0.04587074858123945
+      ]
+    }
+  },
+  {
+    "object": "cylinder",
+    "attempt": 25,
+    "seed": 40025,
+    "success": true,
+    "grasped": true,
+    "lifted": true,
+    "steps": 56,
+    "randomization": {
+      "configured": {
+        "position_m": 0.045,
+        "size_fraction": 0.12,
+        "mass_fraction": 0.3,
+        "friction_fraction": 0.3,
+        "servo_gain_fraction": 0.15,
+        "coordinate_noise_m": 0.006,
+        "action_delay_steps": 2,
+        "joint_damping_fraction": 0.25,
+        "joint_sensor_bias_rad": 0.015,
+        "camera_tilt_deg": 5.0
+      },
+      "object_scale": 1.0208618221828236,
+      "object_mass_kg": 0.02322352081953612,
+      "friction_scale": 0.9474163582453383,
+      "servo_gain_scale": [
+        1.0276109575938899,
+        1.0864436188834217,
+        0.9792772224472744,
+        0.9002056205508147,
+        1.0703463875266461,
+        1.102040627936164
+      ],
+      "joint_damping_scale": [
+        0.7792364357418419,
+        1.001687502101786,
+        1.2231509940051053,
+        1.047537766563448,
+        0.8658025044211044,
+        0.8972421869227101
+      ],
+      "action_delay_steps": 1,
+      "joint_sensor_bias_rad": [
+        -0.003872266591412406,
+        0.005922218997963028,
+        -0.014675264034104601,
+        -0.006965811542939113,
+        0.009554434420423509,
+        -0.010056360734011487
+      ],
+      "camera_tilt_rad": [
+        -0.016464142130641415,
+        -0.038830887784059624
+      ]
+    }
+  }
+]

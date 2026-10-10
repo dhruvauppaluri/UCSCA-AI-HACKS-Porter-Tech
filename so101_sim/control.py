@@ -71,6 +71,25 @@ class SafeCartesianController:
     def apply(self, data: mujoco.MjData, action: np.ndarray, substeps: int):
         start = data.ctrl[:6].copy()
         end = self.proposed_target(data, action)
+        return self._interpolate(data, start, end, substeps)
+
+    def apply_joint_target(self, data: mujoco.MjData, target: np.ndarray, substeps: int):
+        """Apply an absolute six-joint policy target with the same motion bounds."""
+        target = np.asarray(target, dtype=float)
+        if target.shape != (6,) or not np.all(np.isfinite(target)):
+            raise ValueError("joint target must be six finite values")
+        start = data.ctrl[:6].copy()
+        end = np.clip(target, self.limits[:, 0], self.limits[:, 1])
+        max_step = self.settings.max_joint_step_rad
+        end[:5] = np.clip(end[:5], start[:5] - max_step, start[:5] + max_step)
+        gripper_percent = self.gripper.to_percent(start[5])
+        requested_percent = self.gripper.to_percent(end[5])
+        bounded_percent = np.clip(requested_percent, gripper_percent - self.settings.max_gripper_step_percent,
+                                  gripper_percent + self.settings.max_gripper_step_percent)
+        end[5] = self.gripper.to_joint(bounded_percent)
+        return self._interpolate(data, start, end, substeps)
+
+    def _interpolate(self, data: mujoco.MjData, start: np.ndarray, end: np.ndarray, substeps: int):
         for i in range(substeps):
             # Smoothstep interpolation has zero velocity at both endpoints.
             t = (i + 1) / substeps

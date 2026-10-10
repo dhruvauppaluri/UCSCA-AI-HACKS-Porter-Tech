@@ -1,18 +1,23 @@
 """Diagnostic finite-state demonstrator for curriculum bootstrapping.
 
-It uses simulator state and the assisted grasp. It is a source of trajectories,
-not a deployable robot controller or evidence of learned performance.
+It uses privileged simulator state. The contact-scene mode closes at a lower
+height and waits for two finger-pad contacts before lifting. It is a source of
+trajectories, not a deployable robot controller or evidence of learned policy
+performance.
 """
 
 import numpy as np
 
 
 class ScriptedExpert:
-    def __init__(self, env):
+    def __init__(self, env, contact_height_offset_m: float = 0.008,
+                 contact_lateral_offset_m: float = 0.0):
         self.env = env
         self.phase = "approach"
         self.lift_target = None
         self.close_target = None
+        self.contact_height_offset_m = contact_height_offset_m
+        self.contact_lateral_offset_m = contact_lateral_offset_m
 
     def act(self) -> np.ndarray:
         env = self.env
@@ -21,8 +26,18 @@ class ScriptedExpert:
         tray = env._tray_xyz()
         if self.phase == "approach" and np.linalg.norm(ee[:2] - obj[:2]) < 0.018 and abs(ee[2] - obj[2]) < 0.055:
             self.phase = "close"
-            self.close_target = ee.copy() if env.selected == "bottle" else obj + np.array([0, 0, 0.025])
-        if self.phase == "close" and env._assisted_attached:
+            if env.physics_variant == "pick101_contact":
+                static_pad = env.data.geom_xpos[env.model.geom("static_finger_pad").id].copy()
+                moving_pad = env.data.geom_xpos[env.model.geom("moving_finger_pad").id].copy()
+                closing_axis = moving_pad[:2] - static_pad[:2]
+                closing_axis /= np.linalg.norm(closing_axis)
+                self.close_target = obj + np.array([0, 0, self.contact_height_offset_m])
+                self.close_target[:2] -= closing_axis * self.contact_lateral_offset_m
+            else:
+                self.close_target = ee.copy() if env.selected == "bottle" else obj + np.array([0, 0, 0.025])
+        grasp_ready = (env._two_pad_contact() if env.physics_variant == "pick101_contact"
+                       else env._assisted_attached)
+        if self.phase == "close" and grasp_ready:
             self.phase = "lift"
             self.lift_target = ee + np.array([0, 0, 0.10])
         if self.phase == "lift" and obj[2] > env._object_half_height() + 0.055:

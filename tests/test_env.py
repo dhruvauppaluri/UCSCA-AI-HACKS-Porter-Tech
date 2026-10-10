@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 
 from so101_sim.env import OBJECTS, SO101PickPlaceEnv
 from so101_sim.gripper import GripperMapping
@@ -26,6 +27,38 @@ def test_gripper_percent_mapping_endpoints():
     assert mapping.to_percent(mapping.to_joint(100)) == 100
     assert mapping.to_joint(-10) == mapping.to_joint(0)
     assert mapping.to_joint(110) == mapping.to_joint(100)
+
+
+def test_pick101_contact_variant_has_finger_pads_and_no_proxy():
+    with pytest.raises(ValueError, match="assist_grasp=False"):
+        SO101PickPlaceEnv(physics_variant="pick101_contact")
+    env = SO101PickPlaceEnv(stage="robust", assist_grasp=False,
+                            physics_variant="pick101_contact")
+    try:
+        env.reset(seed=123, options={"object_name": "box"})
+        assert env.model.geom("static_finger_pad").id >= 0
+        assert env.model.geom("moving_finger_pad").id >= 0
+        assert not env.assist_grasp
+        assert env.model.opt.noslip_iterations == 3
+    finally:
+        env.close()
+
+
+def test_robust_randomization_replays_from_seed_and_joint_targets_are_bounded():
+    env = SO101PickPlaceEnv(stage="robust", control_mode="joint")
+    try:
+        _, first = env.reset(seed=123, options={"object_name": "bottle"})
+        initial_ctrl = env.data.ctrl[:6].copy()
+        _, second = env.reset(seed=123, options={"object_name": "bottle"})
+        assert first["randomization"] == second["randomization"]
+        assert 0 <= first["randomization"]["action_delay_steps"] <= 2
+        for _ in range(3):
+            env.step(env.action_space.high)
+        assert np.all(np.abs(env.data.ctrl[:5] - initial_ctrl[:5]) <=
+                      3 * env.ctrl.settings.max_joint_step_rad + 1e-6)
+        assert np.all(env.data.ctrl[:6] <= env.action_space.high + 1e-6)
+    finally:
+        env.close()
 
 
 def test_diagnostic_pick_place_requires_release():

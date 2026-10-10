@@ -1,0 +1,319 @@
+INFO 2026-10-10 02:17:04 ot_train.py:163 {'batch_size': 16,
+ 'checkpoint_path': None,
+ 'dataset': {'episodes': None,
+             'image_transforms': {'enable': False,
+                                  'max_num_transforms': 3,
+                                  'random_order': False,
+                                  'tfs': {'affine': {'kwargs': {'degrees': [-5.0,
+                                                                            5.0],
+                                                                'translate': [0.05,
+                                                                              0.05]},
+                                                     'type': 'RandomAffine',
+                                                     'weight': 1.0},
+                                          'brightness': {'kwargs': {'brightness': [0.8,
+                                                                                   1.2]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'contrast': {'kwargs': {'contrast': [0.8,
+                                                                               1.2]},
+                                                       'type': 'ColorJitter',
+                                                       'weight': 1.0},
+                                          'hue': {'kwargs': {'hue': [-0.05,
+                                                                     0.05]},
+                                                  'type': 'ColorJitter',
+                                                  'weight': 1.0},
+                                          'saturation': {'kwargs': {'saturation': [0.5,
+                                                                                   1.5]},
+                                                         'type': 'ColorJitter',
+                                                         'weight': 1.0},
+                                          'sharpness': {'kwargs': {'sharpness': [0.5,
+                                                                                 1.5]},
+                                                        'type': 'SharpnessJitter',
+                                                        'weight': 1.0}}},
+             'repo_id': 'local/so101-mujoco-robust-60-v3',
+             'revision': None,
+             'root': 'runs/2026-10-09/lerobot-robust-60-v3',
+             'streaming': False,
+             'use_imagenet_stats': True,
+             'video_backend': 'pyav'},
+ 'env': None,
+ 'eval': {'batch_size': 50, 'n_episodes': 50, 'use_async_envs': False},
+ 'eval_freq': 20000,
+ 'job_name': 'act',
+ 'log_freq': 100,
+ 'num_workers': 4,
+ 'optimizer': {'betas': [0.9, 0.999],
+               'eps': 1e-08,
+               'grad_clip_norm': 10.0,
+               'lr': 1e-05,
+               'type': 'adamw',
+               'weight_decay': 0.0001},
+ 'output_dir': 'runs/2026-10-09/act-robust-60',
+ 'policy': {'chunk_size': 32,
+            'device': 'cuda',
+            'dim_feedforward': 1024,
+            'dim_model': 256,
+            'dropout': 0.1,
+            'feedforward_activation': 'relu',
+            'input_features': {},
+            'kl_weight': 10.0,
+            'latent_dim': 32,
+            'license': None,
+            'n_action_steps': 1,
+            'n_decoder_layers': 1,
+            'n_encoder_layers': 2,
+            'n_heads': 4,
+            'n_obs_steps': 1,
+            'n_vae_encoder_layers': 4,
+            'normalization_mapping': {'ACTION': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'STATE': <NormalizationMode.MEAN_STD: 'MEAN_STD'>,
+                                      'VISUAL': <NormalizationMode.MEAN_STD: 'MEAN_STD'>},
+            'optimizer_lr': 1e-05,
+            'optimizer_lr_backbone': 1e-05,
+            'optimizer_weight_decay': 0.0001,
+            'output_features': {},
+            'pre_norm': False,
+            'pretrained_backbone_weights': 'ResNet18_Weights.IMAGENET1K_V1',
+            'pretrained_path': None,
+            'private': None,
+            'push_to_hub': False,
+            'replace_final_stride_with_dilation': False,
+            'repo_id': None,
+            'tags': None,
+            'temporal_ensemble_coeff': None,
+            'type': 'act',
+            'use_amp': False,
+            'use_vae': True,
+            'vision_backbone': 'resnet18'},
+ 'rename_map': {},
+ 'resume': False,
+ 'save_checkpoint': True,
+ 'save_freq': 1000,
+ 'scheduler': None,
+ 'seed': 20261010,
+ 'steps': 4000,
+ 'use_policy_training_preset': True,
+ 'wandb': {'disable_artifact': False,
+           'enable': False,
+           'entity': None,
+           'mode': None,
+           'notes': None,
+           'project': 'lerobot',
+           'run_id': None}}
+INFO 2026-10-10 02:17:04 ot_train.py:171 Logs will be saved locally.
+INFO 2026-10-10 02:17:04 ot_train.py:183 Creating dataset
+INFO 2026-10-10 02:17:05 ot_train.py:202 Creating policy
+INFO 2026-10-10 02:17:06 ot_train.py:247 Creating optimizer and scheduler
+INFO 2026-10-10 02:17:06 ot_train.py:259 Output dir: runs/2026-10-09/act-robust-60
+INFO 2026-10-10 02:17:06 ot_train.py:264 cfg.steps=4000 (4K)
+INFO 2026-10-10 02:17:06 ot_train.py:265 dataset.num_frames=3314 (3K)
+INFO 2026-10-10 02:17:06 ot_train.py:266 dataset.num_episodes=60
+INFO 2026-10-10 02:17:06 ot_train.py:269 Effective batch size: 16 x 1 = 16
+INFO 2026-10-10 02:17:06 ot_train.py:270 num_learnable_params=17131526 (17M)
+INFO 2026-10-10 02:17:06 ot_train.py:271 num_total_params=17131526 (17M)
+INFO 2026-10-10 02:17:06 ot_train.py:327 Start offline training on a fixed dataset
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:17:33 ot_train.py:354 step:100 smpl:2K ep:29 epch:0.48 loss:13.870 grdn:162.643 lr:1.0e-05 updt_s:0.237 data_s:0.034
+INFO 2026-10-10 02:17:42 ot_train.py:354 step:200 smpl:3K ep:58 epch:0.97 loss:3.813 grdn:52.434 lr:1.0e-05 updt_s:0.055 data_s:0.033
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:17:52 ot_train.py:354 step:300 smpl:5K ep:87 epch:1.45 loss:2.916 grdn:45.498 lr:1.0e-05 updt_s:0.061 data_s:0.046
+INFO 2026-10-10 02:18:02 ot_train.py:354 step:400 smpl:6K ep:116 epch:1.93 loss:2.483 grdn:40.075 lr:1.0e-05 updt_s:0.059 data_s:0.034
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:18:12 ot_train.py:354 step:500 smpl:8K ep:145 epch:2.41 loss:2.235 grdn:38.101 lr:1.0e-05 updt_s:0.062 data_s:0.037
+INFO 2026-10-10 02:18:21 ot_train.py:354 step:600 smpl:10K ep:174 epch:2.90 loss:2.060 grdn:35.298 lr:1.0e-05 updt_s:0.060 data_s:0.028
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:18:31 ot_train.py:354 step:700 smpl:11K ep:203 epch:3.38 loss:1.887 grdn:34.654 lr:1.0e-05 updt_s:0.060 data_s:0.041
+INFO 2026-10-10 02:18:40 ot_train.py:354 step:800 smpl:13K ep:232 epch:3.86 loss:1.769 grdn:32.262 lr:1.0e-05 updt_s:0.059 data_s:0.032
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:18:50 ot_train.py:354 step:900 smpl:14K ep:261 epch:4.35 loss:1.657 grdn:31.018 lr:1.0e-05 updt_s:0.055 data_s:0.043
+INFO 2026-10-10 02:18:59 ot_train.py:354 step:1K smpl:16K ep:290 epch:4.83 loss:1.549 grdn:29.295 lr:1.0e-05 updt_s:0.054 data_s:0.035
+INFO 2026-10-10 02:18:59 ot_train.py:364 Checkpoint policy after step 1000
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:19:10 ot_train.py:354 step:1K smpl:18K ep:319 epch:5.31 loss:1.462 grdn:29.053 lr:1.0e-05 updt_s:0.055 data_s:0.039
+INFO 2026-10-10 02:19:19 ot_train.py:354 step:1K smpl:19K ep:348 epch:5.79 loss:1.395 grdn:28.143 lr:1.0e-05 updt_s:0.063 data_s:0.028
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:19:30 ot_train.py:354 step:1K smpl:21K ep:377 epch:6.28 loss:1.284 grdn:27.029 lr:1.0e-05 updt_s:0.065 data_s:0.038
+INFO 2026-10-10 02:19:39 ot_train.py:354 step:1K smpl:22K ep:406 epch:6.76 loss:1.232 grdn:26.174 lr:1.0e-05 updt_s:0.060 data_s:0.036
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:19:50 ot_train.py:354 step:2K smpl:24K ep:435 epch:7.24 loss:1.165 grdn:26.577 lr:1.0e-05 updt_s:0.070 data_s:0.035
+INFO 2026-10-10 02:19:59 ot_train.py:354 step:2K smpl:26K ep:463 epch:7.72 loss:1.108 grdn:25.527 lr:1.0e-05 updt_s:0.072 data_s:0.022
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:20:09 ot_train.py:354 step:2K smpl:27K ep:492 epch:8.21 loss:1.054 grdn:25.183 lr:1.0e-05 updt_s:0.065 data_s:0.034
+INFO 2026-10-10 02:20:19 ot_train.py:354 step:2K smpl:29K ep:521 epch:8.69 loss:0.985 grdn:23.704 lr:1.0e-05 updt_s:0.066 data_s:0.029
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:20:29 ot_train.py:354 step:2K smpl:30K ep:550 epch:9.17 loss:0.937 grdn:24.054 lr:1.0e-05 updt_s:0.063 data_s:0.038
+INFO 2026-10-10 02:20:38 ot_train.py:354 step:2K smpl:32K ep:579 epch:9.66 loss:0.882 grdn:22.116 lr:1.0e-05 updt_s:0.065 data_s:0.025
+INFO 2026-10-10 02:20:38 ot_train.py:364 Checkpoint policy after step 2000
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:20:50 ot_train.py:354 step:2K smpl:34K ep:608 epch:10.14 loss:0.841 grdn:22.321 lr:1.0e-05 updt_s:0.069 data_s:0.028
+INFO 2026-10-10 02:20:59 ot_train.py:354 step:2K smpl:35K ep:637 epch:10.62 loss:0.793 grdn:21.927 lr:1.0e-05 updt_s:0.063 data_s:0.030
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:21:09 ot_train.py:354 step:2K smpl:37K ep:666 epch:11.10 loss:0.751 grdn:21.446 lr:1.0e-05 updt_s:0.068 data_s:0.031
+INFO 2026-10-10 02:21:18 ot_train.py:354 step:2K smpl:38K ep:695 epch:11.59 loss:0.705 grdn:20.184 lr:1.0e-05 updt_s:0.066 data_s:0.023
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:21:28 ot_train.py:354 step:2K smpl:40K ep:724 epch:12.07 loss:0.667 grdn:20.137 lr:1.0e-05 updt_s:0.064 data_s:0.032
+INFO 2026-10-10 02:21:37 ot_train.py:354 step:3K smpl:42K ep:753 epch:12.55 loss:0.636 grdn:19.054 lr:1.0e-05 updt_s:0.058 data_s:0.033
+INFO 2026-10-10 02:21:46 ot_train.py:354 step:3K smpl:43K ep:782 epch:13.04 loss:0.590 grdn:18.820 lr:1.0e-05 updt_s:0.059 data_s:0.030
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:21:56 ot_train.py:354 step:3K smpl:45K ep:811 epch:13.52 loss:0.567 grdn:18.877 lr:1.0e-05 updt_s:0.064 data_s:0.036
+INFO 2026-10-10 02:22:05 ot_train.py:354 step:3K smpl:46K ep:840 epch:14.00 loss:0.539 grdn:17.793 lr:1.0e-05 updt_s:0.059 data_s:0.029
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:22:15 ot_train.py:354 step:3K smpl:48K ep:869 epch:14.48 loss:0.510 grdn:17.395 lr:1.0e-05 updt_s:0.052 data_s:0.048
+INFO 2026-10-10 02:22:15 ot_train.py:364 Checkpoint policy after step 3000
+INFO 2026-10-10 02:22:25 ot_train.py:354 step:3K smpl:50K ep:898 epch:14.97 loss:0.480 grdn:16.963 lr:1.0e-05 updt_s:0.067 data_s:0.017
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:22:35 ot_train.py:354 step:3K smpl:51K ep:927 epch:15.45 loss:0.453 grdn:16.351 lr:1.0e-05 updt_s:0.052 data_s:0.044
+INFO 2026-10-10 02:22:44 ot_train.py:354 step:3K smpl:53K ep:956 epch:15.93 loss:0.434 grdn:16.377 lr:1.0e-05 updt_s:0.056 data_s:0.035
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:22:54 ot_train.py:354 step:3K smpl:54K ep:985 epch:16.42 loss:0.408 grdn:16.263 lr:1.0e-05 updt_s:0.055 data_s:0.043
+INFO 2026-10-10 02:23:04 ot_train.py:354 step:4K smpl:56K ep:1K epch:16.90 loss:0.389 grdn:15.100 lr:1.0e-05 updt_s:0.057 data_s:0.038
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:23:14 ot_train.py:354 step:4K smpl:58K ep:1K epch:17.38 loss:0.370 grdn:15.338 lr:1.0e-05 updt_s:0.056 data_s:0.045
+INFO 2026-10-10 02:23:23 ot_train.py:354 step:4K smpl:59K ep:1K epch:17.86 loss:0.356 grdn:14.522 lr:1.0e-05 updt_s:0.055 data_s:0.041
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:23:33 ot_train.py:354 step:4K smpl:61K ep:1K epch:18.35 loss:0.340 grdn:14.237 lr:1.0e-05 updt_s:0.050 data_s:0.049
+INFO 2026-10-10 02:23:42 ot_train.py:354 step:4K smpl:62K ep:1K epch:18.83 loss:0.321 grdn:13.885 lr:1.0e-05 updt_s:0.054 data_s:0.034
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+/home/dhruv/so101-miniforge/envs/so101-lerobot/lib/python3.11/site-packages/torchvision/io/_video_deprecation_warning.py:5: UserWarning: The video decoding and encoding capabilities of torchvision are deprecated from version 0.22 and will be removed in version 0.24. We recommend that you migrate to TorchCodec, where we'll consolidate the future decoding/encoding capabilities of PyTorch: https://github.com/pytorch/torchcodec
+  warnings.warn(
+INFO 2026-10-10 02:23:52 ot_train.py:354 step:4K smpl:64K ep:1K epch:19.31 loss:0.308 grdn:13.986 lr:1.0e-05 updt_s:0.050 data_s:0.048
+INFO 2026-10-10 02:23:52 ot_train.py:364 Checkpoint policy after step 4000
+INFO 2026-10-10 02:23:54 ot_train.py:435 End of training

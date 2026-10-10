@@ -1,0 +1,288 @@
+{
+  "dataset": "artifacts/so101-2026-10-10/contact-cylinder-100",
+  "checkpoint": "runs/contact-act-100-4000/checkpoints/002000/pretrained_model",
+  "max_steps": 120,
+  "physics_variant": "pick101_contact",
+  "summary": {
+    "place": {
+      "episodes": 4,
+      "pick_rate": 0.0,
+      "lift_rate": 0.0,
+      "place_rate": 0.0,
+      "failures": 4,
+      "mean_seconds": 6.0,
+      "mean_max_joint_speed_rad_s": 2.08333323558277,
+      "mean_rms_joint_jerk_rad_s3": 360.0220716087838
+    }
+  },
+  "episodes": [
+    {
+      "stage": "place",
+      "object": "cylinder",
+      "episode": 0,
+      "seed": 140200,
+      "success": false,
+      "grasped": false,
+      "lifted": false,
+      "seconds": 6.0,
+      "max_joint_speed_rad_s": 1.9792328651816564,
+      "rms_joint_jerk_rad_s3": 304.9417369518595,
+      "collision_count": 0,
+      "randomization": {
+        "configured": {
+          "position_m": 0.035,
+          "size_fraction": 0.0,
+          "mass_fraction": 0.0,
+          "friction_fraction": 0.0,
+          "servo_gain_fraction": 0.0,
+          "coordinate_noise_m": 0.0,
+          "action_delay_steps": 0,
+          "joint_damping_fraction": 0.0,
+          "joint_sensor_bias_rad": 0.0,
+          "camera_tilt_deg": 0.0
+        },
+        "object_scale": 1.0,
+        "object_mass_kg": 0.025,
+        "friction_scale": 1.0,
+        "servo_gain_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_damping_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "action_delay_steps": 0,
+        "joint_sensor_bias_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_tilt_rad": [
+          0.0,
+          0.0
+        ],
+        "object_xy_m": [
+          0.2547828406558428,
+          -0.06441459918307205
+        ],
+        "tray_xy_m": [
+          0.2699548201456705,
+          0.10365535866096676
+        ]
+      }
+    },
+    {
+      "stage": "place",
+      "object": "cylinder",
+      "episode": 1,
+      "seed": 140201,
+      "success": false,
+      "grasped": false,
+      "lifted": false,
+      "seconds": 6.0,
+      "max_joint_speed_rad_s": 2.2235541776451897,
+      "rms_joint_jerk_rad_s3": 415.2097131416409,
+      "collision_count": 0,
+      "randomization": {
+        "configured": {
+          "position_m": 0.035,
+          "size_fraction": 0.0,
+          "mass_fraction": 0.0,
+          "friction_fraction": 0.0,
+          "servo_gain_fraction": 0.0,
+          "coordinate_noise_m": 0.0,
+          "action_delay_steps": 0,
+          "joint_damping_fraction": 0.0,
+          "joint_sensor_bias_rad": 0.0,
+          "camera_tilt_deg": 0.0
+        },
+        "object_scale": 1.0,
+        "object_mass_kg": 0.025,
+        "friction_scale": 1.0,
+        "servo_gain_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_damping_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "action_delay_steps": 0,
+        "joint_sensor_bias_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_tilt_rad": [
+          0.0,
+          0.0
+        ],
+        "object_xy_m": [
+          0.22313120800253575,
+          -0.12426591695320695
+        ],
+        "tray_xy_m": [
+          0.26832444364358193,
+          0.12025211122237564
+        ]
+      }
+    },
+    {
+      "stage": "place",
+      "object": "cylinder",
+      "episode": 2,
+      "seed": 140202,
+      "success": false,
+      "grasped": false,
+      "lifted": false,
+      "seconds": 6.0,
+      "max_joint_speed_rad_s": 1.8163164690186233,
+      "rms_joint_jerk_rad_s3": 370.1871553522817,
+      "collision_count": 0,
+      "randomization": {
+        "configured": {
+          "position_m": 0.035,
+          "size_fraction": 0.0,
+          "mass_fraction": 0.0,
+          "friction_fraction": 0.0,
+          "servo_gain_fraction": 0.0,
+          "coordinate_noise_m": 0.0,
+          "action_delay_steps": 0,
+          "joint_damping_fraction": 0.0,
+          "joint_sensor_bias_rad": 0.0,
+          "camera_tilt_deg": 0.0
+        },
+        "object_scale": 1.0,
+        "object_mass_kg": 0.025,
+        "friction_scale": 1.0,
+        "servo_gain_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_damping_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "action_delay_steps": 0,
+        "joint_sensor_bias_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_tilt_rad": [
+          0.0,
+          0.0
+        ],
+        "object_xy_m": [
+          0.24428425485039765,
+          -0.10486115364495646
+        ],
+        "tray_xy_m": [
+          0.2717006883751043,
+          0.11650472008262422
+        ]
+      }
+    },
+    {
+      "stage": "place",
+      "object": "cylinder",
+      "episode": 3,
+      "seed": 140203,
+      "success": false,
+      "grasped": false,
+      "lifted": false,
+      "seconds": 6.0,
+      "max_joint_speed_rad_s": 2.3142294304856104,
+      "rms_joint_jerk_rad_s3": 349.74968098935307,
+      "collision_count": 0,
+      "randomization": {
+        "configured": {
+          "position_m": 0.035,
+          "size_fraction": 0.0,
+          "mass_fraction": 0.0,
+          "friction_fraction": 0.0,
+          "servo_gain_fraction": 0.0,
+          "coordinate_noise_m": 0.0,
+          "action_delay_steps": 0,
+          "joint_damping_fraction": 0.0,
+          "joint_sensor_bias_rad": 0.0,
+          "camera_tilt_deg": 0.0
+        },
+        "object_scale": 1.0,
+        "object_mass_kg": 0.025,
+        "friction_scale": 1.0,
+        "servo_gain_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "joint_damping_scale": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "action_delay_steps": 0,
+        "joint_sensor_bias_rad": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "camera_tilt_rad": [
+          0.0,
+          0.0
+        ],
+        "object_xy_m": [
+          0.21860467631948896,
+          -0.06741571978206877
+        ],
+        "tray_xy_m": [
+          0.28700282289487206,
+          0.11500864072784639
+        ]
+      }
+    }
+  ]
+}
