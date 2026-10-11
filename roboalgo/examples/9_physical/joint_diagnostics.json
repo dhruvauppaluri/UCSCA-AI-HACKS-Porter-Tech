@@ -1,0 +1,42 @@
+{
+  "shoulder_pan": {
+    "rmse_deg": 0.9209831907566851,
+    "max_error_deg": 2.6173878256874596,
+    "best_delay_without_offset_s": 0.62,
+    "command_range_deg": 3.372807724898749,
+    "observed_range_deg": 2.0219780219780215,
+    "longest_unchanged_s_approx": 3.7666666666666666
+  },
+  "shoulder_lift": {
+    "rmse_deg": 1.4730738956471396,
+    "max_error_deg": 4.228013166290403,
+    "best_delay_without_offset_s": 0.34,
+    "command_range_deg": 10.707801719870389,
+    "observed_range_deg": 7.472527472527474,
+    "longest_unchanged_s_approx": 1.6666666666666667
+  },
+  "elbow_flex": {
+    "rmse_deg": 1.466977781659779,
+    "max_error_deg": 3.665659570977896,
+    "best_delay_without_offset_s": 1.1500000000000001,
+    "command_range_deg": 3.1457456054404496,
+    "observed_range_deg": 4.219780219780221,
+    "longest_unchanged_s_approx": 1.7666666666666666
+  },
+  "wrist_flex": {
+    "rmse_deg": 1.8477203071922461,
+    "max_error_deg": 4.1450044317560355,
+    "best_delay_without_offset_s": 0.42,
+    "command_range_deg": 11.89649041914847,
+    "observed_range_deg": 9.934065934065934,
+    "longest_unchanged_s_approx": 1.9333333333333333
+  },
+  "wrist_roll": {
+    "rmse_deg": 0.38612309166379744,
+    "max_error_deg": 0.6467496352659765,
+    "best_delay_without_offset_s": 0.87,
+    "command_range_deg": 0.11388388661724491,
+    "observed_range_deg": 0.3516483516483504,
+    "longest_unchanged_s_approx": 4.433333333333334
+  }
+}

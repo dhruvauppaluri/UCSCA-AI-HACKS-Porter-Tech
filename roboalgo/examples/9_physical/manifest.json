@@ -1,0 +1,11 @@
+{
+  "text": "9",
+  "duration_s": 8.0,
+  "max_model_ik_error_mm": 0.008849561903924313,
+  "max_joint_speed_deg_s": 9.214052009264506,
+  "paper_contact_z_mm": 0,
+  "lift_mm": 30,
+  "physical_accuracy_validated": false,
+  "paper_frame": "same replay-aligned estimate as 21",
+  "motion": "quintic timing for lowering, oval, tail, and lift"
+}

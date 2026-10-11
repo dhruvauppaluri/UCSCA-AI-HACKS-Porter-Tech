@@ -1,0 +1,44 @@
+{
+  "recording": "teleop_demo_20261011T180426Z.jsonl",
+  "samples": 1790,
+  "recording_duration_s": 60.741426916996716,
+  "inferred_loop_window_s": [
+    36.5,
+    41.5
+  ],
+  "inferred_contact_window_s": [
+    36.5,
+    50.5
+  ],
+  "contact_labels_confirmed": false,
+  "surface_z_from_xy_coefficients": [
+    0.0260228844448213,
+    0.18990640357667748,
+    -24.58248526689149
+  ],
+  "apparent_surface_residual_rms_mm": 3.473245543580674,
+  "loop_center_mm": [
+    61.37263648082133,
+    169.99419436875252
+  ],
+  "loop_radii_mm": [
+    23.53871582270446,
+    22.505771830334737
+  ],
+  "tail_endpoint_mm": [
+    72.86796812091879,
+    72.61655418224528
+  ],
+  "heldout_z_prediction_rmse_mm": 3.6683865431589386,
+  "uncorrected_target_z_rmse_mm": 17.220491426615524,
+  "candidate_duration_s": 16,
+  "candidate_max_ik_error_mm": 0.018916471132786213,
+  "candidate_max_joint_speed_deg_s": 8.523981744996831,
+  "executed": false,
+  "limits": [
+    "Coordinates derive from archived FK; no camera or force labels.",
+    "The inferred contact surface includes pose-dependent geometry error and is not a measured paper plane.",
+    "The intended nine uses the user-specified digit as a shape prior, not automatic recognition.",
+    "Predictor was evaluated on the new demonstration, not retrained. Candidate commands have not been compensated or physically validated."
+  ]
+}

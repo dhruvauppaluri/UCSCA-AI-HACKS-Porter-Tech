@@ -1,0 +1,14 @@
+{
+  "source_physical_log": "smoothed_9_physical_20261011T181325Z.jsonl",
+  "observed_loop_xy_span_mm": [
+    38.659645168609096,
+    27.339328896367135
+  ],
+  "loop_y_command_multiplier": 1.4140670868386316,
+  "duration_s": 16,
+  "tail_paper_path_unchanged": true,
+  "max_ik_residual_mm": 0.018421539762218744,
+  "max_joint_speed_deg_s": 10.263595169364095,
+  "executed": false,
+  "note": "Empirical axis scaling from one servo-reconstructed run. It is not proof of a circular physical ink result; hysteresis/contact/geometry remain uncertain."
+}

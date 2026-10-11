@@ -1,0 +1,22 @@
+{
+  "physically_executed": false,
+  "pen_up_clearance_model_mm": 40,
+  "shape": "Two level stationary dots and one symmetric half-ellipse smile",
+  "duration_s": 25.7,
+  "eye_spacing_mm": 26.23596931987276,
+  "mouth_width_mm": 51.562090853857164,
+  "mouth_depth_mm": 33.73296946057256,
+  "max_ik_residual_mm": 0.01929471442760616,
+  "max_joint_speed_deg_s": 12.649403848576819,
+  "inferred_contact_surface": [
+    0.03173940099735687,
+    0.16773914006095803,
+    -15.67951373501737
+  ],
+  "contact_surface_rms_mm": 0.9209621306943654,
+  "limitations": [
+    "Stroke windows and paper contact inferred, not force measured.",
+    "Symmetry is imposed in model coordinates; real ink symmetry remains unverified.",
+    "No 9-specific stretching applied."
+  ]
+}

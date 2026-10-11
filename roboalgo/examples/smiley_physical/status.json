@@ -1,0 +1,12 @@
+{
+  "samples": 1516,
+  "duration_s": 51.470532263978384,
+  "method": "Five-sample binomial smoothing of recorded follower joints; gripper unchanged",
+  "physically_executed": false,
+  "limitations": [
+    "Conservative jitter smoothing only, not fitted face geometry.",
+    "Recording includes approach and idle periods.",
+    "Pen contact labels and stroke boundaries have not yet been determined.",
+    "Not prepared for direct physical replay."
+  ]
+}
