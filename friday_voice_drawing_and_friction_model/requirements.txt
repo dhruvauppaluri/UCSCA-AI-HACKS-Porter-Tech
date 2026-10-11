@@ -1,4 +1,0 @@
-elevenlabs[pyaudio]
-matplotlib
-numpy
-pandas
