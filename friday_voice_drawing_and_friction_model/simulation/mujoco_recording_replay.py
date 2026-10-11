@@ -261,7 +261,7 @@ def joint_arrays(model, observed, commanded, grip_observed, grip_commanded, bias
 
 
 def run_simulation(model, times, observed, commands, paper_origin, paper_to_world,
-                   config, mode, contact_window, capture_video=False):
+                   config, mode, contact_window, capture_video=False, capture_stride=3):
     data = mujoco.MjData(model)
     joint_ids = [model.joint(name).id for name in (*JOINTS, "gripper")]
     qids = [model.jnt_qposadr[j] for j in joint_ids]
@@ -313,7 +313,7 @@ def run_simulation(model, times, observed, commands, paper_origin, paper_to_worl
                      "inside_writable_bounds": int(in_bounds),
                      "source_contact_window": int(contact_window[0] <= t <= contact_window[1]),
                      "joint_error_deg": float(np.linalg.norm(np.rad2deg(data.qpos[qids[:5]] - observed[i, :5])))} )
-        if capture_video and (i % 3 == 0 or i == len(times) - 1):
+        if capture_video and (i % capture_stride == 0 or i == len(times) - 1):
             snapshots.append((data.qpos.copy(), data.qvel.copy(), i + 1))
     return rows, data, snapshots
 

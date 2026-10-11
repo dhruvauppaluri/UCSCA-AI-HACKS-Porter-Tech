@@ -126,6 +126,18 @@ The default `replay-aligned` placement translates that fit using the contact
 window inferred from this recording. The two placements give materially
 different ink results, so neither establishes the real paper position.
 
+To explore the same run in MuJoCo's native 3D viewer on macOS:
+
+```bash
+mjpython simulation/view_recording_interactive.py
+```
+
+The viewer loops the actuator-driven replay. Drag to orbit, scroll to zoom,
+press `P` to pause/resume, use the left/right arrows to step one recorded
+sample while paused, `R` to restart, `I` to show/hide simulated ink, and `C`
+to reset the camera. Close the window to stop. Use `--mode replay` to inspect
+the measured follower poses instead of simulated actuator responses.
+
 The video is a **conditional simulation**, not a reconstruction of measured ink.
 The CSV contains joint positions and targets, but no pen contact, paper pose,
 force, or ink observations. The pen-pivot fit has about 9.8 mm RMS residual and
