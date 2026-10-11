@@ -1,0 +1,56 @@
+{
+  "validation_method": "leave one paired run out of parameter fitting",
+  "mean_run_z_rmse_mm": 5.931245957116721,
+  "runs": [
+    {
+      "recording": "arm_motion_20261010_210241_cartesian.csv",
+      "samples": 1036,
+      "z_rmse_mm": 6.85399396957446,
+      "first_2s_z_rmse_mm": 1.5156571505602594,
+      "mean_z_error_mm": 0.8575551911718567
+    },
+    {
+      "recording": "arm_motion_20261010_211211_cartesian.csv",
+      "samples": 661,
+      "z_rmse_mm": 8.962559521100584,
+      "first_2s_z_rmse_mm": 3.611365100392105,
+      "mean_z_error_mm": 3.2298736294811228
+    },
+    {
+      "recording": "arm_motion_20261010_213515_cartesian.csv",
+      "samples": 659,
+      "z_rmse_mm": 5.569286795303985,
+      "first_2s_z_rmse_mm": 0.001618162121088102,
+      "mean_z_error_mm": 1.3347082680644018
+    },
+    {
+      "recording": "arm_motion_20261010_213829_cartesian.csv",
+      "samples": 1000,
+      "z_rmse_mm": 6.0929629862765236,
+      "first_2s_z_rmse_mm": 1.040326017024332,
+      "mean_z_error_mm": -1.146767101598533
+    },
+    {
+      "recording": "arm_motion_20261010_214539_cartesian.csv",
+      "samples": 1726,
+      "z_rmse_mm": 4.228540897422252,
+      "first_2s_z_rmse_mm": 1.6465191944272977,
+      "mean_z_error_mm": -0.5508048646286017
+    },
+    {
+      "recording": "arm_motion_20261010_214924_cartesian.csv",
+      "samples": 768,
+      "z_rmse_mm": 4.4136198918739105,
+      "first_2s_z_rmse_mm": 0.7454780417803392,
+      "mean_z_error_mm": -1.1639673167049307
+    },
+    {
+      "recording": "teleop_demo_20261011T035258Z_cartesian.csv",
+      "samples": 4954,
+      "z_rmse_mm": 5.397757638265324,
+      "first_2s_z_rmse_mm": 1.388220266400562,
+      "mean_z_error_mm": -1.7397784490194512
+    }
+  ],
+  "final_model": "z_predictor_all_seven.json"
+}

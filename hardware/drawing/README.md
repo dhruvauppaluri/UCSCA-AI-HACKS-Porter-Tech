@@ -1,4 +1,6 @@
-# Physical SO-101 drawing session
+# Physical SO-101 drawing session archive
+
+**Historical session record:** later autonomous 9 and smiley experiments are documented in [current physical routines](../../roboalgo/examples/PHYSICAL_ROUTINES.md). Statements below about failed circles and unvalidated replay describe this earlier session.
 
 This directory archives the October 10, 2026 (PDT) pen drawing work on the AMD-hosted SO-101 leader and follower. The camera files, joint captures, motion plans, scripts, and controller logs are preserved together. File timestamps inside the capture data are UTC and may read October 11.
 

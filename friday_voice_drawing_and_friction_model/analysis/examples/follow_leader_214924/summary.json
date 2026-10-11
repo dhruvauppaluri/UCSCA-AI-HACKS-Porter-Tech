@@ -1,0 +1,165 @@
+{
+  "input": "friday_voice_drawing_and_friction_model/data/recordings/cartesian/arm_motion_20261010_214924_cartesian.csv",
+  "held_out_recording": "arm_motion_20261010_214924_cartesian.csv",
+  "training_recordings": [
+    "arm_motion_20261010_210241_cartesian.csv",
+    "arm_motion_20261010_211211_cartesian.csv",
+    "arm_motion_20261010_213515_cartesian.csv",
+    "arm_motion_20261010_213829_cartesian.csv",
+    "arm_motion_20261010_214539_cartesian.csv",
+    "teleop_demo_20261011T035258Z_cartesian.csv"
+  ],
+  "samples": 768,
+  "duration_s": 25.567146,
+  "initial_follower_xyz_mm": [
+    202.536935,
+    -51.551434,
+    -11.619863
+  ],
+  "leader_equals_sent_target": true,
+  "parameters": {
+    "x": {
+      "delay_s": 0.0,
+      "tau_s": 0.21
+    },
+    "y": {
+      "delay_s": 0.03333333333333333,
+      "tau_s": 0.16
+    },
+    "z": {
+      "delay_s": 0.03333333333333333,
+      "tau_s": 0.16
+    }
+  },
+  "z_correction": {
+    "selected_by": "leave-one-run-out on six training runs",
+    "selected": {
+      "kind": "quadratic_xyz",
+      "ridge": 0.1,
+      "mean_held_out_z_rmse_mm": 6.825174764018764,
+      "per_run_z_rmse_mm": [
+        7.7209061940691806,
+        9.199306010767675,
+        7.973308969670055,
+        6.172657426626238,
+        4.5158928713412285,
+        5.368977111638208
+      ]
+    },
+    "candidates": [
+      {
+        "kind": "constant",
+        "ridge": 0.1,
+        "mean_held_out_z_rmse_mm": 13.398321111847176,
+        "per_run_z_rmse_mm": [
+          17.566270372348402,
+          19.6977172838021,
+          11.087473008495481,
+          9.392588955750446,
+          12.051221898569894,
+          10.594655152116724
+        ]
+      },
+      {
+        "kind": "constant",
+        "ridge": 1.0,
+        "mean_held_out_z_rmse_mm": 13.398321111847176,
+        "per_run_z_rmse_mm": [
+          17.566270372348402,
+          19.6977172838021,
+          11.087473008495481,
+          9.392588955750446,
+          12.051221898569894,
+          10.594655152116724
+        ]
+      },
+      {
+        "kind": "linear_xyz",
+        "ridge": 0.1,
+        "mean_held_out_z_rmse_mm": 8.328559574506011,
+        "per_run_z_rmse_mm": [
+          9.393564912938077,
+          10.56368253262896,
+          7.300500570530143,
+          7.848339135709824,
+          6.7899320434186015,
+          8.075338251810464
+        ]
+      },
+      {
+        "kind": "linear_xyz",
+        "ridge": 1.0,
+        "mean_held_out_z_rmse_mm": 8.637128080625525,
+        "per_run_z_rmse_mm": [
+          10.172917535292981,
+          11.978155468891313,
+          7.3781638638318725,
+          7.483411634279433,
+          6.917321686710164,
+          7.8927982947473945
+        ]
+      },
+      {
+        "kind": "quadratic_xyz",
+        "ridge": 0.1,
+        "mean_held_out_z_rmse_mm": 6.825174764018764,
+        "per_run_z_rmse_mm": [
+          7.7209061940691806,
+          9.199306010767675,
+          7.973308969670055,
+          6.172657426626238,
+          4.5158928713412285,
+          5.368977111638208
+        ]
+      },
+      {
+        "kind": "quadratic_xyz",
+        "ridge": 1.0,
+        "mean_held_out_z_rmse_mm": 7.462948904068998,
+        "per_run_z_rmse_mm": [
+          8.193481051734413,
+          11.572295690294096,
+          7.728486144314659,
+          5.950492315006636,
+          5.538825381957774,
+          5.794112841106418
+        ]
+      }
+    ],
+    "weights": [
+      -15.594528090637413,
+      -9.271239531606689,
+      5.945930902648221,
+      -8.550108719263147,
+      -2.134045277950558,
+      -3.067361946760953,
+      2.8713650865786517,
+      -0.8518481951041283,
+      -3.3354078862430527,
+      2.0690955293964253
+    ],
+    "x_y_predictions_unchanged": true
+  },
+  "held_out_3d_rmse_mm": 13.368757934897644,
+  "corrected_held_out_3d_rmse_mm": 11.901868268424039,
+  "held_out_xy_rmse_mm": 10.958951314683247,
+  "held_out_3d_mae_mm": 10.780509208329796,
+  "corrected_held_out_3d_mae_mm": 9.647562845591104,
+  "held_out_3d_p95_error_mm": 26.011556724734245,
+  "corrected_held_out_3d_p95_error_mm": 23.607076372544732,
+  "held_out_3d_max_error_mm": 35.80038627864832,
+  "direct_leader_3d_rmse_mm": 22.871579985661185,
+  "direct_leader_xy_rmse_mm": 18.977712902313037,
+  "per_axis_rmse_mm": {
+    "x": 10.517523905116088,
+    "y": 3.0790103642094673,
+    "z": 7.656701300448585
+  },
+  "corrected_z_rmse_mm": 4.642828271788797,
+  "limits": [
+    "The initial follower XYZ comes from this run; later follower samples are withheld until scoring.",
+    "XYZ positions come from forward kinematics, not direct pen-tip measurement.",
+    "This model predicts motion only; it does not infer paper contact, pressure, or ink.",
+    "The Z correction is empirical and needs validation on further unseen sessions."
+  ]
+}

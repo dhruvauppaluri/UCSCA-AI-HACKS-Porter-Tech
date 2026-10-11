@@ -1,0 +1,91 @@
+{
+  "drawing": "cartoon-dog",
+  "text": null,
+  "samples": 739,
+  "duration_s": 49.20000000000076,
+  "source_recording_for_calibration": "friday_voice_drawing_and_friction_model/data/recordings/raw/arm_motion_20261010_214924.csv",
+  "paper_mm": [
+    220.0,
+    275.0
+  ],
+  "writable_inset_mm": [
+    170.0,
+    235.0
+  ],
+  "pen_tip_site_offset_mm": [
+    40.880793141564915,
+    3.310161144086591,
+    7.302548788002195
+  ],
+  "joint_zero_bias_deg": {
+    "shoulder_lift": 0.1261783590925175,
+    "elbow_flex": 2.0858676034870425,
+    "wrist_flex": -2.3830847932771877,
+    "wrist_roll": -0.005859587310436319
+  },
+  "pivot_fit_rms_mm": 9.798934227582231,
+  "corner_fit_rms_mm": 13.221437360086282,
+  "replay_alignment_shift_mm": [
+    -75.77039117318995,
+    -53.261598665825794,
+    -4.449358287896714
+  ],
+  "paper_origin_world_m": [
+    0.10947647618467733,
+    0.05894245916170922,
+    -0.022496034361139106
+  ],
+  "paper_to_world_rotation": [
+    [
+      -0.0469055569705503,
+      0.9960345783319576,
+      0.07559753628499707
+    ],
+    [
+      -0.9986766241680106,
+      -0.045162595620301754,
+      -0.02460366430479077
+    ],
+    [
+      -0.021091919440112707,
+      -0.07665154091025221,
+      0.9968348269449736
+    ]
+  ],
+  "seed_recording_index": 487,
+  "joint_limits_widened_to_recording_deg": {
+    "shoulder_lift": [
+      -105.00568977277561,
+      100.00000000000041
+    ],
+    "elbow_flex": [
+      -96.82986737710912,
+      99.87707639469585
+    ]
+  },
+  "fitted_delay_s": 0.033333,
+  "fitted_tau_s": 0.16,
+  "ik_residual_rms_mm": 0.29494558100561086,
+  "ik_residual_max_mm": 0.785534156444451,
+  "pen_shaft_angle_change_median_deg": 0.8617781624101859,
+  "pen_shaft_angle_change_max_deg": 4.292870221035049,
+  "ik_over_3mm_samples": 0,
+  "requested_pen_down_samples": 453,
+  "simulated_pen_down_xy_rmse_mm": 4.870917259758212,
+  "simulated_pen_down_xy_max_error_mm": 8.0745155526562,
+  "collision_stroke_sample_coverage_within_3mm_percent": 94.48123620309052,
+  "collision_stroke_sample_coverage_within_5mm_percent": 100.0,
+  "simulated_collision_ink_samples": 477,
+  "inferred_near_contact_ink_samples": 7,
+  "pen_down_without_predicted_ink_samples": 0,
+  "off_stroke_collision_ink_samples": 31,
+  "off_stroke_collision_over_3mm_from_stroke_samples": 6,
+  "ink_outside_writable_bounds_samples": 0,
+  "near_contact_allowance_mm": 5.0,
+  "limits": [
+    "Paper pose was aligned to a prior recording and inset centering is assumed.",
+    "Pen tip and corner fit errors remain large relative to letter strokes.",
+    "Near-contact ink is a visual hypothesis, not a force or ink measurement.",
+    "Lag compensation is fitted to seven teleoperation runs; this new text has no real validation."
+  ]
+}

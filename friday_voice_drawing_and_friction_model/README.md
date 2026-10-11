@@ -1,5 +1,7 @@
 # Voice drawing and exploratory pen model
 
+For the current physical drawing routines and ElevenLabs feedback bridge, start at the [project README](../README.md). The print-only voice interface below is an earlier modeling prototype.
+
 This folder combines a 2D stroke planner, a voice interface, the recorded arm
 data, follower calibration, response fits, and a paper-coordinate trajectory
 simulator. The fitting scripts read the recordings bundled in this folder.

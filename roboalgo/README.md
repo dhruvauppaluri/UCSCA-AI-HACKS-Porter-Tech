@@ -1,10 +1,14 @@
-# RoboAlgo: follower Z motion predictor
+# RoboAlgo: drawing trajectories and follower prediction
 
-This folder packages the drawing project's current **leader/command XYZ →
+The predictor component packages the drawing project's **leader/command XYZ →
 follower Z** algorithm. It reads a timed Cartesian command path in the robot
 base frame and the follower's first measured Z position. It predicts later
 follower Z positions without reading later follower measurements. It does not
 alter X/Y, generate letters, solve inverse kinematics, or measure pen contact.
+
+## Current drawing routines
+
+The package also contains calibrated IK preparation and saved physical routines for **9** and **smiley face**. See [physical routines](examples/PHYSICAL_ROUTINES.md) and [voice feedback](../voice/feedback/README.md). Those replay controllers are separate from the offline Z predictor described below.
 
 ## Contents
 

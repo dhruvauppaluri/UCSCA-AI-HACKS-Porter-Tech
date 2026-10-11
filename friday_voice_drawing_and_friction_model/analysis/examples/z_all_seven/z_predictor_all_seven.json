@@ -1,0 +1,51 @@
+{
+  "delay_s": 0.03333333333333333,
+  "tau_s": 0.16,
+  "ridge": 0.1,
+  "motion_scale_mm": 20.0,
+  "motion_deadband_mm": 1.0,
+  "motion_measure": "running maximum displacement from first leader XYZ",
+  "feature_names": [
+    "intercept",
+    "x",
+    "y",
+    "z",
+    "x_squared",
+    "y_squared",
+    "z_squared",
+    "xy",
+    "xz",
+    "yz"
+  ],
+  "weights": [
+    -16.33930401980867,
+    -9.52272080809325,
+    5.568752310605875,
+    -9.399553473042848,
+    -1.5642504415866607,
+    -3.483724304128628,
+    3.430047807877836,
+    -0.9933523720436356,
+    -3.756883075734745,
+    1.183403910167176
+  ],
+  "model": "motion-gated spatial correction of delayed follower Z",
+  "training_recordings": [
+    "arm_motion_20261010_210241_cartesian.csv",
+    "arm_motion_20261010_211211_cartesian.csv",
+    "arm_motion_20261010_213515_cartesian.csv",
+    "arm_motion_20261010_213829_cartesian.csv",
+    "arm_motion_20261010_214539_cartesian.csv",
+    "arm_motion_20261010_214924_cartesian.csv",
+    "teleop_demo_20261011T035258Z_cartesian.csv"
+  ],
+  "trained_on_all_paired_runs": true,
+  "input": "leader/target XYZ in base-frame mm plus initial follower Z in mm",
+  "output": "predicted follower Z in base-frame mm",
+  "x_y_predictions": "unchanged; this model returns Z only",
+  "limitations": [
+    "Leader-only and duplicate-prefix files have no independent paired follower labels.",
+    "Model form was developed after inspecting these runs; leave-one-run-out scores are diagnostics, not new-session validation.",
+    "Base-frame XYZ comes from forward kinematics, not directly measured pen-tip or paper contact."
+  ]
+}
