@@ -7,6 +7,10 @@ HOST="${AMD_SSH_TARGET:-amd-genai2}"
 if ! ssh -S "$SOCKET" -O check "$HOST" >/dev/null 2>&1; then
   ssh -M -S "$SOCKET" -o ControlPersist=8h -o ServerAliveInterval=5 -o ServerAliveCountMax=3 -fN "$HOST"
 fi
+if [ -z "${SSL_CERT_FILE:-}" ]; then
+  SSL_CERT_FILE="$("$PYTHON" -c 'import certifi; print(certifi.where())' 2>/dev/null || true)"
+  [ -n "$SSL_CERT_FILE" ] && export SSL_CERT_FILE
+fi
 set -a
 source "$HOME/.config/roboarm/mac-voice.env"
 set +a
