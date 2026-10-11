@@ -1,0 +1,89 @@
+{
+  "frame": "URDF base_link; meters converted to millimeters",
+  "urdf": "work/so101_new_calib.urdf",
+  "urdf_sha256": "3a65d2d35e68a8d2f0c2cc176d19b884506543c93ba72980145b80abe276022c",
+  "tip_offset_gripper_frame_mm": [
+    -7.49,
+    3.33,
+    37.58
+  ],
+  "files": [
+    {
+      "source": "robot-host/arm_motion_20261010_210241.csv",
+      "output": "arm_motion_20261010_210241_cartesian.csv",
+      "rows": 1036,
+      "segments": 1,
+      "source_sha256": "42131d5edf385a314bd0269de1ac90e35bbab39982e912636b6f7c651db59d6f"
+    },
+    {
+      "source": "robot-host/arm_motion_20261010_213515.csv",
+      "output": "arm_motion_20261010_213515_cartesian.csv",
+      "rows": 659,
+      "segments": 1,
+      "source_sha256": "f003a544531a493c9e660f4992446cf0bcbd6abf70729cb2cb39c941c4b7f43c"
+    },
+    {
+      "source": "robot-host/arm_motion_20261010_213829.csv",
+      "output": "arm_motion_20261010_213829_cartesian.csv",
+      "rows": 1000,
+      "segments": 1,
+      "source_sha256": "6d0270c2cbf2545f343595f8181d36604262b0e8bfe1491cf7593f681078625a"
+    },
+    {
+      "source": "robot-host/arm_motion_20261010_214539.csv",
+      "output": "arm_motion_20261010_214539_cartesian.csv",
+      "rows": 1726,
+      "segments": 1,
+      "source_sha256": "3cf5292d4da52879914567dc6063b04b50cbc829baa6177834e19c341979ab2e"
+    },
+    {
+      "source": "robot-host/arm_motion_20261010_214924.csv",
+      "output": "arm_motion_20261010_214924_cartesian.csv",
+      "rows": 768,
+      "segments": 1,
+      "source_sha256": "719ef2a0d3c0c155c1f8b860bf804b1e512e1f149133a4a5a0c51ec32d1006e0"
+    },
+    {
+      "source": "robot-host/leader_movements_20261010_204807.csv",
+      "output": "leader_movements_20261010_204807_cartesian.csv",
+      "rows": 442,
+      "segments": 1,
+      "source_sha256": "d85b651dd1456ba32fe9e8738ee609c81b19c121efce45ba4022f7006e997de5"
+    },
+    {
+      "source": "robot-host/leader_movements_20261010_205139.csv",
+      "output": "leader_movements_20261010_205139_cartesian.csv",
+      "rows": 2057,
+      "segments": 1,
+      "source_sha256": "a607a2842b77a2f7816c942e1ace1a9af45b8bec2057a76ab359b2e0bf3f4ae2"
+    },
+    {
+      "source": "robot-host/usefulcommands/arm_motion_20261010_211211.csv",
+      "output": "arm_motion_20261010_211211_cartesian.csv",
+      "rows": 661,
+      "segments": 1,
+      "source_sha256": "57db66352c5a13afdf8e045822d0ad4923ce024c2f212895ab4e37dad950908d"
+    },
+    {
+      "source": "robot-host/usefulcommands/leader_movements_20261010_205807.csv",
+      "output": "leader_movements_20261010_205807_cartesian.csv",
+      "rows": 2030,
+      "segments": 1,
+      "source_sha256": "4298141b8b7561f6a5333818413d98db6ccb25ca1d17a6287eee94cfecafbbeb"
+    },
+    {
+      "source": "remote-data/teleop_demo_20261011T035258Z.jsonl",
+      "output": "teleop_demo_20261011T035258Z_cartesian.csv",
+      "rows": 4954,
+      "segments": 1,
+      "source_sha256": "61d1123120a16447e8eafec866560531e2041f899625c10c68a4b533fc5d6895"
+    },
+    {
+      "source": "remote-data/three_circles_20261011T035521Z.jsonl",
+      "output": "three_circles_20261011T035521Z_cartesian.csv",
+      "rows": 4063,
+      "segments": 1,
+      "source_sha256": "1dd598c27a82344bc3139691ae99298813246ce61320474ebe14d791c33dc916"
+    }
+  ]
+}
