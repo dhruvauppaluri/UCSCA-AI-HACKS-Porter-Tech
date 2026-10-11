@@ -20,6 +20,8 @@ alter X/Y, generate letters, solve inverse kinematics, or measure pen contact.
   checks on held-out recordings; `plot_stress.py` draws the results.
 - `artifacts/`: fitted JSON model, held-out validation and stress results,
   example CSV, and charts.
+- `examples/21/`: timed “21” paper targets, simulated joint targets, and
+  RoboAlgo predictions with the observed limitations for a physical test.
 
 The seven source recordings remain in
 `friday_voice_drawing_and_friction_model/data/recordings/cartesian/` in this
