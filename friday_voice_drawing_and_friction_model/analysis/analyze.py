@@ -3,7 +3,7 @@ import numpy as np, pandas as pd
 
 import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-CSV = sys.argv[1] if len(sys.argv) > 1 else "../data/recordings/arm_motion_20261010_214924_cartesian.csv"
+CSV = sys.argv[1] if len(sys.argv) > 1 else "../data/recordings/cartesian/arm_motion_20261010_214924_cartesian.csv"
 d = pd.read_csv(CSV)
 t = d.time_s.values
 T = d[[f"target_{a}_mm" for a in "xyz"]].values

@@ -1,0 +1,74 @@
+{
+  "model": "Independent XYZ delayed first-order response in URDF base frame",
+  "source": "Seven independent paired runs; leader-only runs have no follower XYZ",
+  "parameters": {
+    "x": {
+      "delay_s": 0.0,
+      "tau_s": 0.28
+    },
+    "y": {
+      "delay_s": 0.033333,
+      "tau_s": 0.16
+    },
+    "z": {
+      "delay_s": 0.033333,
+      "tau_s": 0.16
+    }
+  },
+  "isotropic_parameters": {
+    "delay_s": 0.033333,
+    "tau_s": 0.16
+  },
+  "leave_one_run_out": [
+    {
+      "recording": "arm_motion_20261010_210241_cartesian.csv",
+      "samples": 1036,
+      "model_xyz_rmse_mm": 27.437,
+      "direct_target_xyz_rmse_mm": 33.868,
+      "isotropic_model_xyz_rmse_mm": 27.262
+    },
+    {
+      "recording": "arm_motion_20261010_211211_cartesian.csv",
+      "samples": 661,
+      "model_xyz_rmse_mm": 31.911,
+      "direct_target_xyz_rmse_mm": 37.27,
+      "isotropic_model_xyz_rmse_mm": 31.544
+    },
+    {
+      "recording": "arm_motion_20261010_213515_cartesian.csv",
+      "samples": 659,
+      "model_xyz_rmse_mm": 20.337,
+      "direct_target_xyz_rmse_mm": 26.44,
+      "isotropic_model_xyz_rmse_mm": 20.559
+    },
+    {
+      "recording": "arm_motion_20261010_213829_cartesian.csv",
+      "samples": 1000,
+      "model_xyz_rmse_mm": 16.56,
+      "direct_target_xyz_rmse_mm": 28.893,
+      "isotropic_model_xyz_rmse_mm": 17.147
+    },
+    {
+      "recording": "arm_motion_20261010_214539_cartesian.csv",
+      "samples": 1726,
+      "model_xyz_rmse_mm": 19.663,
+      "direct_target_xyz_rmse_mm": 24.135,
+      "isotropic_model_xyz_rmse_mm": 19.739
+    },
+    {
+      "recording": "arm_motion_20261010_214924_cartesian.csv",
+      "samples": 768,
+      "model_xyz_rmse_mm": 13.369,
+      "direct_target_xyz_rmse_mm": 22.872,
+      "isotropic_model_xyz_rmse_mm": 13.729
+    },
+    {
+      "recording": "teleop_demo_20261011T035258Z_cartesian.csv",
+      "samples": 4954,
+      "model_xyz_rmse_mm": 16.525,
+      "direct_target_xyz_rmse_mm": 21.509,
+      "isotropic_model_xyz_rmse_mm": 16.532
+    }
+  ],
+  "limits": "XYZ values are derived from imperfect forward kinematics; paper contact and friction are not identified."
+}

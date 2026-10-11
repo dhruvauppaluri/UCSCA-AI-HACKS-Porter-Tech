@@ -1,0 +1,82 @@
+{
+  "bottom_left": {
+    "captured_at_utc": "2026-10-11T02:21:49.758039+00:00",
+    "follower_id": "my_awesome_follower_arm",
+    "follower_port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C4C128167-if00",
+    "joint_positions": {
+      "elbow_flex.pos": 64.0,
+      "gripper.pos": 1.0702341137123745,
+      "shoulder_lift.pos": -47.032967032967036,
+      "shoulder_pan.pos": 14.593406593406593,
+      "wrist_flex.pos": 67.78021978021978,
+      "wrist_roll.pos": 37.934065934065934
+    },
+    "label": "bottom_left",
+    "note": "Pen offset direction and exact length are not yet calibrated.",
+    "pen_tip_offset_mm_estimate": 38.1,
+    "units": {
+      "body_joints": "degrees",
+      "gripper": "percent_open"
+    }
+  },
+  "bottom_right": {
+    "captured_at_utc": "2026-10-11T02:22:17.211868+00:00",
+    "follower_id": "my_awesome_follower_arm",
+    "follower_port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C4C128167-if00",
+    "joint_positions": {
+      "elbow_flex.pos": 20.21978021978022,
+      "gripper.pos": 1.0702341137123745,
+      "shoulder_lift.pos": 3.5164835164835164,
+      "shoulder_pan.pos": 54.59340659340659,
+      "wrist_flex.pos": 59.07692307692308,
+      "wrist_roll.pos": 55.07692307692308
+    },
+    "label": "bottom_right",
+    "note": "Pen offset direction and exact length are not yet calibrated.",
+    "pen_tip_offset_mm_estimate": 38.1,
+    "units": {
+      "body_joints": "degrees",
+      "gripper": "percent_open"
+    }
+  },
+  "top_left": {
+    "captured_at_utc": "2026-10-11T02:20:43.298288+00:00",
+    "follower_id": "my_awesome_follower_arm",
+    "follower_port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C4C128167-if00",
+    "joint_positions": {
+      "elbow_flex.pos": -50.46153846153846,
+      "gripper.pos": 1.0702341137123745,
+      "shoulder_lift.pos": 55.824175824175825,
+      "shoulder_pan.pos": 6.769230769230769,
+      "wrist_flex.pos": 61.010989010989015,
+      "wrist_roll.pos": 22.9010989010989
+    },
+    "label": "top_left",
+    "note": "Pen offset direction and exact length are not yet calibrated.",
+    "pen_tip_offset_mm_estimate": 38.1,
+    "units": {
+      "body_joints": "degrees",
+      "gripper": "percent_open"
+    }
+  },
+  "top_right": {
+    "captured_at_utc": "2026-10-11T02:23:44.251276+00:00",
+    "follower_id": "my_awesome_follower_arm",
+    "follower_port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C4C128167-if00",
+    "joint_positions": {
+      "elbow_flex.pos": -55.032967032967036,
+      "gripper.pos": 1.0702341137123745,
+      "shoulder_lift.pos": 66.54945054945055,
+      "shoulder_pan.pos": 30.065934065934066,
+      "wrist_flex.pos": 39.120879120879124,
+      "wrist_roll.pos": 39.86813186813187
+    },
+    "label": "top_right",
+    "note": "Pen offset direction and exact length are not yet calibrated.",
+    "pen_tip_offset_mm_estimate": 38.1,
+    "units": {
+      "body_joints": "degrees",
+      "gripper": "percent_open"
+    }
+  }
+}

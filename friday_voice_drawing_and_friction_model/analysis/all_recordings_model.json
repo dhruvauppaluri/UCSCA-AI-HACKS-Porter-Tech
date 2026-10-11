@@ -1,0 +1,211 @@
+{
+  "model": "independent joint first-order response with pure command delay",
+  "units": "arm joints in degrees; gripper in its recorded opening units",
+  "fitted_on": [
+    "arm_motion_20261010_210241.csv",
+    "arm_motion_20261010_211211.csv",
+    "arm_motion_20261010_213515.csv",
+    "arm_motion_20261010_213829.csv",
+    "arm_motion_20261010_214539.csv",
+    "arm_motion_20261010_214924.csv",
+    "teleop_demo_20261011T035258Z.jsonl"
+  ],
+  "leader_only": [
+    {
+      "recording": "leader_movements_20261010_204807.csv",
+      "samples": 442,
+      "duration_s": 14.7,
+      "joint_range_deg": {
+        "shoulder_pan": 0.97,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 16.97,
+        "wrist_flex": 10.9,
+        "wrist_roll": 0.7
+      },
+      "p95_angular_speed_deg_s": {
+        "shoulder_pan": 0.0,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 10.58,
+        "wrist_flex": 2.64,
+        "wrist_roll": 2.6
+      }
+    },
+    {
+      "recording": "leader_movements_20261010_205139.csv",
+      "samples": 2057,
+      "duration_s": 68.53,
+      "joint_range_deg": {
+        "shoulder_pan": 0.79,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 4.92,
+        "wrist_flex": 12.75,
+        "wrist_roll": 0.79
+      },
+      "p95_angular_speed_deg_s": {
+        "shoulder_pan": 0.0,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.0,
+        "wrist_flex": 0.0,
+        "wrist_roll": 0.0
+      }
+    },
+    {
+      "recording": "leader_movements_20261010_205807.csv",
+      "samples": 2030,
+      "duration_s": 67.63,
+      "joint_range_deg": {
+        "shoulder_pan": 15.03,
+        "shoulder_lift": 0.26,
+        "elbow_flex": 5.54,
+        "wrist_flex": 14.86,
+        "wrist_roll": 21.45
+      },
+      "p95_angular_speed_deg_s": {
+        "shoulder_pan": 0.0,
+        "shoulder_lift": 0.0,
+        "elbow_flex": 0.0,
+        "wrist_flex": 0.0,
+        "wrist_roll": 0.0
+      }
+    }
+  ],
+  "excluded_duplicate": "three_circles snapshot is contained in the full teleoperation recording",
+  "parameters": {
+    "shoulder_pan": {
+      "delay_s": 0.066667,
+      "tau_s": 0.12
+    },
+    "shoulder_lift": {
+      "delay_s": 0.1,
+      "tau_s": 0.07
+    },
+    "elbow_flex": {
+      "delay_s": 0.066667,
+      "tau_s": 0.12
+    },
+    "wrist_flex": {
+      "delay_s": 0.033333,
+      "tau_s": 0.16
+    },
+    "wrist_roll": {
+      "delay_s": 0.066667,
+      "tau_s": 0.09
+    },
+    "gripper": {
+      "delay_s": 0.0,
+      "tau_s": 0.52
+    }
+  },
+  "leave_one_run_out": [
+    {
+      "recording": "arm_motion_20261010_210241.csv",
+      "samples": 1036,
+      "duration_s": 34.5,
+      "model_arm_rmse_deg": 4.019,
+      "direct_target_arm_rmse_deg": 8.261,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.698,
+        "shoulder_lift": 2.592,
+        "elbow_flex": 2.692,
+        "wrist_flex": 1.255,
+        "wrist_roll": 0.355,
+        "gripper": 0.156
+      }
+    },
+    {
+      "recording": "arm_motion_20261010_211211.csv",
+      "samples": 661,
+      "duration_s": 22.0,
+      "model_arm_rmse_deg": 5.129,
+      "direct_target_arm_rmse_deg": 10.334,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.616,
+        "shoulder_lift": 3.664,
+        "elbow_flex": 3.087,
+        "wrist_flex": 1.687,
+        "wrist_roll": 0.35,
+        "gripper": 0.287
+      }
+    },
+    {
+      "recording": "arm_motion_20261010_213515.csv",
+      "samples": 659,
+      "duration_s": 21.93,
+      "model_arm_rmse_deg": 3.856,
+      "direct_target_arm_rmse_deg": 9.216,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.833,
+        "shoulder_lift": 1.777,
+        "elbow_flex": 2.753,
+        "wrist_flex": 1.812,
+        "wrist_roll": 0.387,
+        "gripper": 0.391
+      }
+    },
+    {
+      "recording": "arm_motion_20261010_213829.csv",
+      "samples": 1000,
+      "duration_s": 28.2,
+      "model_arm_rmse_deg": 3.614,
+      "direct_target_arm_rmse_deg": 9.06,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.744,
+        "shoulder_lift": 2.122,
+        "elbow_flex": 2.253,
+        "wrist_flex": 1.666,
+        "wrist_roll": 0.389,
+        "gripper": 3.427
+      }
+    },
+    {
+      "recording": "arm_motion_20261010_214539.csv",
+      "samples": 1726,
+      "duration_s": 57.5,
+      "model_arm_rmse_deg": 3.477,
+      "direct_target_arm_rmse_deg": 6.382,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.63,
+        "shoulder_lift": 1.996,
+        "elbow_flex": 2.43,
+        "wrist_flex": 1.271,
+        "wrist_roll": 0.439,
+        "gripper": 0.289
+      }
+    },
+    {
+      "recording": "arm_motion_20261010_214924.csv",
+      "samples": 768,
+      "duration_s": 25.57,
+      "model_arm_rmse_deg": 2.488,
+      "direct_target_arm_rmse_deg": 7.174,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.635,
+        "shoulder_lift": 0.983,
+        "elbow_flex": 1.639,
+        "wrist_flex": 1.42,
+        "wrist_roll": 0.341,
+        "gripper": 0.288
+      }
+    },
+    {
+      "recording": "teleop_demo_20261011T035258Z.jsonl",
+      "samples": 4954,
+      "duration_s": 167.64,
+      "model_arm_rmse_deg": 3.371,
+      "direct_target_arm_rmse_deg": 5.837,
+      "model_joint_rmse_deg": {
+        "shoulder_pan": 0.953,
+        "shoulder_lift": 1.807,
+        "elbow_flex": 1.996,
+        "wrist_flex": 1.753,
+        "wrist_roll": 0.367,
+        "gripper": 1.567
+      }
+    }
+  ],
+  "limits": [
+    "The model describes observed tracking, not rigid-body dynamics or measured forces.",
+    "Contact state is not verified in these files; friction cannot be isolated from residual motion.",
+    "Cartesian pen coordinates inherit the URDF and pen-tip calibration error."
+  ]
+}

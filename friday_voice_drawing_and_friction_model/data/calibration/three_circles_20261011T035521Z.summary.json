@@ -1,0 +1,14 @@
+{
+  "source": "/home/amd-genai2/drawing_capture/data/teleop_demo_20261011T035258Z.jsonl",
+  "snapshot": "/home/amd-genai2/drawing_capture/data/three_circles_20261011T035521Z.jsonl",
+  "samples": 4063,
+  "duration_s": 137.49623118899763,
+  "user_report": "Three different circles drawn; individual stroke boundaries not yet labeled. Includes startup and other movements.",
+  "tracking_rmse_deg": {
+    "shoulder_pan.pos": 1.883,
+    "shoulder_lift.pos": 3.633,
+    "elbow_flex.pos": 3.701,
+    "wrist_flex.pos": 2.533,
+    "wrist_roll.pos": 1.001
+  }
+}
