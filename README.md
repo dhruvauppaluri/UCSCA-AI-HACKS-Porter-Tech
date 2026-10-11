@@ -2,11 +2,13 @@
 
 **Continuing on a new machine?** Start with the [current handoff](handoffs/START-HERE.md) for the measured status, saved artifacts, real-kit interface gaps, and first physical-arm session. The [resource index](handoffs/resource-links.md) gathers the supplied Google Docs, kit listing, hackathon notebook, source repositories, and setup links.
 
+The [physical drawing session](hardware/drawing/README.md) preserves the paper calibration, attempted hover and circle paths, teleoperation recorder, camera references, and motor fault logs. No circle was drawn; the latest teleoperation launch failed while configuring motor ID 2.
+
 For the latest contact-grasp dataset, AMD cloud training smoke test, real-arm session order, and NVIDIA Brev credit path, see the [competition execution record](handoffs/2026-10-10-competition-execution.md).
 
 This project rehearses SO-101 pick-and-place in MuJoCo and records synchronized camera, joint-state, and joint-target demonstrations in LeRobot v3 format. It includes ACT training and simulated inference, a Gymnasium environment, bounded controllers, the earlier state-only SAC curriculum, camera adapters, evaluation metrics, and a local command API.
 
-The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101) under Apache 2.0; see `so101_sim/model/LICENSE-APACHE-2.0`. The XIAO stream adapter follows Seeed's [XIAO ESP32-S3 Sense camera example](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/). No physical robot interface is enabled in this package.
+The arm model and STL files come from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101) under Apache 2.0; see `so101_sim/model/LICENSE-APACHE-2.0`. The XIAO stream adapter follows Seeed's [XIAO ESP32-S3 Sense camera example](https://wiki.seeedstudio.com/xiao_esp32s3_camera_usage/). The simulator package does not issue physical robot commands; the separate `hardware/drawing/` archive contains experimental real-arm scripts and logs.
 
 An optional contact-based variant adopts the finger pads and robot model from [ggand0/pick-101](https://github.com/ggand0/pick-101), with attribution and MIT notice in [`so101_sim/model/PICK101-ATTRIBUTION.md`](so101_sim/model/PICK101-ATTRIBUTION.md). Pass `--physics-variant pick101_contact` to `so101_sim.eval_lerobot` to evaluate without the assisted grasp proxy. This is a separate transfer check; it uses different grasp physics and a shifted tool site, so compare its results separately from the training scene.
 The [pick-101 review](handoffs/2026-10-10-pick101-review.md) explains its reported 2-million-frame lift result and the exact pieces adopted here.
@@ -21,7 +23,7 @@ The repository includes the searchable [conversation record](handoffs/conversati
 
 ## Physical AI track status
 
-The AMD challenge's Mission 1 requires a full Hugging Face LeRobot setup on AMD hardware and a real pick-and-place into a bin. This repository now has a LeRobot simulation data, training, and inference path, but no loaner-arm trial has been run. The simulated joint radians, assisted grasp proxy, and NVIDIA GPU run do not establish real-arm or AMD challenge compliance. Complete and record the real Mission 1 path first, then add XIAO vision and ElevenLabs voice if time permits. This repository stays private during development; see the dated handoff for the eventual public-release checklist and the Mission 2 option.
+The AMD challenge's Mission 1 requires a full Hugging Face LeRobot setup on AMD hardware and a real pick-and-place into a bin. This repository has a LeRobot simulation data, training, and inference path. A separate physical pen-drawing session has been archived, but no real pick-and-place into a bin has been demonstrated. The simulated joint radians, assisted grasp proxy, and NVIDIA GPU run do not establish real-arm or AMD challenge compliance. Complete and record the real Mission 1 path first, then add XIAO vision and ElevenLabs voice if time permits. This repository stays private during development; see the dated handoff for the eventual public-release checklist and the Mission 2 option.
 
 ## Install
 

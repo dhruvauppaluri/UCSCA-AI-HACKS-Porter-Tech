@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-10-11T03:04:27.347138+00:00",
+  "log": [
+    {
+      "step": 1,
+      "target": {
+        "shoulder_pan": 31.914015930632786,
+        "shoulder_lift": 21.640701898649162,
+        "elbow_flex": -9.444060199677024,
+        "wrist_flex": 87.10172079845745,
+        "wrist_roll": 18.804096430305712
+      },
+      "observed": {
+        "shoulder_pan": 32.0,
+        "shoulder_lift": 22.417582417582416,
+        "elbow_flex": -9.142857142857142,
+        "wrist_flex": 87.12087912087912,
+        "wrist_roll": 18.681318681318682
+      },
+      "tracking_gap_deg": 0.7768805189332539,
+      "rise_from_clear_pose_mm": -2.62947901371389
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "/home/amd-genai2/drawing_capture/corner_capture.py", line 386, in <module>
+    main()
+  File "/home/amd-genai2/drawing_capture/corner_capture.py", line 371, in main
+    run(args)
+  File "/home/amd-genai2/drawing_capture/corner_capture.py", line 232, in run
+    follower.configure()
+  File "/home/amd-genai2/lerobot/src/lerobot/robots/so_follower/so_follower.py", line 160, in configure
+    with self.bus.torque_disabled():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amd-genai2/miniforge3/envs/lerobot/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/amd-genai2/lerobot/src/lerobot/motors/motors_bus.py", line 687, in torque_disabled
+    self.disable_torque(motors)
+  File "/home/amd-genai2/lerobot/src/lerobot/motors/feetech/feetech.py", line 293, in disable_torque
+    self.write("Torque_Enable", motor, TorqueMode.DISABLED.value, num_retry=num_retry)
+  File "/home/amd-genai2/lerobot/src/lerobot/utils/decorators.py", line 29, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/amd-genai2/lerobot/src/lerobot/motors/motors_bus.py", line 1097, in write
+    self._write(addr, length, id_, int_value, num_retry=num_retry, raise_on_error=True, err_msg=err_msg)
+  File "/home/amd-genai2/lerobot/src/lerobot/motors/motors_bus.py", line 1123, in _write
+    raise RuntimeError(f"{err_msg} {self.packet_handler.getRxPacketError(error)}")
+RuntimeError: Failed to write 'Torque_Enable' on id_=2 with '0' after 1 tries. 

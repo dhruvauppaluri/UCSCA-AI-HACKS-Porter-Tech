@@ -1,0 +1,22 @@
+{
+  "bottom_left": {
+    "captured_at_utc": "2026-10-11T02:10:54.225102+00:00",
+    "follower_id": "my_awesome_follower_arm",
+    "follower_port": "/dev/serial/by-id/usb-1a86_USB_Single_Serial_5C4C128167-if00",
+    "joint_positions": {
+      "elbow_flex.pos": 132.0,
+      "gripper.pos": 135.0,
+      "shoulder_lift.pos": 131.0,
+      "shoulder_pan.pos": 130.0,
+      "wrist_flex.pos": 133.0,
+      "wrist_roll.pos": 134.0
+    },
+    "label": "bottom_left",
+    "note": "Pen offset direction and exact length are not yet calibrated.",
+    "pen_tip_offset_mm_estimate": 38.1,
+    "units": {
+      "body_joints": "degrees",
+      "gripper": "percent_open"
+    }
+  }
+}

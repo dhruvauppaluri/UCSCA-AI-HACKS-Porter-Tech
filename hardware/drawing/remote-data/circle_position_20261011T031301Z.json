@@ -1,0 +1,404 @@
+{
+  "phase": "position",
+  "log": [
+    {
+      "step": 1,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.103906838603073,
+        "shoulder_lift": 21.833994968093105,
+        "elbow_flex": -9.243649849003022,
+        "wrist_flex": 86.80757332240198,
+        "wrist_roll": 18.77006359630284
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    },
+    {
+      "step": 2,
+      "phase": "lift",
+      "target": {
+        "shoulder_pan": 31.086259331400118,
+        "shoulder_lift": 21.301646540999666,
+        "elbow_flex": -9.350070210555415,
+        "wrist_flex": 87.23169362139903,
+        "wrist_roll": 18.770970242245806
+      },
+      "actual": {
+        "shoulder_pan": 31.12087912087912,
+        "shoulder_lift": 22.593406593406595,
+        "elbow_flex": -9.054945054945055,
+        "wrist_flex": 86.41758241758242,
+        "wrist_roll": 18.76923076923077
+      },
+      "height_from_contact_mm": -0.9652641458468179
+    }
+  ]
+}
