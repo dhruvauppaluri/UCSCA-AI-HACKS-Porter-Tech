@@ -96,10 +96,41 @@ calibration error. The video needs
 time alignment and pen/paper tracking, followed by validation on a separate
 recording, before using the numbers as predictive physics parameters.
 
-The simulation is useful for exploring how candidate paths respond to assumed
-lag and drag. It is not a validated robot controller or a MuJoCo implementation.
-The repository's separate `so101_sim/` contains a MuJoCo arm model and a
-gripper-frame IK controller; pen-tip IK and paper contact are not connected yet.
+The trajectory proxy is useful for exploring how candidate paths respond to
+assumed lag and drag. It is not a validated robot controller. The repository's
+separate `so101_sim/` contains a MuJoCo arm model and a gripper-frame IK
+controller; pen-tip IK for arbitrary text remains to be connected.
+
+## MuJoCo replay of the recorded circle session
+
+`simulation/mujoco_recording_replay.py` uses the archived follower recording
+`arm_motion_20261010_214924.csv`, follower calibration, captured pen-pivot and
+paper-corner poses, and the SO-101 MuJoCo arm. It builds a 220 × 275 mm sheet
+with a 170 × 235 mm writable inset. The inset is assumed centered, giving
+25 mm side margins and 20 mm top/bottom margins; the paper config does not
+record its exact offset. The script draws blue marks where the simulated pen
+collides with the simulated paper and lies within the full sheet.
+
+From this folder, recreate the actuator-driven video and trace with:
+
+```bash
+python simulation/mujoco_recording_replay.py --mode driven --video \
+  --output-dir simulation/examples/arm_motion_214924_driven
+```
+
+The output includes `mujoco_writing.mp4`, `mujoco_scene.png`,
+`ink_on_paper.png`, `trace.csv`, and `summary.json`. `--mode replay` places the
+arm at each measured follower pose instead of integrating its actuator model.
+`--paper-placement captured` uses the saved corner fit without translation.
+The default `replay-aligned` placement translates that fit using the contact
+window inferred from this recording. The two placements give materially
+different ink results, so neither establishes the real paper position.
+
+The video is a **conditional simulation**, not a reconstruction of measured ink.
+The CSV contains joint positions and targets, but no pen contact, paper pose,
+force, or ink observations. The pen-pivot fit has about 9.8 mm RMS residual and
+the corner fit about 13.2 mm RMS residual. Friction is provisionally 0.3.
+See `summary.json` for the exact alignment shift, contact counts, and limits.
 
 ## MuJoCo trajectory handoff
 

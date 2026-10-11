@@ -1,3 +1,6 @@
 numpy
 pandas
 matplotlib
+mujoco
+imageio
+imageio-ffmpeg
