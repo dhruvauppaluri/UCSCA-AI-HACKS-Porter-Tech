@@ -138,6 +138,27 @@ sample while paused, `R` to restart, `I` to show/hide simulated ink, and `C`
 to reset the camera. Close the window to stop. Use `--mode replay` to inspect
 the measured follower poses instead of simulated actuator responses.
 
+For an exploratory **5 mm near-contact allowance** (the middle of a requested
+4–6 mm range), run:
+
+```bash
+python simulation/mujoco_recording_replay.py --mode driven --near-contact-mm 5 --video \
+  --output-dir simulation/examples/arm_motion_214924_driven_near5
+mjpython simulation/view_recording_interactive.py --near-contact-mm 5
+```
+
+This adds faint cyan marks when the simulated pen surface is within 5 mm of
+the paper during the archived writing interval. Dark marks still mean an
+actual MuJoCo collision. The allowance changes **only the ink interpretation**;
+it does not change arm motion, collision forces, or measured pressure. Use `N`
+in the viewer to hide/show faint marks. In this run, the allowance adds 75
+inferred mark samples to 342 collision mark samples. It fills some gaps near
+the tops of the right-hand strokes, but also adds isolated marks. In the
+partial video comparison, predicted-to-observed mean distance increases from
+6.2 to 6.7 mm, while observed-to-predicted mean distance decreases from 7.7
+to 7.3 mm. So it covers more visible ink at the cost of additional predicted
+marks; this is not a validated pressure model.
+
 The video is a **conditional simulation**, not a reconstruction of measured ink.
 The CSV contains joint positions and targets, but no pen contact, paper pose,
 force, or ink observations. The pen-pivot fit has about 9.8 mm RMS residual and

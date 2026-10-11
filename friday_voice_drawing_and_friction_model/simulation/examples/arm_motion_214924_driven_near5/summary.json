@@ -1,0 +1,86 @@
+{
+  "source_recording": "friday_voice_drawing_and_friction_model/data/recordings/raw/arm_motion_20261010_214924.csv",
+  "mode": "driven",
+  "samples": 768,
+  "duration_s": 25.567146,
+  "paper_mm": [
+    220.0,
+    275.0
+  ],
+  "writable_inset_mm": [
+    170.0,
+    235.0
+  ],
+  "assumed_centered_inset_margins_mm": [
+    25.0,
+    20.0
+  ],
+  "pen_tip_site_offset_mm": [
+    40.880793141564915,
+    3.310161144086591,
+    7.302548788002195
+  ],
+  "joint_zero_bias_deg": {
+    "shoulder_lift": 0.1261783590925175,
+    "elbow_flex": 2.0858676034870425,
+    "wrist_flex": -2.3830847932771877,
+    "wrist_roll": -0.005859587310436319
+  },
+  "pivot_fit_rms_mm": 9.798934227582231,
+  "corner_fit_rms_mm": 13.221437360086282,
+  "captured_paper_origin_world_m": [
+    0.15930917827783836,
+    -0.019242561867344396,
+    -0.02374148565785713
+  ],
+  "paper_origin_world_m": [
+    0.10947647618467733,
+    0.05894245916170922,
+    -0.022496034361139106
+  ],
+  "paper_to_world_rotation": [
+    [
+      -0.0469055569705503,
+      0.9960345783319576,
+      0.07559753628499707
+    ],
+    [
+      -0.9986766241680106,
+      -0.045162595620301754,
+      -0.02460366430479077
+    ],
+    [
+      -0.021091919440112707,
+      -0.07665154091025221,
+      0.9968348269449736
+    ]
+  ],
+  "replay_alignment_shift_in_captured_paper_frame_mm": [
+    -75.77039117318995,
+    -53.261598665825794,
+    -4.449358287896714
+  ],
+  "joint_limits_widened_to_recording_deg": {
+    "shoulder_lift": [
+      -105.00568977277561,
+      100.00000000000041
+    ],
+    "elbow_flex": [
+      -96.82986737710912,
+      99.87707639469585
+    ]
+  },
+  "pen_paper_contact_samples": 342,
+  "near_contact_allowance_mm": 5.0,
+  "inferred_near_contact_ink_samples": 75,
+  "ink_samples": 417,
+  "ink_outside_writable_samples": 7,
+  "joint_tracking_rmse_deg": 7.502298295432605,
+  "limitations": [
+    "CSV joint values were already servo-calibrated; tick offsets were not reapplied.",
+    "Contact, ink, paper pose, and pen offset were not directly measured in this recording.",
+    "Replay-aligned placement uses the same recording to shift the paper; it is a hypothesis.",
+    "Near-contact marks are a benefit-of-the-doubt visualization, not MuJoCo collisions or pressure measurements.",
+    "Friction=0.3 and centered inset margins are unvalidated scene assumptions."
+  ]
+}

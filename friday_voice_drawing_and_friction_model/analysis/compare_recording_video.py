@@ -138,7 +138,7 @@ def main():
         u = round(MM_TO_PX * (paper_y + 20))
         v = round(MM_TO_PX * (paper_x + 25))
         if 310 <= u < 445 and 40 <= v < 425:
-            predicted.append((u, v))
+            predicted.append((u, v, int(row.get("inferred_near_contact", 0))))
     predicted = np.asarray(predicted, dtype=int)
     if not len(predicted) or not cv2.countNonZero(actual_centerline):
         raise ValueError("No matching right-hand ink strokes were detected")
@@ -155,14 +155,15 @@ def main():
     # It is a visual consistency check, not a held-out accuracy score.
     comparison = cv2.cvtColor(after, cv2.COLOR_BGR2RGB)
     comparison[filtered > 0] = [192, 48, 39]
-    for u, v in predicted:
-        cv2.circle(comparison, (int(u), int(v)), 2, (20, 48, 160), -1)
+    for u, v, inferred in predicted:
+        color = (90, 160, 220) if inferred else (20, 48, 160)
+        cv2.circle(comparison, (int(u), int(v)), 2, color, -1)
     fig, axes = plt.subplots(1, 2, figsize=(12, 6), constrained_layout=True)
     extent = [0, LONG_MM, SHORT_MM, 0]
     axes[0].imshow(cv2.cvtColor(before, cv2.COLOR_BGR2RGB), extent=extent)
     axes[0].set_title("Video at 4 s: earlier ink already present")
     axes[1].imshow(comparison, extent=extent)
-    axes[1].set_title("24 s video: new ink (red), simulated contact (blue)")
+    axes[1].set_title("24 s: new ink red; collision blue; inferred near contact cyan")
     for ax in axes:
         ax.set_xlabel("Along sheet's 275 mm edge (mm)")
         ax.set_ylabel("Along sheet's 220 mm edge (mm)")
@@ -177,6 +178,7 @@ def main():
         "comparison_frames_s": [4, 24], "simulated_interval_s": [12, 20],
         "feature_matches": matches, "registration_inliers": inliers,
         "predicted_contact_points_compared": len(predicted),
+        "inferred_near_contact_points_compared": int(predicted[:, 2].sum()),
         "new_ink_centerline_pixels": int(cv2.countNonZero(actual_centerline)),
         "predicted_to_new_ink_centerline_mean_mm": float(pred_distances.mean()),
         "predicted_to_new_ink_centerline_median_mm": float(np.median(pred_distances)),

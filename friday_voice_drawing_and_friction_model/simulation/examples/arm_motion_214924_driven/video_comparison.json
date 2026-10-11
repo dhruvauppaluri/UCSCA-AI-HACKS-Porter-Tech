@@ -12,6 +12,7 @@
   "feature_matches": 221,
   "registration_inliers": 180,
   "predicted_contact_points_compared": 157,
+  "inferred_near_contact_points_compared": 0,
   "new_ink_centerline_pixels": 1281,
   "predicted_to_new_ink_centerline_mean_mm": 6.164813995361328,
   "predicted_to_new_ink_centerline_median_mm": 5.49224853515625,

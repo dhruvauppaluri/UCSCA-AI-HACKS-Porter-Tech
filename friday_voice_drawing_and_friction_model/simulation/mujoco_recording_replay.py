@@ -261,7 +261,8 @@ def joint_arrays(model, observed, commanded, grip_observed, grip_commanded, bias
 
 
 def run_simulation(model, times, observed, commands, paper_origin, paper_to_world,
-                   config, mode, contact_window, capture_video=False, capture_stride=3):
+                   config, mode, contact_window, capture_video=False, capture_stride=3,
+                   near_contact_mm=0):
     data = mujoco.MjData(model)
     joint_ids = [model.joint(name).id for name in (*JOINTS, "gripper")]
     qids = [model.jnt_qposadr[j] for j in joint_ids]
@@ -269,6 +270,7 @@ def run_simulation(model, times, observed, commands, paper_origin, paper_to_worl
     site_id = model.site("pen_tip_site").id
     pen_id = model.geom("pen_tip_geom").id
     paper_id = model.geom("paper_geom").id
+    pen_radius_m = float(model.geom_size[pen_id, 0])
     data.qpos[qids] = observed[0]
     data.ctrl[:] = commands[0]
     mujoco.mj_forward(model, data)
@@ -304,10 +306,19 @@ def run_simulation(model, times, observed, commands, paper_origin, paper_to_worl
         on_sheet = (-x_margin <= point[0] <= width + x_margin and
                     -y_margin <= point[1] <= height + y_margin)
         in_bounds = (0 <= point[0] <= width and 0 <= point[1] <= height)
-        ink = bool(touching and on_sheet)
+        # A 5 mm allowance is an explicit visual hypothesis for uncertain
+        # light touches. It does not change MuJoCo's actual collision state.
+        clearance_m = max(0., float(local[2]) - pen_radius_m)
+        near = bool(not touching and near_contact_mm > 0 and
+                    contact_window[0] <= t <= contact_window[1] and
+                    0 <= clearance_m <= near_contact_mm / 1000 and on_sheet)
+        ink = bool(on_sheet and (touching or near))
         rows.append({"time_s": float(t), "paper_x_m": float(local[0]),
                      "paper_y_m": float(local[1]), "paper_z_m": float(local[2]),
-                     "pen_paper_contact": int(touching), "ink": int(ink),
+                     "pen_paper_contact": int(touching),
+                     "inferred_near_contact": int(near),
+                     "pen_surface_clearance_mm": float(clearance_m * 1000),
+                     "ink": int(ink),
                      "ink_x_m": float(point[0]) if ink else None,
                      "ink_y_m": float(point[1]) if ink else None,
                      "inside_writable_bounds": int(in_bounds),
@@ -337,25 +348,32 @@ def plot_ink(rows, config, destination, mode):
                                facecolor="#fffef8", edgecolor="#555", linewidth=1.5))
     ax.add_patch(plt.Rectangle((0, 0), width, height, fill=False,
                                linestyle="--", edgecolor="#888", linewidth=1.1))
-    points = np.array([[row["ink_x_m"] * 1000, row["ink_y_m"] * 1000]
-                       for row in rows if row["ink"]])
-    if len(points):
-        ax.scatter(points[:, 0], points[:, 1], s=5, color="#13269a", alpha=.8)
+    for inferred, color, label in ((0, "#13269a", "MuJoCo collision"),
+                                    (1, "#6ba8df", "Within near-contact allowance")):
+        points = np.array([[row["ink_x_m"] * 1000, row["ink_y_m"] * 1000]
+                           for row in rows if row["ink"] and
+                           row["inferred_near_contact"] == inferred])
+        if len(points):
+            ax.scatter(points[:, 0], points[:, 1], s=5, color=color,
+                       alpha=.8, label=label)
     ax.set_xlim(-x_margin - 5, width + x_margin + 5)
     ax.set_ylim(-y_margin - 5, height + y_margin + 5)
     ax.set_aspect("equal")
     ax.set_xlabel("Paper x (mm)")
     ax.set_ylabel("Paper y (mm)")
-    ax.set_title("Blue = simulated contact marks; dashed = writable inset")
+    ax.set_title("Dark = collision; light = inferred near contact")
+    ax.legend(loc="lower right", fontsize=8)
     t = np.array([r["time_s"] for r in rows])
     z = np.array([r["paper_z_m"] * 1000 for r in rows])
-    mark = np.array([bool(r["ink"]) for r in rows])
     height_ax.plot(t, z, color="#444", linewidth=1)
-    height_ax.scatter(t[mark], z[mark], s=5, color="#13269a")
+    for inferred, color in ((0, "#13269a"), (1, "#6ba8df")):
+        mark = np.array([bool(r["ink"]) and
+                         r["inferred_near_contact"] == inferred for r in rows])
+        height_ax.scatter(t[mark], z[mark], s=5, color=color)
     height_ax.axhline(0, color="#a44", linestyle="--", label="paper surface")
     height_ax.set_xlabel("Time (s)")
     height_ax.set_ylabel("Pen-tip center above paper (mm)")
-    height_ax.set_title("Contact comes from MuJoCo geometry")
+    height_ax.set_title("Near contact is inferred, not a measured force")
     height_ax.grid(alpha=.25)
     height_ax.legend()
     fig.suptitle(f"SO-101 {mode} · arm_motion_20261010_214924.csv\n"
@@ -376,13 +394,21 @@ def render_scene(model, data, rows, paper_origin, paper_to_world, destination):
             position = paper_origin + paper_to_world @ np.array(
                 [row["ink_x_m"], row["ink_y_m"], .0004])
             geom = renderer.scene.geoms[renderer.scene.ngeom]
+            radius, color = ink_style(row)
             mujoco.mjv_initGeom(geom, mujoco.mjtGeom.mjGEOM_SPHERE,
-                                np.array([.0013, 0., 0.]), position,
-                                np.eye(3).ravel(), np.array([0., .02, .15, 1.], dtype=np.float32))
+                                np.array([radius, 0., 0.]), position,
+                                np.eye(3).ravel(), color)
             renderer.scene.ngeom += 1
         plt.imsave(destination, renderer.render())
     finally:
         renderer.close()
+
+
+def ink_style(row):
+    """Show inferred light touches differently from actual simulated contact."""
+    if row["inferred_near_contact"]:
+        return .00095, np.array([.25, .55, .90, 1.], dtype=np.float32)
+    return .0013, np.array([0., .02, .15, 1.], dtype=np.float32)
 
 
 def render_video(model, snapshots, rows, paper_origin, paper_to_world, destination):
@@ -405,9 +431,10 @@ def render_video(model, snapshots, rows, paper_origin, paper_to_world, destinati
                 position = paper_origin + paper_to_world @ np.array(
                     [row["ink_x_m"], row["ink_y_m"], .0004])
                 geom = renderer.scene.geoms[renderer.scene.ngeom]
+                radius, color = ink_style(row)
                 mujoco.mjv_initGeom(geom, mujoco.mjtGeom.mjGEOM_SPHERE,
-                                    np.array([.0013, 0., 0.]), position,
-                                    np.eye(3).ravel(), np.array([0., .02, .15, 1.], dtype=np.float32))
+                                    np.array([radius, 0., 0.]), position,
+                                    np.eye(3).ravel(), color)
                 renderer.scene.ngeom += 1
             writer.append_data(renderer.render())
     finally:
@@ -425,7 +452,11 @@ def main():
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--video", action="store_true",
                         help="Render a 10 fps MP4 of the MuJoCo arm and accumulating ink")
+    parser.add_argument("--near-contact-mm", type=float, default=0,
+                        help="Infer faint ink within this pen-surface clearance; 0 keeps collision-only ink")
     args = parser.parse_args()
+    if not 0 <= args.near_contact_mm <= 20:
+        parser.error("--near-contact-mm must be between 0 and 20")
     args.output_dir.mkdir(parents=True, exist_ok=True)
     config = json.loads((CALIBRATION / "paper_config.json").read_text())
     results = json.loads((ROOT / "analysis/results.json").read_text())
@@ -446,7 +477,8 @@ def main():
                                                  grip_obs, grip_cmd, bias)
     rows, data, snapshots = run_simulation(model, times, observed, commands, paper_origin,
                                            axes, config, args.mode, contact_window,
-                                           capture_video=args.video)
+                                           capture_video=args.video,
+                                           near_contact_mm=args.near_contact_mm)
     write_trace(rows, args.output_dir / "trace.csv")
     plot_ink(rows, config, args.output_dir / "ink_on_paper.png", args.mode)
     render_scene(model, data, rows, paper_origin, axes, args.output_dir / "mujoco_scene.png")
@@ -473,18 +505,21 @@ def main():
         "replay_alignment_shift_in_captured_paper_frame_mm": (shift * 1000).tolist(),
         "joint_limits_widened_to_recording_deg": widened,
         "pen_paper_contact_samples": sum(r["pen_paper_contact"] for r in rows),
+        "near_contact_allowance_mm": args.near_contact_mm,
+        "inferred_near_contact_ink_samples": sum(r["inferred_near_contact"] for r in rows),
         "ink_samples": count,
         "ink_outside_writable_samples": sum(r["ink"] and not r["inside_writable_bounds"] for r in rows),
         "joint_tracking_rmse_deg": float(np.sqrt(np.mean([r["joint_error_deg"]**2 for r in rows]))),
         "limitations": ["CSV joint values were already servo-calibrated; tick offsets were not reapplied.",
                         "Contact, ink, paper pose, and pen offset were not directly measured in this recording.",
                         "Replay-aligned placement uses the same recording to shift the paper; it is a hypothesis.",
+                        "Near-contact marks are a benefit-of-the-doubt visualization, not MuJoCo collisions or pressure measurements.",
                         "Friction=0.3 and centered inset margins are unvalidated scene assumptions."],
     }
     (args.output_dir / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps({k: summary[k] for k in ("mode", "samples", "duration_s",
                                             "pivot_fit_rms_mm", "corner_fit_rms_mm",
-                                            "pen_paper_contact_samples", "ink_samples",
+                                            "pen_paper_contact_samples", "inferred_near_contact_ink_samples", "ink_samples",
                                             "ink_outside_writable_samples", "joint_tracking_rmse_deg")}, indent=2))
     print(f"Wrote trace.csv, ink_on_paper.png, mujoco_scene.png, and summary.json to {args.output_dir}")
 
