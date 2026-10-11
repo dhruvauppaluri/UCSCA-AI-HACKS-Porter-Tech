@@ -20,8 +20,10 @@ from corner_capture import FOLLOWER_PORT, FOLLOWER_ID, port_holders
 
 
 NAMES = ("shoulder_pan", "shoulder_lift", "elbow_flex", "wrist_flex", "wrist_roll")
-DEFAULT_PLAN = (Path(__file__).resolve().parents[4] / "roboalgo" / "examples" / "21" /
-                "physical_hover_21_FOR_REVIEW.csv")
+REPO_PLAN = (Path(__file__).resolve().parents[4] / "roboalgo" / "examples" / "21" /
+             "physical_hover_21_FOR_REVIEW.csv")
+DEFAULT_PLAN = REPO_PLAN if REPO_PLAN.exists() else Path(__file__).with_name(
+    "physical_hover_21_FOR_REVIEW.csv")
 
 
 def read_plan(path):
