@@ -5,8 +5,8 @@ candidate for supervised testing, not evidence of physical pen clearance.
 """
 
 import csv
+import hashlib
 import json
-import math
 import sys
 from pathlib import Path
 
@@ -61,6 +61,14 @@ def main():
     paper = read_csv(EXAMPLE / "paper_waypoints.csv")
     prior = read_csv(EXAMPLE / "candidate_arm_angles_FOR_REVIEW.csv")
     sim = json.loads((EXAMPLE / "source_sim" / "summary.json").read_text())
+    recording_path = ROOT / sim["source_recording_for_calibration"]
+    recording = read_csv(recording_path)
+    seed_index = int(sim["seed_recording_index"])
+    # Original playback requires all six joints. Preserve the gripper command
+    # at the recording pose used to seed the simulation, in percent-open units.
+    gripper = float(recording[seed_index]["target_gripper.pos"])
+    if not np.isfinite(gripper) or not 0 <= gripper <= 100:
+        raise ValueError("Invalid recorded gripper command")
     if len(paper) != len(prior):
         raise ValueError("Paper and prior joint trajectories have different lengths")
     rotation = np.asarray(sim["paper_to_world_rotation"], dtype=float)
@@ -92,11 +100,29 @@ def main():
                          "rms_fk_residual_mm": float(np.sqrt(np.mean(errors ** 2))),
                          "max_step_deg": float(np.max(jumps)), "rows": len(result)}
         write_csv(EXAMPLE / f"physical_{mode}_21_FOR_REVIEW.csv", result)
+        if mode == "hover":
+            playback_fields = ["time_s", *[f"{n}.pos" for n in JOINTS], "gripper.pos"]
+            with (EXAMPLE / "physical_hover_21_PLAYBACK.csv").open("w", newline="") as f:
+                writer = csv.DictWriter(f, fieldnames=playback_fields)
+                writer.writeheader()
+                writer.writerows({**{key: row[key] for key in playback_fields[:-1]},
+                                  "gripper.pos": gripper} for row in result)
     report = {"source": "paper_waypoints.csv", "paper_frame": "replay-aligned MuJoCo estimate",
               "hover_height_mm": HOVER_MM, "results": outputs,
               "prior_corner_fit_rms_mm": sim["corner_fit_rms_mm"],
               "prior_pen_tip_fit_rms_mm": sim["pivot_fit_rms_mm"],
               "physical_contact_validated": False,
+              "playback": {
+                  "csv": "physical_hover_21_PLAYBACK.csv",
+                  "runner": "hardware/drawing/robot-host/usefulcommands/play_dataforarm.py",
+                  "runner_sha256": hashlib.sha256((ROOT / "hardware/drawing/robot-host/usefulcommands/play_dataforarm.py").read_bytes()).hexdigest(),
+                  "body_units": "degrees; robot-host config default use_degrees=True verified 2026-10-11",
+                  "gripper_units": "percent_open",
+                  "gripper_command": gripper,
+                  "gripper_source": str(recording_path.relative_to(ROOT)),
+                  "gripper_source_row_zero_based": seed_index,
+                  "recommended_speed_multiplier": 0.4,
+                  "physical_run_performed": False},
               "initial_sag_mm": None,
               "note": "Numerical IK reduces the archived-FK discrepancy. It does not validate the paper pose, pen tip, sag, or actual clearance."}
     (EXAMPLE / "physical_prep_manifest.json").write_text(json.dumps(report, indent=2) + "\n")

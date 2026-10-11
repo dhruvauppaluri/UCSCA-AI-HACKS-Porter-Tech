@@ -19,6 +19,18 @@
   "prior_corner_fit_rms_mm": 13.221437360086282,
   "prior_pen_tip_fit_rms_mm": 9.798934227582231,
   "physical_contact_validated": false,
+  "playback": {
+    "csv": "physical_hover_21_PLAYBACK.csv",
+    "runner": "hardware/drawing/robot-host/usefulcommands/play_dataforarm.py",
+    "runner_sha256": "025761d6c8ba0fa97e7fd9c9d1ed8b56b6b6e0ab000b03a93085d59e9c79a7ea",
+    "body_units": "degrees; robot-host config default use_degrees=True verified 2026-10-11",
+    "gripper_units": "percent_open",
+    "gripper_command": 2.0249221183800623,
+    "gripper_source": "friday_voice_drawing_and_friction_model/data/recordings/raw/arm_motion_20261010_214924.csv",
+    "gripper_source_row_zero_based": 536,
+    "recommended_speed_multiplier": 0.4,
+    "physical_run_performed": false
+  },
   "initial_sag_mm": null,
   "note": "Numerical IK reduces the archived-FK discrepancy. It does not validate the paper pose, pen tip, sag, or actual clearance."
 }
