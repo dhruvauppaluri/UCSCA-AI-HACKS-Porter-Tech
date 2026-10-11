@@ -2,7 +2,7 @@
 
 **Continuing on a new machine?** Start with the [current handoff](handoffs/START-HERE.md) for the measured status, saved artifacts, real-kit interface gaps, and first physical-arm session. The [resource index](handoffs/resource-links.md) gathers the supplied Google Docs, kit listing, hackathon notebook, source repositories, and setup links.
 
-The [physical drawing session](hardware/drawing/README.md) preserves the paper calibration, attempted hover and circle paths, teleoperation recorder, camera references, and motor fault logs. No circle was drawn; the latest teleoperation launch failed while configuring motor ID 2.
+The [physical drawing session](hardware/drawing/README.md) preserves the paper calibration, attempted hover and circle paths, teleoperation recorder, camera references, and motor fault logs. No autonomous circle was drawn; the latest teleoperation launch failed while configuring motor ID 2.
 
 For the latest contact-grasp dataset, AMD cloud training smoke test, real-arm session order, and NVIDIA Brev credit path, see the [competition execution record](handoffs/2026-10-10-competition-execution.md).
 

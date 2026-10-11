@@ -1,0 +1,10 @@
+Capture teleoperation ready; data directory: /home/amd-genai2/drawing_capture/data
+Captured pivot_1: {'shoulder_pan.pos': 23.47252747252747, 'shoulder_lift.pos': 24.0, 'elbow_flex.pos': -8.87912087912088, 'wrist_flex.pos': 68.83516483516483, 'wrist_roll.pos': 67.20879120879121, 'gripper.pos': 1.0702341137123745}
+Captured pivot_2: {'shoulder_pan.pos': 23.208791208791208, 'shoulder_lift.pos': 9.406593406593407, 'elbow_flex.pos': 18.63736263736264, 'wrist_flex.pos': 47.120879120879124, 'wrist_roll.pos': 94.63736263736264, 'gripper.pos': 1.0702341137123745}
+Captured pivot_3: {'shoulder_pan.pos': 23.824175824175825, 'shoulder_lift.pos': 45.53846153846154, 'elbow_flex.pos': -46.065934065934066, 'wrist_flex.pos': 93.01098901098901, 'wrist_roll.pos': 65.8021978021978, 'gripper.pos': 1.0702341137123745}
+Captured pivot_4: {'shoulder_pan.pos': 23.824175824175825, 'shoulder_lift.pos': -5.8901098901098905, 'elbow_flex.pos': 66.02197802197803, 'wrist_flex.pos': -10.373626373626374, 'wrist_roll.pos': -84.61538461538461, 'gripper.pos': 1.0702341137123745}
+Captured pivot_5: {'shoulder_pan.pos': 23.64835164835165, 'shoulder_lift.pos': 23.296703296703296, 'elbow_flex.pos': -7.824175824175824, 'wrist_flex.pos': 69.27472527472527, 'wrist_roll.pos': -44.61538461538461, 'gripper.pos': 1.0702341137123745}
+Captured pivot_6: {'shoulder_pan.pos': 24.0, 'shoulder_lift.pos': 47.824175824175825, 'elbow_flex.pos': -39.824175824175825, 'wrist_flex.pos': 90.46153846153847, 'wrist_roll.pos': 39.78021978021978, 'gripper.pos': 1.0702341137123745}
+Captured pivot_6: {'shoulder_pan.pos': 24.0, 'shoulder_lift.pos': 47.824175824175825, 'elbow_flex.pos': -39.824175824175825, 'wrist_flex.pos': 90.46153846153847, 'wrist_roll.pos': 39.78021978021978, 'gripper.pos': 1.0702341137123745}
+Captured pivot_6: {'shoulder_pan.pos': 32.08791208791209, 'shoulder_lift.pos': -11.340659340659341, 'elbow_flex.pos': -6.329670329670329, 'wrist_flex.pos': 80.17582417582418, 'wrist_roll.pos': 19.12087912087912, 'gripper.pos': 1.8729096989966554}
+Stopping capture teleoperation

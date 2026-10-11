@@ -13,7 +13,7 @@ This directory archives the October 10, 2026 (PDT) pen drawing work on the AMD-h
 
 The four corner readings and six same-dot pivot readings were captured during leader-to-follower teleoperation. Cam0 and cam2 reference images were also saved, but camera measurements were not used to guide the attempted motion.
 
-An autonomous hover-square attempt stopped before drawing. The follower shoulder sagged after control handoff, and subsequent servo-goal motion did not reliably lift the pen. The user observed paper contact. A 24 mm circle was planned from a user-confirmed center contact pose, but execution stopped at the second lift waypoint because the shoulder failed to follow its upward goal and drifted down. **No circle was drawn.** The arm was manually supported and powered off afterward.
+An autonomous hover-square attempt stopped before drawing. The follower shoulder sagged after control handoff, and subsequent servo-goal motion did not reliably lift the pen. The user observed paper contact. A 24 mm circle was planned from a user-confirmed center contact pose, but execution stopped at the second lift waypoint because the shoulder failed to follow its upward goal and drifted down. **No autonomous circle was drawn in those attempts.** The arm was manually supported and powered off afterward.
 
 On the later power-on, the follower reported all motor torques disabled and power-on default goals. A new teleoperation launch set the goals to measured positions before enabling torque, but it exited during `follower.configure()` when a write to motor ID 2 (`Torque_Enable`) failed. See `remote-data/teleop_live.log`. The process did not reach the teleoperation loop or start a circle recording. The communication and shoulder-holding fault needs hands-on resolution before further drawing attempts.
 
@@ -23,4 +23,10 @@ On the later power-on, the follower reported all motor torques disabled and powe
 - `work/`: captured corner and pivot readings, the URDF, geometry analysis scripts, and planned hover/circle trajectories. The plans are records of attempts, not validated safe motions.
 - `remote-data/`: exact robot-host captures and controller logs, including failed motion traces, camera metadata and images, and the session's live calibration JSON.
 
-Once the shoulder can hold position and motor ID 2 communicates reliably, `outputs/corner_capture.py` can run one persistent teleoperation loop. Its `record-start` and `record-stop` commands open and close a timestamped JSONL trajectory without stopping teleoperation or opening the serial port from another process. See `outputs/README-corner-capture.md` for the command sequence. The recorder was installed on the robot host, but no circle trajectory was captured in this session.
+## Later teleoperation and recordings
+
+Teleoperation subsequently ran using `standard_teleop_record.py`, which seeds follower goals from measured positions, blends into leader targets over five seconds, then uses LeRobot's teleoperation loop. Both arm positions and sent commands were recorded. The user reported drawing three different circles; individual strokes have not yet been segmented or evaluated visually. No autonomous replay has been validated.
+
+The three-circle snapshot contains 4,063 samples over 137.5 seconds, including startup and other movement. The complete recording and shutdown serial-error log are also preserved. Teleoperation was confirmed stopped afterward; torque-off was not commanded.
+
+`robot-host/` preserves all files collected from the robot's `drawing_capture/` and `usefulcommands/` directories, plus all nine CSV recordings found in those locations and the robot user's home directory. Scripts and CSVs created separately on the robot are included unchanged. `remote-data/` is also refreshed with the latest capture data. These are experiment archives, not validated autonomous-motion programs.

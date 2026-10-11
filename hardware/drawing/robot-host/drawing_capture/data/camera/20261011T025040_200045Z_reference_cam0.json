@@ -1,0 +1,9 @@
+{
+  "label": "reference_cam0",
+  "captured_at_utc": "2026-10-11T02:50:40.200045+00:00",
+  "camera": "usb-icSpring_icspring_camera-video-index0",
+  "stream": "http://127.0.0.1:8767/cam0",
+  "image": "/home/amd-genai2/drawing_capture/data/camera/20261011T025040_200045Z_reference_cam0.jpg",
+  "width_px": 640,
+  "height_px": 480
+}
