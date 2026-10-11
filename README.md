@@ -60,7 +60,7 @@ For microphone dry runs, install `elevenlabs[pyaudio]`, set `ELEVENLABS_API_KEY`
 python voice/feedback/elevenlabs_bridge.py
 ```
 
-This defaults to **no robot movement**. Physical mode requires the configured LeRobot station and its serial devices, calibration, helper scripts, pen mount, and paper layout. See the [full setup](voice/feedback/README.md) before using `--physical`. A separate laptop-to-station voice transport is not implemented.
+This defaults to **no robot movement**. Physical mode requires the configured LeRobot station and its serial devices, calibration, helper scripts, pen mount, and paper layout. See the [full setup](voice/feedback/README.md) before using `--physical`. A Mac-to-station transport is available: the Mac runs the voice client and forwards the five tools over SSH to the AMD controller (see [Mac voice](voice/feedback/MAC_VOICE.md)). Its dry run passed; a physical run through it has not been verified.
 
 ## Setup and units
 
