@@ -1,0 +1,155 @@
+{
+  "seed": 20261011,
+  "trials_per_run_per_random_scenario": 30,
+  "validation": "leave one entire run out when fitting each predictor",
+  "reference": "actual follower Z from original unperturbed run",
+  "caveat": "Perturbed leader commands have no matching physical follower recording; these are input robustness checks, not accuracy tests for altered motion.",
+  "scenario_definitions": {
+    "leader_iid_noise": "Independent Gaussian measurement error on each leader XYZ sample and axis; follower recording unchanged.",
+    "initial_z_noise": "Gaussian error added only to the first follower Z measurement; later follower samples are held out.",
+    "downsample": "Keep every Nth paired sample plus the final sample; predict and score only at retained timestamps.",
+    "random_keep": "Randomly keep a stated fraction of paired timestamps (always including endpoints); predict and score at retained times."
+  },
+  "scenarios": {
+    "baseline": {
+      "n": 7,
+      "mean_rmse_mm": 5.931245957116721,
+      "mean_first_2s_rmse_mm": 1.421311990386569,
+      "p95_trial_rmse_mm": 8.329989855642745,
+      "worst_trial_rmse_mm": 8.962559521100584,
+      "worst_point_error_mm": 43.820149432327554,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.0
+    },
+    "downsample_2x": {
+      "n": 7,
+      "mean_rmse_mm": 5.890669587286939,
+      "mean_first_2s_rmse_mm": 1.6141016309007863,
+      "p95_trial_rmse_mm": 8.250809737243626,
+      "worst_trial_rmse_mm": 8.879547673839834,
+      "worst_point_error_mm": 51.854288673513295,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": -0.04057636982978163
+    },
+    "downsample_4x": {
+      "n": 7,
+      "mean_rmse_mm": 6.238352488632166,
+      "mean_first_2s_rmse_mm": 2.4126553248889375,
+      "p95_trial_rmse_mm": 8.617769524529804,
+      "worst_trial_rmse_mm": 8.979191807770214,
+      "worst_point_error_mm": 66.20205323780209,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.3071065315154451
+    },
+    "downsample_8x": {
+      "n": 7,
+      "mean_rmse_mm": 7.765752546986881,
+      "mean_first_2s_rmse_mm": 4.104106315353195,
+      "p95_trial_rmse_mm": 10.970934622348548,
+      "worst_trial_rmse_mm": 11.61894075934986,
+      "worst_point_error_mm": 96.21399354936304,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 1.83450658987016
+    },
+    "initial_z_noise_0.5mm": {
+      "n": 210,
+      "mean_rmse_mm": 5.932129045747918,
+      "mean_first_2s_rmse_mm": 1.5216985155589355,
+      "p95_trial_rmse_mm": 8.963472367602277,
+      "worst_trial_rmse_mm": 8.980178705699034,
+      "worst_point_error_mm": 43.82015223962148,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.0008830886311974595
+    },
+    "initial_z_noise_2mm": {
+      "n": 210,
+      "mean_rmse_mm": 5.960188974013949,
+      "mean_first_2s_rmse_mm": 2.1038725926748305,
+      "p95_trial_rmse_mm": 8.970149388299568,
+      "worst_trial_rmse_mm": 9.090640871385082,
+      "worst_point_error_mm": 43.82015819827504,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.028943016897228446
+    },
+    "initial_z_noise_5mm": {
+      "n": 210,
+      "mean_rmse_mm": 6.099872781609686,
+      "mean_first_2s_rmse_mm": 3.8484866933028496,
+      "p95_trial_rmse_mm": 9.033068597586139,
+      "worst_trial_rmse_mm": 9.531889997374554,
+      "worst_point_error_mm": 43.820167490863156,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.16862682449296518
+    },
+    "leader_iid_noise_0.1mm": {
+      "n": 210,
+      "mean_rmse_mm": 5.931380402705041,
+      "mean_first_2s_rmse_mm": 1.4331474670537976,
+      "p95_trial_rmse_mm": 8.962934618887553,
+      "worst_trial_rmse_mm": 8.968305678518242,
+      "worst_point_error_mm": 43.93551495070781,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.0001344455883200979
+    },
+    "leader_iid_noise_0.5mm": {
+      "n": 210,
+      "mean_rmse_mm": 5.936599847224928,
+      "mean_first_2s_rmse_mm": 1.5088433552094191,
+      "p95_trial_rmse_mm": 8.970236747836692,
+      "worst_trial_rmse_mm": 8.994503648082873,
+      "worst_point_error_mm": 44.42266034183339,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.005353890108207082
+    },
+    "leader_iid_noise_10mm": {
+      "n": 210,
+      "mean_rmse_mm": 7.564702761094996,
+      "mean_first_2s_rmse_mm": 5.725550764681306,
+      "p95_trial_rmse_mm": 10.13917258951608,
+      "worst_trial_rmse_mm": 10.669055459839923,
+      "worst_point_error_mm": 55.15563542812153,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 1.6334568039782758
+    },
+    "leader_iid_noise_2mm": {
+      "n": 210,
+      "mean_rmse_mm": 6.036562452597616,
+      "mean_first_2s_rmse_mm": 2.3228173718993608,
+      "p95_trial_rmse_mm": 9.063311871651237,
+      "worst_trial_rmse_mm": 9.16623466392231,
+      "worst_point_error_mm": 46.55705379761555,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.10531649548089561
+    },
+    "leader_iid_noise_5mm": {
+      "n": 210,
+      "mean_rmse_mm": 6.47794534215996,
+      "mean_first_2s_rmse_mm": 3.878388767363888,
+      "p95_trial_rmse_mm": 9.351472946069324,
+      "worst_trial_rmse_mm": 9.54338510464352,
+      "worst_point_error_mm": 51.53467787891486,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.5466993850432393
+    },
+    "random_keep_0.25": {
+      "n": 210,
+      "mean_rmse_mm": 6.6839514444536166,
+      "mean_first_2s_rmse_mm": 3.0014921365152705,
+      "p95_trial_rmse_mm": 9.980726492491288,
+      "worst_trial_rmse_mm": 14.324904669498055,
+      "worst_point_error_mm": 126.73953955057455,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.7527054873368959
+    },
+    "random_keep_0.5": {
+      "n": 210,
+      "mean_rmse_mm": 6.0456289920024355,
+      "mean_first_2s_rmse_mm": 1.861943522879238,
+      "p95_trial_rmse_mm": 9.02744336030531,
+      "worst_trial_rmse_mm": 10.179133445690216,
+      "worst_point_error_mm": 102.40334774029245,
+      "nonfinite_samples": 0,
+      "mean_rmse_increase_mm": 0.11438303488571488
+    }
+  }
+}
