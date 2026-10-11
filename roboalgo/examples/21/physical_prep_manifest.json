@@ -1,0 +1,24 @@
+{
+  "source": "paper_waypoints.csv",
+  "paper_frame": "replay-aligned MuJoCo estimate",
+  "hover_height_mm": 30.0,
+  "results": {
+    "hover": {
+      "max_fk_residual_mm": 0.4670566073235857,
+      "rms_fk_residual_mm": 0.22398643351099554,
+      "max_step_deg": 0.6646923905858415,
+      "rows": 265
+    },
+    "contact_candidate": {
+      "max_fk_residual_mm": 0.4764914484437657,
+      "rms_fk_residual_mm": 0.22100375393767344,
+      "max_step_deg": 0.6904778216738734,
+      "rows": 265
+    }
+  },
+  "prior_corner_fit_rms_mm": 13.221437360086282,
+  "prior_pen_tip_fit_rms_mm": 9.798934227582231,
+  "physical_contact_validated": false,
+  "initial_sag_mm": null,
+  "note": "Numerical IK reduces the archived-FK discrepancy. It does not validate the paper pose, pen tip, sag, or actual clearance."
+}
