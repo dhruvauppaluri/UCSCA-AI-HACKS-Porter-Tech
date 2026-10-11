@@ -100,3 +100,28 @@ The simulation is useful for exploring how candidate paths respond to assumed
 lag and drag. It is not a validated robot controller or a MuJoCo implementation.
 The repository's separate `so101_sim/` contains a MuJoCo arm model and a
 gripper-frame IK controller; pen-tip IK and paper contact are not connected yet.
+
+## MuJoCo trajectory handoff
+
+Generate a timed task-space CSV for another phrase with:
+
+```bash
+python simulation/export_mujoco_targets.py '67 67' \
+  --output simulation/examples/67_67_mujoco_tip_targets.csv
+```
+
+The saved example has `time_s`, `paper_x_m`, `paper_y_m`, `paper_z_m`, and
+`pen_down` (0 or 1). The origin is the **inset rectangle's bottom-left mark**;
++x points toward bottom-right, +y toward top-left, and +z away from the paper.
+At 30 Hz, each row is a desired pen-tip waypoint, including pen-up travel and
+the four pen-down digit strokes. The default 10 mm lift and 1 mm nominal
+penetration are planning assumptions, not measured contact settings.
+
+MuJoCo does not execute this CSV by itself. A drawing controller must transform
+each paper-frame waypoint to a model-world position using the paper pose,
+solve pen-tip IK, and send bounded joint targets to the actuators. It should
+use simulated pen-paper contacts to decide what actually writes. `pen_down`
+records the planner's intent, not a measured contact or an actuator command.
+This CSV contains desired targets without Cartesian lag compensation; if the
+MuJoCo actuators are tuned to the measured response, applying the same lag
+model a second time would double-count it.
