@@ -1,1 +1,0 @@
-{"stage": "robust", "episodes": 60, "success_rate": 0.8166666666666667, "dagger_rounds": 4, "dagger_rollout_success_rate": 0.7, "samples": 12864, "bc_loss": 0.043923478573560715}

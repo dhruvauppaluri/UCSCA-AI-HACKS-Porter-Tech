@@ -2,7 +2,7 @@
 
 Updated October 11, 2026. Start with the [project README](../README.md).
 
-The active project is physical pen drawing and voice-guided feedback. Real SO-101 demonstrations, calibrations, generated trajectories, and execution logs are present. Previous pick-and-place status statements belong to the [historical handoff](2026-10-10-start-here-legacy.md).
+The active project is physical pen drawing and voice-guided feedback. Real SO-101 demonstrations, calibrations, generated trajectories, and execution logs are present.
 
 ## Continue work
 

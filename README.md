@@ -2,7 +2,7 @@
 
 An SO-101 follower drawing project built from recorded leader/follower demonstrations, calibrated pen-tip kinematics, trajectory smoothing, MuJoCo experiments, and an ElevenLabs voice-feedback interface.
 
-**Current focus: drawing on paper.** Updated October 11, 2026. The earlier pick-and-place project remains available in the [historical guide](LEGACY_PICK_AND_PLACE.md).
+**Current focus: drawing on paper.** Updated October 11, 2026.
 
 ## What works today
 
@@ -85,7 +85,7 @@ This defaults to **no robot movement**. Physical mode requires the configured Le
 | `friday_voice_drawing_and_friction_model/` | Source recordings, fitting, text/stroke generation, MuJoCo drawing experiments. |
 | `hardware/drawing/` | Earlier physical-session archive: calibration, recorder, camera references, fault history. |
 | `handoffs/` | Current entry point and dated historical records. |
-| `so101_sim/`, `trained-v4/`, `experiments/`, `artifacts/` | Earlier pick-and-place simulation/training work. |
+| `so101_sim/model/` | Shared arm XML and meshes required by the drawing simulations. |
 
 ## Known limits
 
@@ -93,4 +93,4 @@ Physical drawing quality is currently judged by operator feedback. Pen pressure 
 
 ## Attribution
 
-SO-101 models and meshes originate from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101), with the [Apache 2.0 notice](so101_sim/model/LICENSE-APACHE-2.0). The historical contact-grasp variant includes [pick-101 attribution](so101_sim/model/PICK101-ATTRIBUTION.md). Existing license notices and historical experiments are preserved.
+SO-101 models and meshes originate from [TheRobotStudio/SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Simulation/SO101), with the [Apache 2.0 notice](so101_sim/model/LICENSE-APACHE-2.0). The upstream license notice is preserved with the shared assets.

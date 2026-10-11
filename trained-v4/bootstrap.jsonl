@@ -1,6 +1,0 @@
-{"stage": "reach", "episodes": 40, "success_rate": 1.0, "dagger_rounds": 3, "dagger_rollout_success_rate": 1.0, "samples": 1415, "bc_loss": 0.008196210488677025}
-{"stage": "grasp", "episodes": 40, "success_rate": 1.0, "dagger_rounds": 3, "dagger_rollout_success_rate": 1.0, "samples": 1635, "bc_loss": 0.013434020802378654}
-{"stage": "lift", "episodes": 40, "success_rate": 1.0, "dagger_rounds": 3, "dagger_rollout_success_rate": 1.0, "samples": 1807, "bc_loss": 0.011460119858384132}
-{"stage": "place", "episodes": 40, "success_rate": 1.0, "dagger_rounds": 3, "dagger_rollout_success_rate": 1.0, "samples": 4017, "bc_loss": 0.02626502700150013}
-{"stage": "mixed", "episodes": 40, "success_rate": 0.975, "dagger_rounds": 3, "dagger_rollout_success_rate": 0.9743589743589743, "samples": 4754, "bc_loss": 0.039439763873815536}
-{"stage": "robust", "episodes": 40, "success_rate": 1.0, "dagger_rounds": 3, "dagger_rollout_success_rate": 0.8974358974358975, "samples": 5157, "bc_loss": 0.09573917835950851}

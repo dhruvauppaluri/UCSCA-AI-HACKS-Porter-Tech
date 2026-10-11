@@ -100,8 +100,7 @@ recording, before using the numbers as predictive physics parameters.
 
 The trajectory proxy is useful for exploring how candidate paths respond to
 assumed lag and drag. It is not a validated robot controller. The repository's
-separate `so101_sim/` contains a MuJoCo arm model and a gripper-frame IK
-controller; pen-tip IK for arbitrary text remains to be connected.
+`so101_sim/model/` supplies the shared MuJoCo arm assets. Current pen-tip IK and physical routines are described in `roboalgo/`; the voice feedback planner applies bounded drawing corrections.
 
 ## MuJoCo replay of the recorded circle session
 
