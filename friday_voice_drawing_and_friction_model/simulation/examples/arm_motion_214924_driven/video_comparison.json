@@ -1,0 +1,27 @@
+{
+  "video": "data/recordings/arm_motion_20261010_214924_video.mp4",
+  "video_duration_s": 25.47,
+  "comparison_frames_s": [
+    4,
+    24
+  ],
+  "simulated_interval_s": [
+    12,
+    20
+  ],
+  "feature_matches": 221,
+  "registration_inliers": 180,
+  "predicted_contact_points_compared": 157,
+  "new_ink_centerline_pixels": 1281,
+  "predicted_to_new_ink_centerline_mean_mm": 6.164813995361328,
+  "predicted_to_new_ink_centerline_median_mm": 5.49224853515625,
+  "predicted_points_within_10_mm_fraction": 0.7834394904458599,
+  "new_ink_centerline_to_predicted_mean_mm": 7.740737438201904,
+  "limitations": [
+    "Video and CSV have matching run names and durations, but no hardware timecode.",
+    "4 s frame already has ink; only newly visible right-hand strokes are scored.",
+    "Perspective corners were picked visually and paper inset is assumed centered.",
+    "Image differencing, blur, occlusion, and marker width affect the extracted centerline.",
+    "MuJoCo paper placement was adjusted using this same recording; these are not held-out accuracy metrics."
+  ]
+}

@@ -4,3 +4,4 @@ matplotlib
 mujoco
 imageio
 imageio-ffmpeg
+opencv-python-headless

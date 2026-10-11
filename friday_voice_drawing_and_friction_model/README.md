@@ -132,6 +132,28 @@ force, or ink observations. The pen-pivot fit has about 9.8 mm RMS residual and
 the corner fit about 13.2 mm RMS residual. Friction is provisionally 0.3.
 See `summary.json` for the exact alignment shift, contact counts, and limits.
 
+### Check against the archived camera video
+
+The archived 25.47 s video has the same run name and content as the newly
+provided `IMG_4218.mov`. It already shows ink at its beginning, so a final
+photo of the sheet cannot be scored against this one run. The video does show
+new right-hand strokes appearing while the follower moves. Reproduce an
+exploratory comparison of those strokes with:
+
+```bash
+python analysis/compare_recording_video.py
+```
+
+The script registers the 24 s frame to the 4 s frame, rectifies the sheet
+using manually chosen corners, extracts newly darkened pixels, and compares
+their approximate centerline with MuJoCo contact points from 12–20 s. The
+result is `simulation/examples/arm_motion_214924_driven/video_vs_mujoco.png`
+and `video_comparison.json`. With these specific choices, predicted points
+are 6.2 mm from newly visible ink centerline on average, and 78% are within
+10 mm. This describes a **partial, same-run visual fit**, not a general
+writing accuracy percentage. Camera blur, pen occlusion, the hand-picked
+paper corners, and the replay-aligned paper pose all affect the estimate.
+
 ## MuJoCo trajectory handoff
 
 Generate a timed task-space CSV for another phrase with:
